@@ -102,7 +102,7 @@ export default function OplossingenPage() {
   return (
     <div className="flex flex-col w-full selection:bg-primary/30">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-24 bg-white overflow-hidden">
+      <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-30" />
           <motion.div 
@@ -120,16 +120,16 @@ export default function OplossingenPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center max-w-5xl mx-auto"
           >
-            <div className="inline-block px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-sm font-bold mb-8 tracking-widest uppercase">
+            <div className="inline-block px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-sm font-bold mb-6 md:mb-8 tracking-widest uppercase">
               Oplossingen
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-10">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-6 md:mb-10">
               Energie-assets die <br />
               <span className="text-primary italic">meetellen</span>.
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-500 mb-16 leading-relaxed max-w-3xl mx-auto text-balance">
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-500 mb-10 md:mb-16 leading-relaxed max-w-3xl mx-auto text-balance">
               Van zonnepanelen tot opslag, van laden tot sturing. Wij integreren alle componenten zodat ze elkaar versterken.
             </p>
           </motion.div>
@@ -137,13 +137,13 @@ export default function OplossingenPage() {
       </section>
 
       {/* Oplossingen Grid */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-8 tracking-tight">
+          <FadeIn className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
               Alles werkt <span className="text-primary italic">samen</span>.
             </h2>
-            <p className="text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
               Al onze oplossingen zijn ontworpen om samen te werken. Zo creëer je een systeem dat meer is dan de som der delen.
             </p>
           </FadeIn>
@@ -189,15 +189,15 @@ export default function OplossingenPage() {
       </section>
 
       {/* Waarom bij CAPAXX */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
             <FadeIn direction="right">
-              <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-12 tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-8 md:mb-12 tracking-tight leading-tight">
                 Waarom oplossingen <br />bij <span className="text-primary italic">CAPAXX</span>?
               </h2>
               
-              <div className="space-y-10">
+              <div className="space-y-6 md:space-y-10">
                 {[
                   {
                     title: 'Alles uit één hand',
@@ -260,14 +260,14 @@ export default function OplossingenPage() {
       </section>
 
       {/* Werkwijze Section */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <FadeIn>
-              <h2 className="text-4xl md:text-6xl font-black text-secondary mb-8 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-secondary mb-6 md:mb-8 tracking-tight">
                 Van <span className="text-primary italic">scan</span> naar optimaal rendement
               </h2>
-              <p className="text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed italic">
+              <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed italic">
                 Onze werkwijze begint met data en eindigt met blijvend resultaat.
               </p>
             </FadeIn>
@@ -291,11 +291,11 @@ export default function OplossingenPage() {
       </section>
 
       {/* Het verschil met andere partijen */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
-            <FadeIn className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-8 tracking-tight">
+            <FadeIn className="text-center mb-12 md:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
                 Waarom het bij ons <span className="text-primary italic">werkt</span>
               </h2>
             </FadeIn>
@@ -332,26 +332,26 @@ export default function OplossingenPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-secondary text-white rounded-t-[4rem] overflow-hidden relative">
+      <section className="py-16 md:py-24 lg:py-32 bg-secondary text-white rounded-t-[2rem] md:rounded-t-[3rem] lg:rounded-t-[4rem] overflow-hidden relative">
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-5 pointer-events-none" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-10 leading-tight">
               Klaar voor <span className="italic text-primary">maximaal</span> rendement?
             </h2>
-            <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
               We starten met een energiescan om te zien waar je nu staat en wat je volgende stappen zijn.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
               <Link
                 href="/contact?type=energiescan"
-                className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
+                className="inline-flex items-center px-8 py-4 md:px-12 md:py-6 bg-primary text-white font-black rounded-2xl text-base md:text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
               >
-                Vraag energiescan aan <ArrowRight className="w-6 h-6 ml-3" />
+                Vraag energiescan aan <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2 md:ml-3" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-12 py-6 bg-white/5 text-white border border-white/10 font-bold rounded-2xl text-xl hover:bg-white/10 transition-all"
+                className="inline-flex items-center px-8 py-4 md:px-12 md:py-6 bg-white/5 text-white border border-white/10 font-bold rounded-2xl text-base md:text-xl hover:bg-white/10 transition-all"
               >
                 Stel een vraag
               </Link>

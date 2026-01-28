@@ -19,10 +19,10 @@ export default function EMSPage() {
       />
 
       {/* Benefits Section */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="mb-20">
-            <h2 className="text-4xl font-bold text-secondary tracking-tight">Wat het oplevert</h2>
+          <FadeIn className="mb-12 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary tracking-tight">Wat het oplevert</h2>
           </FadeIn>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -62,11 +62,11 @@ export default function EMSPage() {
       </section>
 
       {/* What we deliver Section */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
             <FadeIn direction="right">
-              <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">Onze EMS Aanpak</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-8 md:mb-12 tracking-tight">Onze EMS Aanpak</h2>
               <ul className="space-y-10">
                 {[
                   { title: 'Inmeten & Data', desc: 'Koppelingen met meters, omvormers en batterijen.' },
@@ -129,17 +129,17 @@ export default function EMSPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="max-w-5xl mx-auto text-center p-16 bg-secondary rounded-[4rem] text-white relative overflow-hidden">
+          <FadeIn className="max-w-5xl mx-auto text-center p-8 md:p-12 lg:p-16 bg-secondary rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] text-white relative overflow-hidden">
              <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-5 pointer-events-none" />
-             <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">Stop met gokken op data.</h2>
-             <p className="text-xl text-slate-400 mb-14 max-w-2xl mx-auto leading-relaxed italic">
+             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 leading-tight tracking-tight">Stop met gokken op data.</h2>
+             <p className="text-lg md:text-xl text-slate-400 mb-10 md:mb-14 max-w-2xl mx-auto leading-relaxed italic">
                 Laat ons zien hoe we jouw assets kunnen verbinden en sturen voor maximaal resultaat.
              </p>
              <Link
                 href="/contact"
-                className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl hover:bg-accent transition-all shadow-2xl shadow-black/20 text-xl"
+                className="inline-flex items-center px-8 py-4 md:px-12 md:py-6 bg-primary text-white font-black rounded-2xl hover:bg-accent transition-all shadow-2xl shadow-black/20 text-base md:text-xl"
               >
                 Vraag een demo aan <ArrowRight className="w-6 h-6 ml-3" />
               </Link>

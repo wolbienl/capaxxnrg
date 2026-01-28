@@ -81,16 +81,31 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full selection:bg-primary/30">
       {/* --- HERO SECTION --- */}
-      <section className="relative min-h-[95vh] flex items-center pt-24 overflow-hidden bg-white">
-        {/* Background Decorative Elements */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <section className="relative min-h-[100vh] lg:min-h-[95vh] flex items-center pt-24 overflow-hidden bg-transparent lg:bg-white -mt-20">
+        {/* Mobile: Fullscreen Video Background - extends to top of viewport */}
+        <div className="lg:hidden absolute -top-20 left-0 right-0 bottom-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        </div>
+
+        {/* Desktop: Background Decorative Elements - extends to top of viewport */}
+        <div className="hidden lg:block absolute -top-20 left-0 right-0 bottom-0 z-0 overflow-hidden pointer-events-none">
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 0.15, scale: 1 }}
             transition={{ duration: 2 }}
-            className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] bg-primary rounded-full blur-[120px]" 
+            className="absolute -top-[10%] -right-[10%] w-[70%] h-[70%] bg-primary rounded-full blur-[120px]" 
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+          <div className="absolute -top-20 left-0 right-0 bottom-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -101,32 +116,45 @@ export default function Home() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="z-10"
             >
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-10 text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white lg:text-secondary leading-[1.05] tracking-tight mb-6 md:mb-10 text-balance">
                 Maak energie een <span className="text-primary italic">asset</span> voor jouw vastgoed.
               </h1>
               
-              <p className="text-lg md:text-xl xl:text-2xl text-slate-500 mb-12 leading-relaxed max-w-xl text-balance">
+              <p className="text-base md:text-lg xl:text-xl text-white/80 lg:text-slate-500 mb-8 md:mb-12 leading-relaxed max-w-xl text-balance">
                 Opwek, opslag, laden en sturing, zodat jouw locatie kan doorgroeien, ook met netcongestie.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-5">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="group relative px-8 xl:px-10 py-4 xl:py-5 bg-secondary text-white font-black rounded-2xl text-lg hover:bg-slate-800 transition-all flex items-center justify-center overflow-hidden"
+                  className="group relative px-6 py-3.5 md:px-8 md:py-4 xl:px-10 xl:py-5 bg-primary lg:bg-secondary text-white font-black rounded-2xl text-base md:text-lg hover:bg-accent lg:hover:bg-slate-800 transition-all flex items-center justify-center overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center">
-                    Plan een kennismaking <MoveRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                    Plan een kennismaking <MoveRight className="w-5 h-5 ml-2 md:ml-3 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
                 <Link
                   href="/over-ons"
-                  className="px-8 xl:px-10 py-4 xl:py-5 bg-white text-secondary border border-slate-200 font-bold rounded-2xl text-lg hover:border-primary/30 hover:bg-slate-50 transition-all text-center"
+                  className="px-6 py-3.5 md:px-8 md:py-4 xl:px-10 xl:py-5 bg-white/10 lg:bg-white text-white lg:text-secondary border border-white/30 lg:border-slate-200 font-bold rounded-2xl text-base md:text-lg hover:bg-white/20 lg:hover:border-primary/30 lg:hover:bg-slate-50 transition-all text-center backdrop-blur-sm lg:backdrop-blur-none"
                 >
                   Onze aanpak
                 </Link>
               </div>
+
+              {/* Mobile: Trust indicators */}
+              <div className="lg:hidden flex items-center gap-6 mt-8 pt-6 border-t border-white/20">
+                <div className="flex items-center text-sm text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-primary mr-2" />
+                  <span className="font-medium">Data-gedreven</span>
+                </div>
+                <div className="flex items-center text-sm text-white/80">
+                  <CheckCircle2 className="w-4 h-4 text-primary mr-2" />
+                  <span className="font-medium">Twente</span>
+                </div>
+              </div>
             </motion.div>
 
+            {/* Desktop: Video */}
             <div className="relative lg:block hidden w-full h-full min-h-[500px]">
               <motion.div
                 initial={{ opacity: 0, scale: 1.1 }}
@@ -150,34 +178,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Mobile Video (visible only below lg breakpoint) */}
-        <div className="lg:hidden block px-4 pb-20 relative z-10">
-          <div className="max-w-[600px] mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200/50"
-            >
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/videos/hero.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />
-            </motion.div>
-          </div>
-        </div>
-
       </section>
 
       {/* --- DASHBOARD SECTION --- */}
-      <section className="py-32 bg-slate-900 overflow-hidden relative">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-900 overflow-hidden relative">
         {/* Animated background with particles */}
         <div className="absolute inset-0 pointer-events-none">
           <motion.div 
@@ -216,7 +220,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 xl:gap-24 items-center">
             <FadeIn direction="right">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -238,7 +242,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.1]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-[1.1]"
               >
                 Energie die <span className="text-primary italic">meetelt</span>,<br />
                 <span className="text-primary italic">data</span> die stuurt.
@@ -334,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* --- THE "WHY" SECTION --- */}
-      <section className="py-32 bg-white text-secondary overflow-hidden relative">
+      <section className="py-16 md:py-24 lg:py-32 bg-white text-secondary overflow-hidden relative">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div 
@@ -357,16 +361,16 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           {/* Header Section */}
-          <div className="text-center max-w-4xl mx-auto mb-24">
+          <div className="text-center max-w-4xl mx-auto mb-12 md:mb-20 lg:mb-24">
             <FadeIn>
               <div className="inline-block px-4 py-1 rounded-lg bg-primary/5 border border-primary/10 text-primary text-sm font-bold mb-6 tracking-widest uppercase">
                 De Uitdaging
               </div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 leading-[1.05] tracking-tight">
                 Energie is geen kostenpost meer. <br />
                 <span className="text-primary italic">Het is een asset.</span>
               </h2>
-              <p className="text-xl md:text-2xl text-slate-500 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl text-slate-500 leading-relaxed">
                 Commercieel vastgoed krijgt te maken met hogere kosten en een net dat niet meebeweegt. 
                 Dan wil je geen losse installaties, maar regie.
               </p>
@@ -374,7 +378,7 @@ export default function Home() {
           </div>
 
           {/* Split Cards with Image */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-16">
             {/* Challenge Cards */}
             <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 content-start">
               {[
@@ -493,11 +497,11 @@ export default function Home() {
       </section>
 
       {/* --- SOLUTIONS GRID --- */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-20 gap-6 md:gap-8">
             <FadeIn className="max-w-2xl">
-              <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-4 md:mb-6 tracking-tight">
                 Bouwstenen van een <br /><span className="text-primary italic">duurzaam</span> systeem.
               </h2>
             </FadeIn>
@@ -553,16 +557,16 @@ export default function Home() {
       </section>
 
       {/* --- WERKWIZE (HORIZONTAL) --- */}
-      <section className="py-32 bg-slate-50 overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-24">
+          <div className="text-center mb-12 md:mb-20 lg:mb-24">
             <FadeIn>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">Resultaat in vier stappen</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6">Resultaat in vier stappen</h2>
               <div className="w-20 h-1.5 bg-primary mx-auto rounded-full" />
             </FadeIn>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 relative">
             {/* Background Line */}
             <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-px bg-slate-200 z-0" />
             
@@ -582,31 +586,31 @@ export default function Home() {
       </section>
 
       {/* --- FINAL CTA --- */}
-      <section className="py-32 bg-white overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="relative bg-secondary rounded-[3.5rem] p-12 md:p-24 text-center overflow-hidden">
+          <div className="relative bg-secondary rounded-[2rem] md:rounded-[3rem] lg:rounded-[3.5rem] p-8 md:p-16 lg:p-24 text-center overflow-hidden">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,#f06a00_0%,transparent_50%)]" />
             </div>
             
             <FadeIn className="relative z-10 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-7xl font-bold text-white mb-10 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-10 leading-tight">
                 Geen dikke praat, <br /><span className="text-primary italic">wel resultaat.</span>
               </h2>
-              <p className="text-xl text-slate-400 mb-14 leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-400 mb-8 md:mb-14 leading-relaxed">
                 Nieuwsgierig naar het potentieel van jouw pand? We rekenen het direct door.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <Link
                   href="/contact"
-                  className="px-12 py-5 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-2xl shadow-primary/20"
+                  className="px-8 py-4 md:px-12 md:py-5 bg-primary text-white font-black rounded-2xl text-base md:text-xl hover:bg-accent transition-all shadow-2xl shadow-primary/20"
                 >
                   Vraag energiescan aan
                 </Link>
                 <Link
                   href="/cases"
-                  className="px-12 py-5 bg-white/5 text-white border border-white/10 font-bold rounded-2xl text-xl hover:bg-white/10 transition-all"
+                  className="px-8 py-4 md:px-12 md:py-5 bg-white/5 text-white border border-white/10 font-bold rounded-2xl text-base md:text-xl hover:bg-white/10 transition-all"
                 >
                   Bekijk cases
                 </Link>

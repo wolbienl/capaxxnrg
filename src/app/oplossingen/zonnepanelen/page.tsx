@@ -19,11 +19,11 @@ export default function ZonnepanelenPage() {
       />
 
       {/* Content Section */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
             <FadeIn direction="right">
-              <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">Wanneer het werkt</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-8 md:mb-12 tracking-tight">Wanneer het werkt</h2>
               <ul className="space-y-8">
                 {[
                   'Jouw verbruik overdag is substantieel, of je hebt opslag/EMS om te sturen',
@@ -39,8 +39,8 @@ export default function ZonnepanelenPage() {
                 ))}
               </ul>
 
-              <div className="mt-24">
-                <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">Wat wij leveren</h2>
+              <div className="mt-12 md:mt-24">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-8 md:mb-12 tracking-tight">Wat wij leveren</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     'Dakscan & Prognose',
@@ -61,7 +61,7 @@ export default function ZonnepanelenPage() {
             </FadeIn>
 
             <FadeIn direction="left" className="space-y-10 lg:sticky lg:top-32">
-              <div className="bg-secondary rounded-[2.5rem] p-12 text-white relative overflow-hidden shadow-2xl">
+              <div className="bg-secondary rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 p-8 opacity-5">
                   <AlertTriangle className="w-48 h-48" />
                 </div>

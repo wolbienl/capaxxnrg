@@ -61,8 +61,8 @@ export default function HomeDashboard() {
         <div className="col-span-7 flex flex-col gap-6">
           <div className="flex-1 bg-white/[0.03] rounded-[2rem] p-6 border border-white/5 relative overflow-hidden">
             <div className="text-[10px] font-black text-primary uppercase tracking-widest mb-2">Opwek (Zon)</div>
-            <div className="text-5xl font-black text-white tracking-tighter mb-4">
-              {metrics.solar.toFixed(1)} <span className="text-lg text-slate-500 ml-1 font-bold">kW</span>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter mb-4">
+              {metrics.solar.toFixed(1)} <span className="text-sm md:text-lg text-slate-500 ml-1 font-bold">kW</span>
             </div>
             <div className="h-16 flex items-end space-x-1">
               {[30, 50, 40, 70, 90, 55, 40, 50, 60, 80, 70, 85].map((h, i) => (
@@ -111,7 +111,7 @@ export default function HomeDashboard() {
           <div className="flex-1 bg-white/[0.03] rounded-[2rem] p-6 border border-white/5 relative overflow-hidden">
             <div className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-4">Opslag (Accu)</div>
             <div className="flex items-center justify-between mb-4">
-              <span className="text-4xl font-black text-white">{metrics.battery.toFixed(0)}%</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl font-black text-white">{metrics.battery.toFixed(0)}%</span>
               <div className="text-[10px] font-bold text-slate-500 bg-white/5 px-2 py-1 rounded">1.0 MWh</div>
             </div>
             <div className="h-2 bg-slate-800 rounded-full overflow-hidden border border-white/5">
@@ -127,7 +127,7 @@ export default function HomeDashboard() {
           <div className="h-32 bg-primary rounded-[2rem] p-6 flex flex-col justify-between relative overflow-hidden">
             <ArrowUpRight className="absolute top-4 right-4 w-10 h-10 text-white/20" />
             <div className="text-[10px] font-black text-white/60 uppercase tracking-widest">Rendement</div>
-            <div className="text-2xl font-black text-white tracking-tight">
+            <div className="text-xl md:text-2xl font-black text-white tracking-tight">
               € {metrics.savings.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}
             </div>
           </div>

@@ -97,7 +97,7 @@ export default function EnergielabelsPage() {
       />
 
       {/* Wat is een energielabel */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-24 items-start">
             <FadeIn direction="right">

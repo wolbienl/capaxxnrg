@@ -1,0 +1,66 @@
+'use client'
+
+import { useEffect } from 'react'
+
+// Flag om te voorkomen dat init meerdere keren wordt aangeroepen
+let isInitialized = false
+
+// Track function reference voor gebruik buiten component
+let trackFn: ((eventName: string, options?: { props?: Record<string, string | number | boolean> }) => void) | null = null
+
+export default function PlausibleAnalytics() {
+  useEffect(() => {
+    // Dynamische import om server-side errors te voorkomen
+    const initPlausible = async () => {
+      if (typeof window !== 'undefined' && !isInitialized) {
+        const { init, track } = await import('@plausible-analytics/tracker')
+        
+        init({
+          domain: 'capaxxenergy.nl',
+          // Automatische pageview tracking
+          autoCapturePageviews: true,
+          // Outbound link tracking
+          outboundLinks: true,
+          // File download tracking
+          fileDownloads: true,
+        })
+        
+        trackFn = track
+        isInitialized = true
+      }
+    }
+    
+    initPlausible()
+  }, [])
+
+  return null
+}
+
+// Helper function voor custom events
+export function trackEvent(eventName: string, props?: Record<string, string | number | boolean>) {
+  if (trackFn) {
+    trackFn(eventName, { props })
+  }
+}
+
+// Veelgebruikte events
+export const PlausibleEvents = {
+  // Contactformulier
+  contactFormSubmit: (type?: string) => trackEvent('Contact Form Submit', { type: type || 'general' }),
+  
+  // CTA clicks
+  ctaClick: (location: string, text: string) => trackEvent('CTA Click', { location, text }),
+  
+  // Oplossing bekeken
+  solutionView: (solution: string) => trackEvent('Solution View', { solution }),
+  
+  // Telefoon/email click
+  phoneClick: () => trackEvent('Phone Click'),
+  emailClick: () => trackEvent('Email Click'),
+  
+  // Download
+  download: (file: string) => trackEvent('Download', { file }),
+  
+  // Externe links
+  externalLink: (url: string) => trackEvent('External Link', { url }),
+} as const

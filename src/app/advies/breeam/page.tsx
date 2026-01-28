@@ -70,11 +70,11 @@ export default function BREEAMPage() {
       />
 
       {/* Wat is BREEAM */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
             <FadeIn direction="right">
-              <h2 className="text-4xl font-bold text-secondary mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
                 Wat is BREEAM?
               </h2>
               <p className="text-xl text-slate-600 leading-relaxed mb-8">
@@ -139,10 +139,10 @@ export default function BREEAMPage() {
       </section>
 
       {/* BREEAM Categorieën */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 tracking-tight">
+          <FadeIn className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6 tracking-tight">
               Zes categorieën, één <span className="text-primary italic">systeem</span>
             </h2>
             <p className="text-xl text-slate-500 max-w-3xl mx-auto">
@@ -385,18 +385,18 @@ export default function BREEAMPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-secondary text-white rounded-t-[4rem]">
+      <section className="py-16 md:py-24 lg:py-32 bg-secondary text-white rounded-t-[2rem] md:rounded-t-[3rem] lg:rounded-t-[4rem]">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-10 leading-tight">
               Verhoog de waarde van <span className="italic text-primary">jouw vastgoed</span>
             </h2>
-            <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
               We voeren een BREEAM-analyse uit om te zien waar je staat en welke stappen rendabel zijn richting certificering.
             </p>
             <Link
               href="/contact?type=breeam-analyse"
-              className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
+              className="inline-flex items-center px-8 py-4 md:px-12 md:py-6 bg-primary text-white font-black rounded-2xl text-base md:text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
             >
               Vraag BREEAM-analyse aan <ArrowRight className="w-6 h-6 ml-3" />
             </Link>

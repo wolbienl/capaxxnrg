@@ -68,18 +68,18 @@ export default function LaadinfraPage() {
       />
 
       {/* Snelladers Section */}
-      <section className="py-32 bg-slate-50 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-24 items-center mb-24">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center mb-12 md:mb-24">
             <FadeIn direction="right">
               <div className="inline-flex items-center space-x-2 text-primary font-bold mb-6">
                 <Zap className="w-6 h-6 fill-primary" />
                 <span className="uppercase tracking-[0.2em] text-sm">Heavy Duty & Logistics</span>
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-secondary mb-8 tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-secondary mb-6 md:mb-8 tracking-tight leading-tight">
                 <span className="text-primary italic">Snelladen</span> is een vak apart.
               </h2>
-              <p className="text-xl text-slate-500 mb-10 leading-relaxed italic">
+              <p className="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 leading-relaxed italic">
                 Locaties zoals logistieke hubs, tankstations of wagenparken stellen andere eisen dan een regulier laadpunt. 
                 Hogere vermogens, strikte timing en complexe netcapaciteit vragen om regie.
               </p>
@@ -153,11 +153,11 @@ export default function LaadinfraPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
             <FadeIn direction="right">
-              <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">Waar wij op sturen</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-8 md:mb-12 tracking-tight">Waar wij op sturen</h2>
               <ul className="space-y-10">
                 {[
                   { title: 'Capaciteit', desc: 'Wat kan er nu technisch, wat moet er straks kunnen.' },
@@ -178,8 +178,8 @@ export default function LaadinfraPage() {
               </ul>
             </FadeIn>
 
-            <FadeIn direction="left" className="bg-slate-50 rounded-[3rem] p-12 border border-slate-100 lg:sticky lg:top-32 shadow-xl shadow-slate-200/50">
-              <h2 className="text-3xl font-black text-secondary mb-10 tracking-tight">Wat wij leveren</h2>
+            <FadeIn direction="left" className="bg-slate-50 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 border border-slate-100 lg:sticky lg:top-32 shadow-xl shadow-slate-200/50">
+              <h2 className="text-2xl md:text-3xl font-black text-secondary mb-8 md:mb-10 tracking-tight">Wat wij leveren</h2>
               <ul className="space-y-4 mb-12">
                 {[
                   'Technisch ontwerp & Plaatsingsplan',
@@ -195,7 +195,7 @@ export default function LaadinfraPage() {
               </ul>
               <Link
                 href="/contact"
-                className="w-full py-5 bg-primary text-white font-black rounded-2xl text-center inline-block hover:bg-accent transition-all shadow-xl shadow-orange-500/20"
+                className="w-full py-4 md:py-5 bg-primary text-white font-black rounded-2xl text-center inline-block hover:bg-accent transition-all shadow-xl shadow-orange-500/20 text-base md:text-lg"
               >
                 Start jouw laadplan
               </Link>

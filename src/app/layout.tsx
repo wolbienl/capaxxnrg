@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PlausibleAnalytics from "@/components/PlausibleAnalytics";
 import JsonLd from "@/components/seo/JsonLd";
 import { generatePageMetadata } from "@/lib/seo/metadata";
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/seo/structured-data";
@@ -77,6 +78,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <PlausibleAnalytics />
         <Header />
         <main className="pt-20">
           {children}

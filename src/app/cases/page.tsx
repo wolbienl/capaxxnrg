@@ -9,7 +9,7 @@ export default function CasesPage() {
   return (
     <div className="flex flex-col w-full selection:bg-primary/30">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-24 bg-white overflow-hidden">
+      <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-30" />
           <motion.div 
@@ -25,10 +25,10 @@ export default function CasesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1 className="text-6xl md:text-8xl font-black text-secondary leading-tight mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-secondary leading-tight mb-6 md:mb-8">
               Cases in de <span className="text-primary italic">maak</span>.
             </h1>
-            <p className="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto text-balance">
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-500 mb-8 md:mb-10 leading-relaxed max-w-3xl mx-auto text-balance">
               We zijn druk bezig met het documenteren van onze laatste projecten. Binnenkort delen we hier concrete resultaten, cijfers en verhalen uit de praktijk.
             </p>
           </motion.div>
@@ -36,11 +36,11 @@ export default function CasesPage() {
       </section>
 
       {/* Coming Soon Content */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <FadeIn>
-              <div className="bg-slate-50 rounded-[3rem] p-12 md:p-16 border border-slate-100 text-center relative overflow-hidden">
+              <div className="bg-slate-50 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 border border-slate-100 text-center relative overflow-hidden">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16" />
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl -ml-12 -mb-12" />
@@ -50,7 +50,7 @@ export default function CasesPage() {
                     <FileText className="w-10 h-10" />
                   </div>
                   
-                  <h2 className="text-3xl md:text-4xl font-black text-secondary mb-6 tracking-tight">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-secondary mb-6 tracking-tight">
                     Wat kun je verwachten?
                   </h2>
                   
@@ -102,18 +102,18 @@ export default function CasesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-secondary text-white text-center rounded-t-[4rem]">
+      <section className="py-16 md:py-24 lg:py-32 bg-secondary text-white text-center rounded-t-[2rem] md:rounded-t-[3rem] lg:rounded-t-[4rem]">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight">
               Liever direct in gesprek?
             </h2>
-            <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-400 mb-8 md:mb-10 max-w-2xl mx-auto">
               We vertellen je graag persoonlijk over onze projecten en rekenen direct jouw scenario door.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
+              className="inline-flex items-center px-8 py-4 md:px-12 md:py-6 bg-primary text-white font-black rounded-2xl text-base md:text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
             >
               Plan een kennismaking <ArrowRight className="w-6 h-6 ml-3" />
             </Link>

@@ -55,11 +55,11 @@ export default function ESGPage() {
       />
 
       {/* Wat is ESG */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto mb-24">
+          <div className="max-w-4xl mx-auto mb-12 md:mb-24">
             <FadeIn>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
                 Wat is ESG en waarom telt het?
               </h2>
               <p className="text-xl text-slate-600 leading-relaxed mb-8">
@@ -99,11 +99,11 @@ export default function ESGPage() {
       </section>
 
       {/* Waarom ESG belangrijk is */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
             <FadeIn direction="right">
-              <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">Waarom ESG nu telt</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-8 md:mb-12 tracking-tight">Waarom ESG nu telt</h2>
               <ul className="space-y-8">
                 {[
                   {
@@ -166,10 +166,10 @@ export default function ESGPage() {
       </section>
 
       {/* Wat wij leveren */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <FadeIn className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-8 tracking-tight">
+          <FadeIn className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
               Wat wij <span className="text-primary italic">leveren</span>
             </h2>
           </FadeIn>
@@ -226,15 +226,15 @@ export default function ESGPage() {
       </section>
 
       {/* Het verschil */}
-      <section className="py-32 bg-slate-900 text-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-12 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 md:mb-12 leading-tight">
                 Het <span className="text-primary italic">verschil</span>
               </h2>
-              <div className="bg-white/5 backdrop-blur-xl rounded-[3rem] p-12 md:p-16 border border-white/10">
-                <p className="text-3xl md:text-4xl font-black text-white mb-8 leading-tight italic">
+              <div className="bg-white/5 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 border border-white/10">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-6 md:mb-8 leading-tight italic">
                   &quot;Wij rapporteren niet over wat je zou kunnen zijn. We meten wat je bent, en sturen waar je heen gaat.&quot;
                 </p>
                 <p className="text-xl text-slate-400 leading-relaxed">
@@ -392,18 +392,18 @@ export default function ESGPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-secondary text-white rounded-t-[4rem]">
+      <section className="py-16 md:py-24 lg:py-32 bg-secondary text-white rounded-t-[2rem] md:rounded-t-[3rem] lg:rounded-t-[4rem]">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-10 leading-tight">
               Start met <span className="italic text-primary">meten</span>
             </h2>
-            <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
               We voeren een quickscan uit om te zien waar je nu staat en wat je volgende stappen zijn richting CSRD-compliance.
             </p>
             <Link
               href="/contact?type=esg-quickscan"
-              className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
+              className="inline-flex items-center px-8 py-4 md:px-12 md:py-6 bg-primary text-white font-black rounded-2xl text-base md:text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
             >
               Vraag ESG-quickscan aan <ArrowRight className="w-6 h-6 ml-3" />
             </Link>

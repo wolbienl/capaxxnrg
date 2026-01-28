@@ -57,11 +57,11 @@ export default function ParisProofPage() {
       />
 
       {/* Wat betekent Paris Proof */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
             <FadeIn direction="right">
-              <h2 className="text-4xl font-bold text-secondary mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
                 Wat betekent <span className="text-primary italic">Paris Proof</span>?
               </h2>
               <p className="text-xl text-slate-600 leading-relaxed mb-8">

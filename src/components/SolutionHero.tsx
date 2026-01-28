@@ -27,7 +27,7 @@ export default function SolutionHero({
   showScrollIndicator = true
 }: SolutionHeroProps) {
   return (
-    <section className="relative pt-40 pb-24 bg-white overflow-hidden">
+    <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-50" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 -skew-x-12 translate-x-1/4" />
@@ -60,19 +60,19 @@ export default function SolutionHero({
               <span className="uppercase tracking-widest text-xs">Oplossing</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-6 md:mb-8">
               {title} <br />
               <span className="text-primary italic">{titleHighlight}</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-500 mb-12 leading-relaxed max-w-2xl text-balance">
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-500 mb-8 md:mb-12 leading-relaxed max-w-2xl text-balance">
               {description}
             </p>
             
-            <Link
-              href={ctaHref}
-              className="inline-flex items-center px-10 py-5 bg-secondary text-white font-black rounded-2xl text-lg hover:bg-slate-800 transition-all shadow-2xl shadow-slate-200"
-            >
+<Link
+                              href={ctaHref}
+                              className="inline-flex items-center px-6 py-4 md:px-10 md:py-5 bg-secondary text-white font-black rounded-2xl text-base md:text-lg hover:bg-slate-800 transition-all shadow-2xl shadow-slate-200"
+                            >
               {ctaText} <ArrowRight className="w-5 h-5 ml-3" />
             </Link>
           </motion.div>

@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -81,19 +82,60 @@ const navLinks = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [openMegaMenu, setOpenMegaMenu] = useState<'oplossingen' | 'advies' | null>(null)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  
+  const isHomepage = pathname === '/'
+  const isTransparent = isHomepage && !isScrolled && !isOpen
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    // Check initial scroll position
+    handleScroll()
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/50">
+    <header 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
+        isOpen
+          ? "bg-white border-b border-slate-200/50"
+          : isTransparent 
+            ? "bg-transparent border-b border-transparent" 
+            : "bg-white/70 backdrop-blur-xl border-b border-slate-200/50"
+      )}
+    >
       <nav className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-24">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          {/* Logo - switches between light and dark */}
+          <Link href="/" className="flex items-center space-x-2 group relative">
+            {/* Dark logo (default, shown when scrolled or not on homepage) */}
             <Image
               src="/images/logo-dark.svg"
               alt="CAPAXX ENERGY"
               width={180}
               height={45}
-              className="h-10 w-auto transition-transform duration-500 group-hover:scale-105"
+              className={cn(
+                "h-10 w-auto transition-all duration-500 group-hover:scale-105",
+                isTransparent ? "opacity-0 lg:opacity-100" : "opacity-100"
+              )}
+            />
+            {/* Light logo (shown on mobile homepage when not scrolled) */}
+            <Image
+              src="/images/logo-light.svg"
+              alt="CAPAXX ENERGY"
+              width={180}
+              height={45}
+              className={cn(
+                "h-10 w-auto transition-all duration-500 group-hover:scale-105 absolute inset-0 lg:opacity-0",
+                isTransparent ? "opacity-100" : "opacity-0"
+              )}
             />
           </Link>
 
@@ -270,7 +312,12 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-secondary hover:text-primary transition-colors"
+            className={cn(
+              "lg:hidden p-2 transition-colors",
+              isTransparent 
+                ? "text-white hover:text-primary" 
+                : "text-secondary hover:text-primary"
+            )}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -285,9 +332,9 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+            className="lg:hidden bg-white border-t border-gray-100 max-h-[calc(100vh-6rem)] overflow-y-auto"
           >
-            <div className="container mx-auto px-4 py-6 space-y-4">
+            <div className="container mx-auto px-4 py-6 space-y-4 pb-8">
               {/* Oplossingen Section */}
               <div className="space-y-2">
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Oplossingen</p>
