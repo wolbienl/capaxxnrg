@@ -48,3 +48,77 @@ body {
 .glass-card {
   @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
 }
+
+/* Preloader Battery Animations */
+.battery-charge {
+  box-shadow: 0 0 30px rgba(240, 106, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.battery-bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: bubble-rise 2s ease-in-out infinite;
+}
+
+.battery-bubble-1 {
+  width: 8px;
+  height: 8px;
+  left: 20%;
+  bottom: 10%;
+  animation-delay: 0s;
+}
+
+.battery-bubble-2 {
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  bottom: 5%;
+  animation-delay: 0.5s;
+}
+
+.battery-bubble-3 {
+  width: 10px;
+  height: 10px;
+  left: 70%;
+  bottom: 15%;
+  animation-delay: 1s;
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.battery-wave {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 25%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.3) 75%, 
+    transparent 100%
+  );
+  animation: wave-move 2s linear infinite;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

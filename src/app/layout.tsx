@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ClientLayout from "@/components/ClientLayout";
 import JsonLd from "@/components/seo/JsonLd";
 import { generatePageMetadata } from "@/lib/seo/metadata";
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/seo/structured-data";
@@ -87,11 +88,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main className="pt-20">
-          {children}
-        </main>
-        <Footer />
+        <ClientLayout>
+          <Header />
+          <main className="pt-20">
+            {children}
+          </main>
+          <Footer />
+        </ClientLayout>
       </body>
     </html>
   );
