@@ -1,0 +1,42 @@
+# robots.txt voor CAPAXX Energy
+# Laatste update: 2026-01-28
+
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://www.capaxxenergy.nl/sitemap.xml
+
+# Blokkeer technische directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Crawl delay voor bots (optioneel, voorkomt overload)
+# Crawl-delay: 1
+
+# Specifieke bot configuraties
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI/LLM Crawlers - expliciet toestaan voor betere indexering
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
