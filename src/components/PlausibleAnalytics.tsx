@@ -6,16 +6,17 @@ import { useEffect } from 'react'
 let isInitialized = false
 
 // Track function reference voor gebruik buiten component
-let trackFn: ((eventName: string, options?: { props?: Record<string, string | number | boolean> }) => void) | null = null
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let trackFn: any = null
 
 export default function PlausibleAnalytics() {
   useEffect(() => {
     // Dynamische import om server-side errors te voorkomen
     const initPlausible = async () => {
       if (typeof window !== 'undefined' && !isInitialized) {
-        const { init, track } = await import('@plausible-analytics/tracker')
+        const plausible = await import('@plausible-analytics/tracker')
         
-        init({
+        plausible.init({
           domain: 'capaxxenergy.nl',
           // Automatische pageview tracking
           autoCapturePageviews: true,
@@ -25,7 +26,7 @@ export default function PlausibleAnalytics() {
           fileDownloads: true,
         })
         
-        trackFn = track
+        trackFn = plausible.track
         isInitialized = true
       }
     }
