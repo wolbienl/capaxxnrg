@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react'
+import { CheckCircle2, ArrowRight, ShieldCheck, MessageCircle, Target, Users, Zap } from 'lucide-react'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 
@@ -55,7 +55,7 @@ export default function OverOnsPage() {
               Klein team. <br />Harde <span className="text-primary italic">focus</span>.
             </h1>
             <p className="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto italic text-balance">
-              CAPAXX Energy is een spinoff van CAPAXX. We komen uit de wereld van data en operatie. Daarom leveren we geen losse componenten, maar systemen die je kunt sturen.
+              Wij geloven dat energie-installaties pas waarde leveren als ze samenwerken. Daarom ontwerpen we geen losse componenten, maar complete systemen met sturing en inzicht.
             </p>
           </motion.div>
         </div>
@@ -64,9 +64,29 @@ export default function OverOnsPage() {
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
-            <FadeIn direction="right" className="aspect-square bg-slate-900 rounded-[4rem] overflow-hidden flex items-center justify-center border border-slate-800 shadow-2xl relative group">
-               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-1000" />
-               <span className="text-white font-black text-4xl uppercase tracking-[0.5em] opacity-10 group-hover:opacity-20 transition-opacity">CAPAXX Team</span>
+            <FadeIn direction="right" className="grid grid-cols-2 gap-6">
+              {[
+                { icon: MessageCircle, title: 'Eerlijk', color: 'from-orange-500 to-amber-500' },
+                { icon: Target, title: 'Resultaat', color: 'from-blue-500 to-cyan-500' },
+                { icon: Users, title: 'Samen', color: 'from-emerald-500 to-green-500' },
+                { icon: Zap, title: 'Pragmatisch', color: 'from-purple-500 to-pink-500' }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  className="aspect-square bg-slate-900 rounded-[2.5rem] p-8 flex flex-col items-center justify-center border border-slate-800 shadow-2xl relative overflow-hidden group cursor-pointer"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                  <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-white/10 transition-colors">
+                    <item.icon className="w-8 h-8 text-white/80 group-hover:text-white transition-colors" />
+                  </div>
+                  <span className="text-white font-black text-xl tracking-tight">{item.title}</span>
+                </motion.div>
+              ))}
             </FadeIn>
             
             <div className="space-y-16">
