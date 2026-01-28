@@ -51,8 +51,6 @@ export const SITE_CONFIG = {
     logo: '/images/logo.svg',
     logoLight: '/images/logo-light.svg',
     logoDark: '/images/logo-dark.svg',
-    // Gebruik bestaande hero image als fallback totdat specifieke OG image beschikbaar is
-    // TODO: Maak dedicated 1200x630px OG image (zie public/images/README-OG-IMAGES.md)
     ogDefault: '/images/storage-render.jpg',
     twitterCard: '/images/storage-render.jpg'
   },
