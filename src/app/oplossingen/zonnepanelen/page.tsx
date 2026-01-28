@@ -10,9 +10,9 @@ export default function ZonnepanelenPage() {
     <div className="flex flex-col w-full selection:bg-primary/30">
       <SolutionHero
         icon={Sun}
-        title="Zonnepanelen"
-        titleHighlight="zonder aannames."
-        description="We ontwerpen op basis van je dak, je verbruiksprofiel en je netruimte. Zodat opwek ook echt waarde oplevert."
+        title="Zonnepanelen die"
+        titleHighlight="renderen."
+        description="We ontwerpen op basis van jouw dak, jouw verbruiksprofiel en jouw netruimte. Zodat opwek ook echt waarde oplevert."
         ctaText="Vraag een dakscan aan"
         ctaHref="/contact?type=dakscan"
         backgroundImage="/images/solar-commercial.jpg"
@@ -26,7 +26,7 @@ export default function ZonnepanelenPage() {
               <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">Wanneer het werkt</h2>
               <ul className="space-y-8">
                 {[
-                  'Je verbruik overdag is substantieel, of je hebt opslag/EMS om te sturen',
+                  'Jouw verbruik overdag is substantieel, of je hebt opslag/EMS om te sturen',
                   'Je wilt grip op opbrengst, monitoring en onderhoud',
                   'Je wilt klaar zijn voor laden, warmtepompen of uitbreiding'
                 ].map((item, i) => (

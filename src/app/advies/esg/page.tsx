@@ -22,7 +22,7 @@ const pillars = [
   {
     title: 'Environmental',
     subtitle: 'Milieu',
-    description: 'Energieverbruik, CO₂-uitstoot, circulariteit. Direct meetbaar vanuit je EMS.',
+    description: 'Energieverbruik, CO₂-uitstoot, circulariteit. Direct meetbaar vanuit jouw EMS.',
     icon: Leaf,
     metrics: ['kWh per m²', 'CO₂-voetafdruk', 'Hernieuwbaar %']
   },
@@ -49,7 +49,7 @@ export default function ESGPage() {
         icon={ClipboardCheck}
         title="ESG zonder"
         titleHighlight="aannames."
-        description="Meetbare Environmental, Social en Governance prestaties voor je portfolio. Data uit je EMS, rapportages conform CSRD, focus op verbetering."
+        description="Meetbare Environmental, Social en Governance prestaties voor jouw portfolio. Data uit jouw EMS, rapportages conform CSRD, focus op verbetering."
         ctaText="Vraag ESG-quickscan aan"
         ctaHref="/contact?type=esg-quickscan"
       />
@@ -179,19 +179,19 @@ export default function ESGPage() {
               {[
                 {
                   title: 'Automatische dataverzameling',
-                  desc: 'Koppeling met je EMS, meters en gebouwsystemen. Energie, CO₂ en verbruik worden continu gemeten.',
+                  desc: 'Koppeling met jouw EMS, meters en gebouwsystemen. Energie, CO₂ en verbruik worden continu gemeten.',
                   icon: Database,
                   items: ['Realtime CO₂-tracking', 'Energieverbruik per m²', 'Hernieuwbaar energie %']
                 },
                 {
                   title: 'CSRD-conforme rapportages',
-                  desc: 'Geen handmatig Excel-werk. Wij genereren audit-klare rapporten direct uit je data.',
+                  desc: 'Geen handmatig Excel-werk. Wij genereren audit-klare rapporten direct uit jouw data.',
                   icon: FileCheck,
                   items: ['CSRD-compliant', 'Audit-klaar', 'Portfolio-overzicht']
                 },
                 {
                   title: 'Routekaart verbetering',
-                  desc: 'We laten zien welke stappen je ESG-score verbeteren en wat ze kosten én opleveren.',
+                  desc: 'We laten zien welke stappen jouw ESG-score verbeteren en wat ze kosten én opleveren.',
                   icon: TrendingUp,
                   items: ['Quick wins benoemd', 'ROI per maatregel', 'Prioritering']
                 },
@@ -296,7 +296,7 @@ export default function ESGPage() {
                 {[
                   { 
                     title: 'Data-integratie', 
-                    desc: 'We koppelen je EMS, slimme meters en gebouwsystemen. Automatisch, geen handwerk.'
+                    desc: 'We koppelen jouw EMS, slimme meters en gebouwsystemen. Automatisch, geen handwerk.'
                   },
                   { 
                     title: 'CSRD-rapportage', 

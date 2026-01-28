@@ -11,9 +11,9 @@ export default function EnergieopslagPage() {
     <div className="flex flex-col w-full selection:bg-primary/30">
       <SolutionHero
         icon={Battery}
-        title="Energieopslag"
-        titleHighlight="die werkt."
-        description="Voor pieken, netcongestie en het beter benutten van je eigen opwek. Maak je aansluiting weer bruikbaar."
+        title="Energieopslag die"
+        titleHighlight="werkt."
+        description="Voor pieken, netcongestie en het beter benutten van jouw eigen opwek. Maak jouw aansluiting weer bruikbaar."
         ctaText="Bereken jouw potentieel"
         ctaHref="/contact?type=peak-shaving"
         backgroundImage="/images/storage-hero.png"
@@ -101,7 +101,7 @@ export default function EnergieopslagPage() {
               <div className="bg-white/5 backdrop-blur-xl rounded-[3rem] p-12 border border-white/10 shadow-2xl">
                 <h3 className="text-3xl font-black mb-8 leading-tight">Data is de basis.</h3>
                 <p className="text-slate-400 mb-10 text-lg leading-relaxed italic">
-                  Stuur je kwartierdata, wij geven je een onderbouwd scenario terug. Geen gokwerk, maar harde businesscase.
+                  Stuur jouw kwartierdata, wij geven je een onderbouwd scenario terug. Geen gokwerk, maar harde businesscase.
                 </p>
                 <Link
                   href="/contact"

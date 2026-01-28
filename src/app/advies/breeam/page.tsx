@@ -82,7 +82,7 @@ export default function BREEAMPage() {
                 Het is het meest gebruikte internationale raamwerk voor duurzaam ontwikkelen, bouwen en exploiteren van vastgoed.
               </p>
               <p className="text-xl text-slate-600 leading-relaxed mb-10 italic">
-                &quot;Een BREEAM-certificaat is geen mooi plaatje aan de muur. Het is een meetbaar bewijs dat je gebouw presteert op energie, water, materialen en comfort.&quot;
+                &quot;Een BREEAM-certificaat is geen mooi plaatje aan de muur. Het is een meetbaar bewijs dat jouw gebouw presteert op energie, water, materialen en comfort.&quot;
               </p>
               
               <div className="bg-slate-50 rounded-[2rem] p-8 border border-slate-100">
@@ -143,10 +143,10 @@ export default function BREEAMPage() {
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 tracking-tight">
-              Zes categorieën, <span className="text-primary italic">één systeem</span>
+              Zes categorieën, één <span className="text-primary italic">systeem</span>
             </h2>
             <p className="text-xl text-slate-500 max-w-3xl mx-auto">
-              BREEAM beoordeelt je gebouw op basis van zes hoofdcategorieën. Wij meten, rapporteren en verbeteren op alle fronten.
+              BREEAM beoordeelt jouw gebouw op basis van zes hoofdcategorieën. Wij meten, rapporteren en verbeteren op alle fronten.
             </p>
           </FadeIn>
 
@@ -207,7 +207,7 @@ export default function BREEAMPage() {
               },
               {
                 title: 'Continue verbetering',
-                desc: 'Ook na certificering blijven we meten en rapporteren om je score te behouden of verbeteren.',
+                desc: 'Ook na certificering blijven we meten en rapporteren om jouw score te behouden of verbeteren.',
                 deliverable: 'Jaarlijkse updates en monitoring'
               }
             ].map((stap, i) => (
@@ -294,7 +294,7 @@ export default function BREEAMPage() {
                   &quot;Een BREEAM-certificaat haal je niet met een mooi verhaal. Het vraagt meetbare prestaties. Die hebben wij.&quot;
                 </p>
                 <p className="text-xl text-slate-400 leading-relaxed">
-                  Wij koppelen je energie-installaties aan BREEAM-vereisten. 
+                  Wij koppelen jouw energie-installaties aan BREEAM-vereisten. 
                   Onze EMS-data vormt de basis voor scoring op energie, water en beheer. 
                   Dat scheelt handmatig werk en geeft je een voorsprong.
                 </p>
@@ -389,7 +389,7 @@ export default function BREEAMPage() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <FadeIn>
             <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
-              Verhoog de waarde van <span className="italic text-primary">je vastgoed</span>
+              Verhoog de waarde van <span className="italic text-primary">jouw vastgoed</span>
             </h2>
             <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
               We voeren een BREEAM-analyse uit om te zien waar je staat en welke stappen rendabel zijn richting certificering.

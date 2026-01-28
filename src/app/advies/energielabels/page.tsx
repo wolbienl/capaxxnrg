@@ -36,7 +36,7 @@ const labels = [
 const maatregelen = [
   {
     title: 'Zonnepanelen',
-    beschrijving: 'Eigen opwek verlaagt je energievraag uit het net direct.',
+    beschrijving: 'Eigen opwek verlaagt jouw energievraag uit het net direct.',
     impact: '1-2 labels',
     kosten: 'Middel',
     terugverdientijd: '6-8 jaar',
@@ -178,7 +178,7 @@ export default function EnergielabelsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 tracking-tight">
-              Welke <span className="text-primary italic">stappen</span> werken?
+              Welke stappen <span className="text-primary italic">werken</span>?
             </h2>
             <p className="text-xl text-slate-500 max-w-3xl mx-auto">
               Labelverbetering is maatwerk. Wij simuleren welke maatregelen bij jouw pand de grootste labelsprong opleveren.
@@ -228,13 +228,13 @@ export default function EnergielabelsPage() {
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <FadeIn direction="right">
               <h2 className="text-4xl font-bold text-secondary mb-12 tracking-tight">
-                Hoe wij je label <span className="text-primary italic">verbeteren</span>
+                Hoe wij jouw label <span className="text-primary italic">verbeteren</span>
               </h2>
               <ul className="space-y-10">
                 {[
                   { 
                     title: 'Actuele label vaststellen', 
-                    desc: 'We checken je huidige label en analyseren waar het verbruik vandaan komt.'
+                    desc: 'We checken jouw huidige label en analyseren waar het verbruik vandaan komt.'
                   },
                   { 
                     title: 'Simulatie', 

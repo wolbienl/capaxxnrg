@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState, memo } from 'react'
 import { Sun, Battery, Zap, ArrowUpRight, TrendingDown } from 'lucide-react'
@@ -15,7 +16,13 @@ const DashboardHeader = memo(() => (
       </div>
       <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em]">System: Active</span>
     </div>
-    <div className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">CAPAXX Energy</div>
+    <Image
+      src="/images/logo-light.svg"
+      alt="CAPAXX Energy"
+      width={100}
+      height={24}
+      className="h-5 w-auto"
+    />
   </div>
 ))
 DashboardHeader.displayName = 'DashboardHeader'

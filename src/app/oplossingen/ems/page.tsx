@@ -11,8 +11,8 @@ export default function EMSPage() {
     <div className="flex flex-col w-full selection:bg-primary/30">
       <SolutionHero
         icon={BarChart3}
-        title="Zonder EMS"
-        titleHighlight="blijf je gokken."
+        title="Regie begint bij"
+        titleHighlight="EMS."
         description="Realtime inzicht en automatische aansturing van opwek, opslag, laden en verbruik. Wij brengen de regie terug in jouw aansluiting."
         ctaText="Vraag een demo aan"
         ctaHref="/contact"
@@ -28,7 +28,7 @@ export default function EMSPage() {
             {[
               {
                 title: 'Piekreductie',
-                desc: 'Minder verrassingen op je factuur door slimme afvlakking.',
+                desc: 'Minder verrassingen op jouw factuur door slimme afvlakking.',
                 icon: TrendingDown
               },
               {

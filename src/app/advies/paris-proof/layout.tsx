@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateAdvisoryMetadata(
   'Paris Proof',
-  'Maak je vastgoed Paris Proof. Voldoe aan klimaatdoelen en bespaar op energiekosten. Roadmap van nu tot 2050 met haalbare stappen en harde ROI.',
+  'Maak jouw vastgoed Paris Proof. Voldoe aan klimaatdoelen en bespaar op energiekosten. Roadmap van nu tot 2050 met haalbare stappen en harde ROI.',
   [
     'Paris Proof',
     'klimaatneutraal',

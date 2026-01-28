@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateSolutionMetadata(
   'Energieopslag',
-  'Batterijopslag voor peak shaving, zelfverbruik verhogen en netcongestie oplossen. Maak je aansluiting weer bruikbaar met slimme energieopslag.',
+  'Batterijopslag voor peak shaving, zelfverbruik verhogen en netcongestie oplossen. Maak jouw aansluiting weer bruikbaar met slimme energieopslag.',
   [
     'batterijopslag',
     'energieopslag',

@@ -52,7 +52,7 @@ export default function OverOnsPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="text-6xl md:text-8xl font-black text-secondary leading-tight mb-8">
-              Klein team. <br /><span className="text-primary italic">Harde focus.</span>
+              Klein team. <br />Harde <span className="text-primary italic">focus</span>.
             </h1>
             <p className="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto italic text-balance">
               CAPAXX Energy is een spinoff van CAPAXX. We komen uit de wereld van data en operatie. Daarom leveren we geen losse componenten, maar systemen die je kunt sturen.

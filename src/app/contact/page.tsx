@@ -21,7 +21,7 @@ export default function ContactPage() {
               Zeg <span className="text-primary italic">hoi.</span>
             </h1>
             <p className="text-xl md:text-3xl text-slate-500 mb-10 leading-relaxed max-w-3xl italic text-balance">
-              Vertel ons over je pand of portefeuille. We reageren snel, direct en zonder omwegen.
+              Vertel ons over jouw pand of portefeuille. We reageren snel, direct en zonder omwegen.
             </p>
           </motion.div>
         </div>

@@ -59,10 +59,10 @@ export default function LaadinfraPage() {
     <div className="flex flex-col w-full selection:bg-primary/30">
       <SolutionHero
         icon={EvCharger}
-        title="Laadinfra"
-        titleHighlight="zonder gedoe."
-        description="Slim laden voor huurders en bezoekers, volledig geïntegreerd met je netcapaciteit. Anders wordt het een kostenpost."
-        ctaText="Bespreek je laadplan"
+        title="Slimme"
+        titleHighlight="laadinfra."
+        description="Slim laden voor huurders en bezoekers, volledig geïntegreerd met jouw netcapaciteit. Anders wordt het een kostenpost."
+        ctaText="Bespreek jouw laadplan"
         ctaHref="/contact"
         backgroundImage="/images/laadinfra-hero.jpg"
       />
@@ -77,7 +77,7 @@ export default function LaadinfraPage() {
                 <span className="uppercase tracking-[0.2em] text-sm">Heavy Duty & Logistics</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-secondary mb-8 tracking-tight leading-tight">
-                Snelladen is <br /><span className="text-primary italic">een vak apart.</span>
+                <span className="text-primary italic">Snelladen</span> is een vak apart.
               </h2>
               <p className="text-xl text-slate-500 mb-10 leading-relaxed italic">
                 Locaties zoals logistieke hubs, tankstations of wagenparken stellen andere eisen dan een regulier laadpunt. 

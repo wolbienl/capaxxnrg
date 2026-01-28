@@ -49,8 +49,8 @@ export default function ParisProofPage() {
     <div className="flex flex-col w-full selection:bg-primary/30">
       <SolutionHero
         icon={Globe}
-        title="Paris Proof is"
-        titleHighlight="cijferwerk."
+        title="Paris Proof vastgoed:"
+        titleHighlight="meetbaar."
         description="Routekaart naar < 70 kWh/m² voor kantoren. Haalbaar, meetbaar, rendabel. We starten met meten, dan weet je precies hoeveel reductie nodig is en wat het kost."
         ctaText="Vraag Paris Proof-scan aan"
         ctaHref="/contact?type=paris-proof-scan"
@@ -433,7 +433,7 @@ export default function ParisProofPage() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <FadeIn>
             <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">
-              Bereid je vastgoed voor op <span className="italic text-primary">2030</span>
+              Bereid jouw vastgoed voor op <span className="italic text-primary">2030</span>
             </h2>
             <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
               We starten met een Paris Proof-scan om te berekenen hoeveel reductie nodig is en wat de slimste route is.

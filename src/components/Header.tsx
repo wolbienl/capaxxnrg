@@ -228,7 +228,7 @@ export default function Header() {
                       <div className="flex items-center gap-6">
                         <div>
                           <h3 className="text-sm font-bold text-secondary mb-1">Data-gedreven duurzaamheid</h3>
-                          <p className="text-xs text-slate-600">Compliance en certificering op basis van meetbare data uit je eigen installaties.</p>
+                          <p className="text-xs text-slate-600">Compliance en certificering op basis van meetbare data uit jouw eigen installaties.</p>
                         </div>
                       </div>
                       <Link

@@ -83,7 +83,7 @@ export default function LoginPage() {
                 </h1>
                 
                 <p className="text-lg md:text-xl text-slate-500 mb-12 leading-relaxed max-w-xl">
-                  Log in op je persoonlijke portaal voor realtime inzicht in opwek, verbruik en prestaties van al je installaties.
+                  Log in op jouw persoonlijke portaal voor realtime inzicht in opwek, verbruik en prestaties van al jouw installaties.
                 </p>
               </FadeIn>
 
@@ -242,7 +242,7 @@ export default function LoginPage() {
                   <div className="relative z-10">
                     <h3 className="text-xl font-black mb-3">Nog geen toegang?</h3>
                     <p className="text-white/90 mb-6 text-sm leading-relaxed">
-                      Vraag een energiescan aan en krijg direct inzicht in je mogelijkheden. 
+                      Vraag een energiescan aan en krijg direct inzicht in jouw mogelijkheden. 
                       Na realisatie krijg je automatisch toegang tot het portaal.
                     </p>
                     <Link

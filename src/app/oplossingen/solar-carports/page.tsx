@@ -17,9 +17,9 @@ export default function SolarCarportsPage() {
     <div className="flex flex-col w-full selection:bg-primary/30">
       <SolutionHero
         icon={Car}
-        title="Solar carports."
-        titleHighlight="Rendement op het asfalt."
-        description="Maak dubbel gebruik van je terrein. Opwek en laden op één plek, met een moderne uitstraling."
+        title="Parkeren én"
+        titleHighlight="opwekken."
+        description="Maak dubbel gebruik van jouw terrein. Opwek en laden op één plek, met een moderne uitstraling."
         ctaText="Check haalbaarheid"
         ctaHref="/contact"
         backgroundImage="/images/solar-carport.webp"
@@ -86,7 +86,7 @@ export default function SolarCarportsPage() {
               </ul>
             </FadeIn>
             <FadeIn direction="left" className="bg-white/5 backdrop-blur-xl rounded-[3.5rem] p-12 border border-white/10 shadow-2xl">
-              <h3 className="text-3xl font-black mb-8 leading-tight">Visitekaartje voor je pand</h3>
+              <h3 className="text-3xl font-black mb-8 leading-tight">Visitekaartje voor jouw pand</h3>
               <p className="text-slate-400 mb-10 text-lg leading-relaxed italic">
                 Een solar carport is meer dan opwek. Het is een energiecentrale en een modern visitekaartje voor huurders en bezoekers.
               </p>

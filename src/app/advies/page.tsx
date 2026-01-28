@@ -19,7 +19,7 @@ const adviesgebieden = [
   {
     title: 'ESG',
     subtitle: 'Environmental, Social & Governance',
-    description: 'CSRD-conforme rapportages vanuit je eigen EMS-data. Geen giswerk, wel meetbare prestaties.',
+    description: 'CSRD-conforme rapportages vanuit jouw eigen EMS-data. Geen giswerk, wel meetbare prestaties.',
     icon: ClipboardCheck,
     href: '/advies/esg',
     color: 'from-blue-500 to-cyan-500',
@@ -119,7 +119,7 @@ export default function AdviesPage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-500 mb-16 leading-relaxed max-w-3xl mx-auto text-balance">
-              Geen rapporten vol aannames. Wij gebruiken data uit je eigen installaties om te laten zien waar je staat, wat het oplevert en hoe je stappen zet.
+              Geen rapporten vol aannames. Wij gebruiken data uit jouw eigen installaties om te laten zien waar je staat, wat het oplevert en hoe je stappen zet.
             </p>
           </motion.div>
         </div>
@@ -190,7 +190,7 @@ export default function AdviesPage() {
                 {[
                   {
                     title: 'We hebben de data al',
-                    desc: 'Energie, CO₂ en verbruik uit je eigen EMS en meters. Geen handmatig verzamelen.'
+                    desc: 'Energie, CO₂ en verbruik uit jouw eigen EMS en meters. Geen handmatig verzamelen.'
                   },
                   {
                     title: 'Van rapport naar actie',
@@ -198,7 +198,7 @@ export default function AdviesPage() {
                   },
                   {
                     title: 'Continu verbeteren',
-                    desc: 'Geen eenmalig rapport. We blijven meten en bijsturen om je score te verbeteren.'
+                    desc: 'Geen eenmalig rapport. We blijven meten en bijsturen om jouw score te verbeteren.'
                   }
                 ].map((item, i) => (
                   <FadeIn key={i} delay={i * 0.1} direction="right">
@@ -293,7 +293,7 @@ export default function AdviesPage() {
               {[
                 {
                   title: 'Data-gedreven',
-                  desc: 'We adviseren op basis van je eigen energie-data, niet op basis van vuistregels of gemiddeldes.',
+                  desc: 'We adviseren op basis van jouw eigen energie-data, niet op basis van vuistregels of gemiddeldes.',
                   stat: '100% realtime'
                 },
                 {

@@ -141,7 +141,7 @@ export default function OplossingenPage() {
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-8 tracking-tight">
-              Vijf bouwstenen voor <span className="text-primary italic">energie-onafhankelijkheid</span>
+              Alles werkt <span className="text-primary italic">samen</span>.
             </h2>
             <p className="text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
               Al onze oplossingen zijn ontworpen om samen te werken. Zo creëer je een systeem dat meer is dan de som der delen.
@@ -209,7 +209,7 @@ export default function OplossingenPage() {
                   },
                   {
                     title: 'Blijvend optimaliseren',
-                    desc: 'We monitoren en sturen bij. Zo blijf je maximaal rendement halen uit je assets.'
+                    desc: 'We monitoren en sturen bij. Zo blijf je maximaal rendement halen uit jouw assets.'
                   }
                 ].map((item, i) => (
                   <FadeIn key={i} delay={i * 0.1} direction="right">
@@ -314,7 +314,7 @@ export default function OplossingenPage() {
                 },
                 {
                   title: 'Continu optimaliseren',
-                  desc: 'We blijven meten, rapporteren en bijsturen. Zo haal je blijvend het maximale uit je assets.',
+                  desc: 'We blijven meten, rapporteren en bijsturen. Zo haal je blijvend het maximale uit jouw assets.',
                   stat: 'Blijvend beter'
                 }
               ].map((item, i) => (

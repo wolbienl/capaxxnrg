@@ -1,50 +1,23 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Zap, Sun, Battery, EvCharger } from 'lucide-react'
+import { ArrowRight, FileText, Camera, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
-
-const cases = [
-  {
-    title: 'Piekreductie door Slimme Opslag',
-    sector: 'Logistiek',
-    situation: 'Netcongestie verhinderde uitbreiding van het laadpark voor elektrische trucks.',
-    goal: 'Verhogen van de laadcapaciteit zonder verzwaring van de hoofdaansluiting.',
-    solution: 'Batterijopslag (300kWh) in combinatie met een EMS voor peak shaving.',
-    results: {
-      peak: '40% verlaging',
-      charging: '2x meer laders',
-      co2: '15 ton p.j.'
-    },
-    tags: ['Batterij', 'EMS', 'Logistiek'],
-    icon: Battery,
-    image: '/images/storage-outdoor.avif'
-  },
-  {
-    title: 'Solar Project Rendement',
-    sector: 'Commercieel',
-    situation: 'Een groot distributiecentrum wil de energiekosten verlagen en verduurzamen.',
-    goal: 'Groene stroom en labelverbetering.',
-    solution: 'Grootschalig PV-systeem met 2.500 panelen en EMS-integratie.',
-    results: {
-      kwh: '1.2M kWh',
-      roi: '4.2 jaar',
-      label: 'Naar Label A'
-    },
-    tags: ['Zonnepanelen', 'EMS', 'Vastgoed'],
-    icon: Sun,
-    image: '/images/solar-commercial.jpg'
-  }
-]
 
 export default function CasesPage() {
   return (
     <div className="flex flex-col w-full selection:bg-primary/30">
+      {/* Hero Section */}
       <section className="relative pt-40 pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-30" />
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.08, scale: 1 }}
+            transition={{ duration: 2 }}
+            className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-primary rounded-full blur-[120px]" 
+          />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.div
@@ -53,89 +26,98 @@ export default function CasesPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="text-6xl md:text-8xl font-black text-secondary leading-tight mb-8">
-              <span className="text-primary italic">Impact</span> in cijfers.
+              Cases in de <span className="text-primary italic">maak</span>.
             </h1>
-            <p className="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto italic text-balance">
-              Realistische scenario's voor commercieel vastgoed. Concrete cijfers die laten zien wat er gebeurt als je data, techniek en sturing combineert.
+            <p className="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto text-balance">
+              We zijn druk bezig met het documenteren van onze laatste projecten. Binnenkort delen we hier concrete resultaten, cijfers en verhalen uit de praktijk.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* Coming Soon Content */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="space-y-40">
-            {cases.map((project, i) => (
-              <FadeIn key={i} direction="up" className="group">
-                <div className="grid lg:grid-cols-2 gap-24 items-center">
-                  <div className="aspect-video bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl relative border border-slate-800 group-hover:border-primary/30 transition-colors">
-                     <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000"
-                     />
-                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50" />
-                     <div className="absolute inset-0 flex flex-col justify-center items-center p-12">
-                        <project.icon className="w-24 h-24 text-white/10 absolute mb-12" />
-                        <div className="relative z-10 text-center">
-                           <div className="text-primary font-black text-7xl mb-4 tracking-tighter">{Object.values(project.results)[0]}</div>
-                           <div className="text-slate-300 font-black uppercase tracking-[0.3em] text-sm">{Object.keys(project.results)[0]}</div>
-                        </div>
-                     </div>
+          <div className="max-w-4xl mx-auto">
+            <FadeIn>
+              <div className="bg-slate-50 rounded-[3rem] p-12 md:p-16 border border-slate-100 text-center relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl -ml-12 -mb-12" />
+                
+                <div className="relative z-10">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-50 rounded-3xl text-primary mb-8">
+                    <FileText className="w-10 h-10" />
                   </div>
                   
-                  <div>
-                    <div className="inline-block px-4 py-1 rounded-lg bg-orange-50 text-primary text-xs font-black uppercase tracking-[0.2em] mb-6">
-                      {project.sector}
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-black text-secondary mb-8 leading-tight tracking-tight group-hover:text-primary transition-colors italic">
-                      {project.title}
-                    </h2>
-                    
-                    <div className="space-y-10 mb-12">
-                      <p className="text-2xl text-slate-500 italic leading-relaxed border-l-4 border-primary/20 pl-8">
-                        &quot;{project.situation}&quot;
-                      </p>
-                      <div className="grid sm:grid-cols-2 gap-12">
-                        <div className="space-y-4">
-                          <h4 className="text-xs font-black text-slate-300 uppercase tracking-[0.2em]">De Oplossing</h4>
-                          <p className="text-lg font-bold text-secondary leading-relaxed">{project.solution}</p>
-                        </div>
-                        <div className="space-y-4">
-                          <h4 className="text-xs font-black text-slate-300 uppercase tracking-[0.2em]">Het Doel</h4>
-                          <p className="text-lg font-bold text-secondary leading-relaxed">{project.goal}</p>
-                        </div>
-                      </div>
-                    </div>
+                  <h2 className="text-3xl md:text-4xl font-black text-secondary mb-6 tracking-tight">
+                    Wat kun je verwachten?
+                  </h2>
+                  
+                  <p className="text-lg text-slate-500 mb-12 leading-relaxed max-w-2xl mx-auto">
+                    Onze cases laten zien hoe commercieel vastgoed profiteert van geïntegreerde energie-oplossingen. Van situatie tot resultaat, met concrete cijfers.
+                  </p>
 
-                    <div className="grid grid-cols-3 gap-6">
-                       {Object.entries(project.results).map(([key, val], idx) => (
-                         <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 group-hover:bg-white group-hover:shadow-xl transition-all">
-                            <div className="text-primary font-black text-2xl mb-1">{val}</div>
-                            <div className="text-[10px] uppercase font-black text-slate-400 tracking-widest">{key}</div>
-                         </div>
-                       ))}
-                    </div>
+                  {/* What's coming */}
+                  <div className="grid md:grid-cols-3 gap-6 mb-12">
+                    {[
+                      {
+                        icon: BarChart3,
+                        title: 'Concrete cijfers',
+                        desc: 'ROI, besparingen en terugverdientijden'
+                      },
+                      {
+                        icon: Camera,
+                        title: 'Projectbeelden',
+                        desc: 'Van installatie tot eindresultaat'
+                      },
+                      {
+                        icon: FileText,
+                        title: 'Volledige verhalen',
+                        desc: 'Uitdaging, aanpak en oplossing'
+                      }
+                    ].map((item, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 + i * 0.1 }}
+                        className="bg-white p-6 rounded-2xl border border-slate-100"
+                      >
+                        <item.icon className="w-8 h-8 text-primary mb-4 mx-auto" />
+                        <h3 className="font-bold text-secondary mb-2">{item.title}</h3>
+                        <p className="text-sm text-slate-500">{item.desc}</p>
+                      </motion.div>
+                    ))}
                   </div>
+
+                  <p className="text-slate-400 text-sm italic">
+                    Wil je alvast weten wat wij voor jouw pand kunnen betekenen?
+                  </p>
                 </div>
-              </FadeIn>
-            ))}
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
+      {/* CTA Section */}
       <section className="py-32 bg-secondary text-white text-center rounded-t-[4rem]">
         <div className="container mx-auto px-4 md:px-6">
-           <FadeIn>
-             <h2 className="text-4xl md:text-6xl font-black mb-10 leading-tight">Klaar voor jouw scenario?</h2>
-             <Link
-                href="/contact"
-                className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
-              >
-                Start jouw scan <ArrowRight className="w-6 h-6 ml-3" />
-              </Link>
-           </FadeIn>
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+              Liever direct in gesprek?
+            </h2>
+            <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+              We vertellen je graag persoonlijk over onze projecten en rekenen direct jouw scenario door.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-12 py-6 bg-primary text-white font-black rounded-2xl text-xl hover:bg-accent transition-all shadow-xl shadow-black/20"
+            >
+              Plan een kennismaking <ArrowRight className="w-6 h-6 ml-3" />
+            </Link>
+          </FadeIn>
         </div>
       </section>
     </div>

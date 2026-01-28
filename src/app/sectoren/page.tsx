@@ -50,7 +50,7 @@ export default function SectorenPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="text-6xl md:text-8xl font-black text-secondary leading-tight mb-8">
-              Geen <span className="text-primary italic">one size</span> fits all.
+              Geen one-size-fits-all. <br />Wel <span className="text-primary italic">maatwerk</span>.
             </h1>
             <p className="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto italic text-balance">
               Elke sector heeft eigen uitdagingen en kansen. Wij snappen de nuances van commercieel vastgoed.

@@ -30,7 +30,7 @@ const solutions = [
   },
   {
     title: 'Energieopslag',
-    description: 'Peak shaving, zelfverbruik verhogen, flexibiliteit terug in je aansluiting.',
+    description: 'Peak shaving, zelfverbruik verhogen, flexibiliteit terug in jouw aansluiting.',
     icon: Battery,
     href: '/oplossingen/energieopslag',
     color: 'bg-blue-600'
@@ -102,11 +102,11 @@ export default function Home() {
               className="z-10"
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-10 text-balance">
-                Maak energie een <span className="text-primary italic">asset</span> voor je vastgoed.
+                Maak energie een <span className="text-primary italic">asset</span> voor jouw vastgoed.
               </h1>
               
               <p className="text-lg md:text-xl xl:text-2xl text-slate-500 mb-12 leading-relaxed max-w-xl text-balance">
-                Opwek, opslag, laden en sturing, zodat je locatie kan doorgroeien, ook met netcongestie.
+                Opwek, opslag, laden en sturing, zodat jouw locatie kan doorgroeien, ook met netcongestie.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5">
@@ -241,7 +241,7 @@ export default function Home() {
                 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.1]"
               >
                 Energie die <span className="text-primary italic">meetelt</span>,<br />
-                data die <span className="text-primary italic">stuurt</span>.
+                <span className="text-primary italic">data</span> die stuurt.
               </motion.h2>
               
               <motion.p 
@@ -251,7 +251,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl text-slate-400 mb-8 leading-relaxed"
               >
-                Geen black box, maar volledige transparantie. Zie in real-time hoe je opwek, 
+                Geen black box, maar volledige transparantie. Zie in real-time hoe jouw opwek, 
                 verbruik en opslag elkaar versterken. Onze dashboards geven jou de regie.
               </motion.p>
               
@@ -498,7 +498,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <FadeIn className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-6 tracking-tight">
-                Bouwstenen van een <br /><span className="text-primary">toekomstvast</span> systeem.
+                Bouwstenen van een <br /><span className="text-primary italic">duurzaam</span> systeem.
               </h2>
             </FadeIn>
             <FadeIn delay={0.2}>
