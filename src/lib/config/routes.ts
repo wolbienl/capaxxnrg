@@ -66,6 +66,12 @@ export const ROUTES = {
     changeFreq: 'monthly' as const
   },
   
+  login: {
+    path: '/login',
+    priority: 0.6,
+    changeFreq: 'monthly' as const
+  },
+  
   werkwijze: {
     path: '/werkwijze',
     priority: 0.9,

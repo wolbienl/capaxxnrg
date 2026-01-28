@@ -255,6 +255,12 @@ export default function Header() {
               Contact
             </Link>
             <Link
+              href="/login"
+              className="text-secondary font-bold hover:text-primary transition-colors"
+            >
+              Login
+            </Link>
+            <Link
               href="/contact?type=energiescan"
               className="px-8 py-3.5 bg-secondary text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 active:scale-95"
             >
@@ -342,6 +348,13 @@ export default function Header() {
                     {link.title}
                   </Link>
                 ))}
+                <Link
+                  href="/login"
+                  className="block p-3 font-medium text-secondary hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Login
+                </Link>
               </div>
 
               {/* CTAs */}
