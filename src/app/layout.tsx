@@ -39,14 +39,6 @@ export const metadata: Metadata = {
     ],
     path: '/'
   }),
-  icons: {
-    icon: [
-      { url: '/images/favicon.svg', type: 'image/svg+xml' },
-    ],
-    apple: [
-      { url: '/images/favicon.svg', type: 'image/svg+xml' },
-    ],
-  },
 };
 
 // Viewport configuratie voor responsive design en mobile optimization
