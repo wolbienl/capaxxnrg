@@ -9,7 +9,7 @@
 
 **Inhoud suggestie:**
 - CAPAXX Energy logo (groot en prominent)
-- Tagline: "Unlock waarde uit jouw vastgoedenergie"
+- Tagline: "Maak energie een asset voor jouw vastgoed."
 - Achtergrond: Moderne energie-installatie of gradient met brand colors
 - Branding: Primary orange (#f06a00) en secondary dark (#0f172a)
 
