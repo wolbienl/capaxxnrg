@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import Preloader from './Preloader'
+import PageTransition from './PageTransition'
+import { TransitionProvider } from './TransitionContext'
 
 interface ClientLayoutProps {
   children: React.ReactNode
@@ -37,26 +39,24 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
   }
 
   return (
-    <>
+    <TransitionProvider>
       <AnimatePresence mode="wait">
         {shouldShowPreloader && (
           <Preloader onComplete={handlePreloaderComplete} duration={2500} />
         )}
       </AnimatePresence>
       
-      <motion.div
-        initial={shouldShowPreloader ? { opacity: 0 } : { opacity: 1 }}
-        animate={{ 
-          opacity: contentReady || !shouldShowPreloader ? 1 : 0 
-        }}
-        transition={{ 
-          duration: 0.6, 
-          ease: [0.4, 0, 0.2, 1],
-          delay: contentReady && shouldShowPreloader ? 0 : 0
+      {/* Page transition for navigation between pages */}
+      <PageTransition />
+      
+      <div
+        style={{
+          opacity: contentReady || !shouldShowPreloader ? 1 : 0,
+          transition: 'opacity 0.6s ease-out',
         }}
       >
         {children}
-      </motion.div>
-    </>
+      </div>
+    </TransitionProvider>
   )
 }

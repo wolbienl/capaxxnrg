@@ -1,6 +1,8 @@
-import Link from 'next/link'
+'use client'
+
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Linkedin, ArrowRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
+import TransitionLink from './TransitionLink'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-12 mb-12 md:mb-20 lg:mb-24">
           {/* Brand Column */}
           <div className="space-y-8">
-            <Link href="/" className="inline-block transition-transform hover:scale-105">
+            <TransitionLink href="/" className="inline-block transition-transform hover:scale-105">
               <Image
                 src="/images/logo-light.svg"
                 alt="CAPAXX ENERGY"
@@ -19,14 +21,14 @@ export default function Footer() {
                 height={50}
                 className="h-10 w-auto"
               />
-            </Link>
+            </TransitionLink>
             <p className="text-slate-400 max-w-xs leading-relaxed italic">
               Unlock waarde uit jouw vastgoedenergie. Voor commercieel vastgoed dat wil doorgroeien.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300">
+              <TransitionLink href="#" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
-              </Link>
+              </TransitionLink>
             </div>
           </div>
 
@@ -36,13 +38,13 @@ export default function Footer() {
             <ul className="space-y-5">
               {['Zonnepanelen', 'Energieopslag', 'Laadinfra', 'Solar Carports', 'EMS'].map((item) => (
                 <li key={item}>
-                  <Link 
+                  <TransitionLink 
                     href={`/oplossingen/${item.toLowerCase().replace(' ', '-')}`} 
                     className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
                   >
                     <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
                     {item}
-                  </Link>
+                  </TransitionLink>
                 </li>
               ))}
             </ul>
@@ -54,13 +56,13 @@ export default function Footer() {
             <ul className="space-y-5">
               {['Advies', 'Cases', 'Over ons'].map((item) => (
                 <li key={item}>
-                  <Link 
+                  <TransitionLink 
                     href={`/${item.toLowerCase().replace(' ', '-')}`} 
                     className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
                   >
                     <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
                     {item}
-                  </Link>
+                  </TransitionLink>
                 </li>
               ))}
             </ul>
@@ -99,8 +101,8 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs font-bold text-slate-500 uppercase tracking-widest">
           <p>© {currentYear} CAPAXX Energy. Geen dikke praat, wel resultaat.</p>
           <div className="flex space-x-8">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-            <Link href="/voorwaarden" className="hover:text-white transition-colors">Voorwaarden</Link>
+            <TransitionLink href="/privacy" className="hover:text-white transition-colors">Privacy</TransitionLink>
+            <TransitionLink href="/voorwaarden" className="hover:text-white transition-colors">Voorwaarden</TransitionLink>
           </div>
         </div>
       </div>
