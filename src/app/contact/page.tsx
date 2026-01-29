@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, ArrowRight, Loader2 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { submitContactForm } from './actions'
 
 export default function ContactPage() {
   const router = useRouter()
@@ -17,21 +18,11 @@ export default function ContactPage() {
     setError(null)
 
     const formData = new FormData(e.currentTarget)
+    const result = await submitContactForm(formData)
 
-    try {
-      const response = await fetch('https://usebasin.com/f/1f4650e9075c', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      })
-
-      if (response.ok) {
-        router.push('/contact/bedankt')
-      } else {
-        setError('Er ging iets mis. Probeer het opnieuw of neem direct contact met ons op.')
-        setIsSubmitting(false)
-      }
-    } catch {
+    if (result.success) {
+      router.push('/contact/bedankt')
+    } else {
       setError('Er ging iets mis. Probeer het opnieuw of neem direct contact met ons op.')
       setIsSubmitting(false)
     }
