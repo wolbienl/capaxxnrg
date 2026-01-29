@@ -1,31 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, ArrowRight, Loader2 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
-import { submitContactForm } from './actions'
+
+const BASIN_URL = 'https://usebasin.com/f/1f4650e9075c'
 
 export default function ContactPage() {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const handleSubmit = () => {
     setIsSubmitting(true)
-    setError(null)
-
-    const formData = new FormData(e.currentTarget)
-    const result = await submitContactForm(formData)
-
-    if (result.success) {
-      router.push('/contact/bedankt')
-    } else {
-      setError('Er ging iets mis. Probeer het opnieuw of neem direct contact met ons op.')
-      setIsSubmitting(false)
-    }
   }
 
   return (
@@ -102,7 +88,13 @@ export default function ContactPage() {
 
             <FadeIn direction="left" className="bg-white rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] p-8 md:p-12 lg:p-16 shadow-[0_30px_100px_rgba(0,0,0,0.1)] border border-slate-100 relative">
                <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-secondary mb-8 md:mb-12 tracking-tight">Start het gesprek.</h3>
-               <form className="space-y-8" onSubmit={handleSubmit}>
+               <form 
+                  className="space-y-8" 
+                  action={BASIN_URL}
+                  method="POST"
+                  onSubmit={handleSubmit}
+               >
+                  <input type="hidden" name="_next" value="https://capaxx-energy.nl/contact/bedankt" />
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-3">
                       <label htmlFor="naam" className="text-xs font-black text-slate-300 uppercase tracking-[0.2em] ml-2">Jouw Naam</label>
@@ -131,11 +123,6 @@ export default function ContactPage() {
                     <label htmlFor="bericht" className="text-xs font-black text-slate-300 uppercase tracking-[0.2em] ml-2">Bericht</label>
                     <textarea id="bericht" name="bericht" required className="w-full px-6 py-5 bg-slate-50 border border-slate-100 rounded-[1.5rem] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-secondary font-medium min-h-[180px]" placeholder="Vertel ons over jouw pand of uitdaging..."></textarea>
                   </div>
-                  {error && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-red-600 font-medium">
-                      {error}
-                    </div>
-                  )}
                   <button type="submit" disabled={isSubmitting} className="w-full py-6 bg-secondary text-white font-black rounded-[1.5rem] text-xl hover:bg-slate-800 transition-all shadow-2xl shadow-slate-200 flex items-center justify-center group active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed">
                     {isSubmitting ? (
                       <>
