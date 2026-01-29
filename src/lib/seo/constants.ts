@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
   name: 'CAPAXX Energy',
   url: 'https://www.capaxxenergy.nl',
   description: 'Energie-oplossingen voor commercieel vastgoed in Twente. Zonnepanelen, energieopslag, laadinfra en EMS voor duurzame bedrijfspanden.',
-  tagline: 'Unlock waarde uit jouw vastgoedenergie',
+  tagline: 'Maak energie een asset voor jouw vastgoed.',
   locale: 'nl_NL',
   
   contact: {

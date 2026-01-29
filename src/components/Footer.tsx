@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </TransitionLink>
             <p className="text-slate-400 max-w-xs leading-relaxed italic">
-              Unlock waarde uit jouw vastgoedenergie. Voor commercieel vastgoed dat wil doorgroeien.
+              Maak energie een asset voor jouw vastgoed.
             </p>
             <div className="flex space-x-4">
               <TransitionLink href="#" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300">
