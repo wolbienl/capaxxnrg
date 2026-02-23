@@ -15,10 +15,14 @@ import {
   ShieldCheck,
   TrendingUp,
   Globe,
-  EvCharger
+  EvCharger,
+  Building2,
+  Factory,
+  Cable,
+  Scale
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
-import HomeDashboard from '@/components/HomeDashboard'
+import FloatingPhone from '@/components/FloatingPhone'
 
 const solutions = [
   {
@@ -302,11 +306,11 @@ export default function Home() {
                 className="mt-12"
               >
                 <Link
-                  href="/oplossingen/ems"
+                  href="/contact?type=energiescan"
                   className="inline-flex items-center px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-accent transition-all shadow-xl shadow-primary/20 group relative overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center">
-                    Ontdek EMS <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    Plan energiescan <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <motion.div
                     className="absolute inset-0 bg-white/10"
@@ -318,19 +322,15 @@ export default function Home() {
               </motion.div>
             </FadeIn>
             
-            <FadeIn direction="left" delay={0.2} className="flex items-center justify-center lg:justify-end">
+            <FadeIn direction="left" delay={0.2} className="flex items-center justify-center">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9, rotateY: 15 }}
-                whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{ scale: 1.02, rotateY: -2 }}
                 className="relative"
               >
-                <HomeDashboard />
-                
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl opacity-30 -z-10 scale-110" />
+                <FloatingPhone />
               </motion.div>
             </FadeIn>
           </div>
@@ -491,6 +491,249 @@ export default function Home() {
                   className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500 rounded-2xl opacity-20 blur-xl"
                 />
               </motion.div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* --- NETCONGESTIE: DOELGROEPEN --- */}
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-900 overflow-hidden relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(240,106,0,0.08),transparent_60%)]" />
+        </div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-12 md:mb-20">
+            <FadeIn>
+              <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-lg bg-primary/10 text-primary text-sm font-bold mb-6 tracking-widest uppercase">
+                <Zap className="w-4 h-4" />
+                <span>Netcongestie</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-[1.05] tracking-tight">
+                22.000 bedrijven op de <span className="text-primary italic">wachtlijst.</span>
+              </h2>
+              <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                Het net zit vol. Maar er zijn routes om toch door te groeien. Cable pooling, 
+                zelfaanleg, flexibele transportrechten — wij implementeren wat bij jouw situatie past.
+              </p>
+            </FadeIn>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                icon: Building2,
+                title: 'Vastgoed & bedrijventerreinen',
+                problem: 'Je terrein kan niet uitbreiden',
+                description: 'Huurders vertrekken, laadpalen worden geblokkeerd, grond is niet meer bouwrijp. Wij organiseren de oplossing op terreinniveau.',
+                href: '/vastgoed',
+                delay: 0
+              },
+              {
+                icon: Sun,
+                title: 'Projectontwikkeling zon & wind',
+                problem: 'Je park krijgt geen aansluiting',
+                description: 'Curtailment stijgt, de businesscase verslechtert. Met zelfaanleg en flexibele transportrechten houd je regie over je project.',
+                href: '/projectontwikkeling',
+                delay: 0.1
+              },
+              {
+                icon: Factory,
+                title: 'Industrie & grootverbruikers',
+                problem: 'Je elektrificatie kan niet door',
+                description: '75% van de verduurzamingsplannen loopt vast op het net. Alternatieve transportrechten en peak shaving bieden een weg vooruit.',
+                href: '/industrie',
+                delay: 0.2
+              }
+            ].map((item, i) => (
+              <FadeIn key={i} delay={item.delay}>
+                <Link href={item.href} className="group block h-full">
+                  <motion.div
+                    whileHover={{ y: -8 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[2rem] p-8 md:p-10 hover:border-primary/30 hover:bg-white/10 transition-all duration-300 h-full flex flex-col"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                      <item.icon className="w-7 h-7" />
+                    </div>
+                    <p className="text-primary font-bold text-sm uppercase tracking-widest mb-3">{item.title}</p>
+                    <h3 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight group-hover:text-primary transition-colors">
+                      {item.problem}
+                    </h3>
+                    <p className="text-slate-400 leading-relaxed mb-8 flex-grow">
+                      {item.description}
+                    </p>
+                    <div className="flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform">
+                      Bekijk oplossingen <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </motion.div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- ENERGIEGEMEENSCHAP --- */}
+      <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            <FadeIn direction="right">
+              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white group">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/capaxx-energy-energiegemeenschap.png"
+                    alt="Energiegemeenschap op bedrijventerrein — cable pooling tussen gebouwen"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 via-transparent to-transparent" />
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-5 border border-white shadow-2xl"
+                >
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { value: '4', label: 'Partijen per aansluiting' },
+                      { value: '100 kVA', label: 'Minimale drempel' },
+                      { value: '2027', label: 'GTO verplicht' }
+                    ].map((stat, i) => (
+                      <div key={i}>
+                        <div className="text-xl md:text-2xl font-black text-primary">{stat.value}</div>
+                        <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.2}>
+              <div className="inline-block px-4 py-1 rounded-lg bg-primary/5 border border-primary/10 text-primary text-sm font-bold mb-6 tracking-widest uppercase">
+                Energiegemeenschap
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6 leading-[1.1] tracking-tight">
+                Richt een energiegemeenschap op <span className="text-primary italic">met je buren.</span>
+              </h2>
+              <p className="text-lg text-slate-500 mb-6 leading-relaxed">
+                Als je op een bedrijventerrein zit waar het net vol is, hoef je niet meer te wachten tot de netbeheerder het net verzwaart. 
+                Je kunt nu met je buren om tafel en samen regelen dat de beschikbare capaciteit beter wordt verdeeld.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  { title: 'Groepstransportovereenkomst (GTO)', text: 'Gezamenlijk transportcapaciteit contracteren bij de netbeheerder, terwijl ieder zijn eigen aansluiting behoudt.' },
+                  { title: 'Cable pooling', text: 'Eén aansluiting delen met maximaal vier partijen, vanaf 100 kVA. Sinds de Energiewet 2026 voor alle installatietypes.' },
+                  { title: 'Individuele flexibiliteit', text: 'Batterijopslag, slim laden, peak shaving. Met de Flex-e subsidie dekt de overheid tot €300.000 van de investering.' }
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div>
+                      <p className="font-bold text-secondary">{item.title}</p>
+                      <p className="text-sm text-slate-500 leading-relaxed">{item.text}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <p className="text-sm text-slate-400 italic mb-8">
+                Het klinkt simpel. Dat is het niet. Je hebt een energiescan nodig, afstemming met de netbeheerder 
+                en een businesscase die voor alle partijen werkt. Maar de mogelijkheid is er nu.
+              </p>
+              <Link
+                href="/kennisbank/cable-pooling"
+                className="inline-flex items-center px-8 py-4 bg-secondary text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 group"
+              >
+                Meer over cable pooling <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* --- ZELF JE KABEL LEGGEN --- */}
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-50 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            <FadeIn direction="right" className="order-2 lg:order-1">
+              <div className="inline-block px-4 py-1 rounded-lg bg-primary/5 border border-primary/10 text-primary text-sm font-bold mb-6 tracking-widest uppercase">
+                Zelfaanleg
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6 leading-[1.1] tracking-tight">
+                Zelf je <span className="text-primary italic">kabel</span> leggen.
+              </h2>
+              <p className="text-lg text-slate-500 mb-6 leading-relaxed">
+                Sta je op een wachtlijst of plan je nieuwbouw met een forse vermogensbehoefte? 
+                De nieuwe Energiewet heeft de drempel voor zelfaanleg van netaansluitingen verlaagd 
+                van 10 MVA naar <span className="font-bold text-secondary">2,3 MVA</span>.
+              </p>
+              <p className="text-lg text-slate-500 mb-6 leading-relaxed">
+                Voorheen was dat recht voorbehouden aan grote industriële partijen en datacenters. 
+                Nu geldt het voor een veel bredere groep: distributiecentra, productielocaties, 
+                grote kantoorpanden, commercieel vastgoed.
+              </p>
+              <div className="bg-white rounded-2xl p-6 border border-slate-100 mb-6">
+                <p className="text-secondary font-bold mb-2">Wat betekent dat concreet?</p>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Als jouw pand meer dan 2,3 MVA nodig heeft, mag je zelf een gekwalificeerde aannemer inschakelen 
+                  die het kabeltracé naar het onderstation aanlegt. De netbeheerder stelt de technische eisen en 
+                  koppelt de leiding aan het net. Maar jij bepaalt het tempo.
+                </p>
+              </div>
+              <p className="text-sm text-slate-400 italic mb-8">
+                Het is geen kwestie van even een kabel de grond in leggen. Je hebt te maken met technische eisen 
+                die per netbeheerder verschillen, vergunningen, KLIC-meldingen en het vinden van een partij 
+                die het daadwerkelijk kan uitvoeren.
+              </p>
+              <Link
+                href="/kennisbank/zelfaanleg"
+                className="inline-flex items-center px-8 py-4 bg-secondary text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 group"
+              >
+                Meer over zelfaanleg <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.2} className="order-1 lg:order-2">
+              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white group">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/capaxx-energy-zelf-kabel-leggen16c.png"
+                    alt="Zelfaanleg van netaansluiting — kabel leggen in het veld"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 via-transparent to-transparent" />
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-xl rounded-2xl p-5 border border-white shadow-2xl"
+                >
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    {[
+                      { value: '2,3', label: 'MVA drempel' },
+                      { value: '50%', label: 'Sneller realisatie' },
+                      { value: '2026', label: 'Energiewet' }
+                    ].map((stat, i) => (
+                      <div key={i}>
+                        <div className="text-xl md:text-2xl font-black text-primary">{stat.value}</div>
+                        <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
             </FadeIn>
           </div>
         </div>

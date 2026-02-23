@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-white pt-16 pb-8 md:pt-24 md:pb-12 lg:pt-32 lg:pb-16">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-12 mb-12 md:mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-8 mb-12 md:mb-20 lg:mb-24">
           {/* Brand Column */}
           <div className="space-y-8">
             <TransitionLink href="/" className="inline-block transition-transform hover:scale-105">
@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </TransitionLink>
             <p className="text-slate-400 max-w-xs leading-relaxed italic">
-              Maak energie een asset voor jouw vastgoed.
+              Maximale capaciteit uit een vol net.
             </p>
             <div className="flex space-x-4">
               <TransitionLink href="#" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300">
@@ -32,36 +32,69 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Oplossingen */}
+          {/* Netcongestie */}
           <div>
-            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Oplossingen</h4>
+            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Netcongestie</h4>
             <ul className="space-y-5">
-              {['Zonnepanelen', 'Energieopslag', 'Laadinfra', 'Solar Carports', 'EMS'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'Vastgoed', href: '/vastgoed' },
+                { label: 'Projectontwikkeling', href: '/projectontwikkeling' },
+                { label: 'Industrie', href: '/industrie' },
+              ].map((item) => (
+                <li key={item.label}>
                   <TransitionLink 
-                    href={`/oplossingen/${item.toLowerCase().replace(' ', '-')}`} 
+                    href={item.href} 
                     className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
                   >
                     <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
-                    {item}
+                    {item.label}
                   </TransitionLink>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Snelkoppelingen */}
+          {/* Kennisbank */}
           <div>
-            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Navigatie</h4>
+            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Kennisbank</h4>
             <ul className="space-y-5">
-              {['Advies', 'Cases', 'Over ons'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'Cable pooling', href: '/kennisbank/cable-pooling' },
+                { label: 'Transportrechten', href: '/kennisbank/transportrechten' },
+                { label: 'Zelfaanleg', href: '/kennisbank/zelfaanleg' },
+                { label: 'Energiewet 2026', href: '/kennisbank/energiewet-2026' },
+              ].map((item) => (
+                <li key={item.label}>
                   <TransitionLink 
-                    href={`/${item.toLowerCase().replace(' ', '-')}`} 
+                    href={item.href} 
                     className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
                   >
                     <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
-                    {item}
+                    {item.label}
+                  </TransitionLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Navigatie */}
+          <div>
+            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Navigatie</h4>
+            <ul className="space-y-5">
+              {[
+                { label: 'Oplossingen', href: '/oplossingen' },
+                { label: 'Advies', href: '/advies' },
+                { label: 'Werkwijze', href: '/werkwijze' },
+                { label: 'Cases', href: '/cases' },
+                { label: 'Over ons', href: '/over-ons' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <TransitionLink 
+                    href={item.href} 
+                    className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
+                  >
+                    <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
+                    {item.label}
                   </TransitionLink>
                 </li>
               ))}

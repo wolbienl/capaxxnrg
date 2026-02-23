@@ -89,6 +89,52 @@ export const ROUTES = {
     priority: 0.8,
     changeFreq: 'monthly' as const
   },
+
+  vastgoed: {
+    path: '/vastgoed',
+    priority: 0.9,
+    changeFreq: 'weekly' as const
+  },
+
+  projectontwikkeling: {
+    path: '/projectontwikkeling',
+    priority: 0.9,
+    changeFreq: 'weekly' as const
+  },
+
+  industrie: {
+    path: '/industrie',
+    priority: 0.9,
+    changeFreq: 'weekly' as const
+  },
+
+  kennisbank: {
+    path: '/kennisbank',
+    priority: 0.9,
+    changeFreq: 'weekly' as const,
+    children: {
+      cablePooling: {
+        path: '/kennisbank/cable-pooling',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      transportrechten: {
+        path: '/kennisbank/transportrechten',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      zelfaanleg: {
+        path: '/kennisbank/zelfaanleg',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      energiewet2026: {
+        path: '/kennisbank/energiewet-2026',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      }
+    }
+  },
   
   advies: {
     path: '/advies',

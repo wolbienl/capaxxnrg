@@ -174,9 +174,9 @@ print_status "Uploading static website to Host Shock..."
 echo -e "${YELLOW}Uploading files...${NC}"
 
 # Rsync de statische website naar de server
-rsync -avz --progress \
-  -e "sshpass -e ssh -o StrictHostKeyChecking=no" \
-  ./out/ capaxxenergynl@31.7.7.98:$REMOTE_DIR/
+# Gebruik RSYNC_RSH voor correcte sshpass integratie
+export RSYNC_RSH="sshpass -e ssh -o StrictHostKeyChecking=no"
+rsync -avz --progress ./out/ capaxxenergynl@31.7.7.98:$REMOTE_DIR/
 
 if [ $? -eq 0 ]; then
     print_success "Website upload successful"
