@@ -14,7 +14,7 @@ const SITE_URL = 'https://capaxx-energy.nl';
 
 const routes = [
   { path: '/', priority: 1.0, changeFreq: 'weekly' },
-  
+
   // Oplossingen
   { path: '/oplossingen/', priority: 0.9, changeFreq: 'weekly' },
   { path: '/oplossingen/zonnepanelen/', priority: 0.8, changeFreq: 'monthly' },
@@ -22,20 +22,35 @@ const routes = [
   { path: '/oplossingen/laadinfra/', priority: 0.8, changeFreq: 'monthly' },
   { path: '/oplossingen/solar-carports/', priority: 0.8, changeFreq: 'monthly' },
   { path: '/oplossingen/ems/', priority: 0.8, changeFreq: 'monthly' },
-  
+
   // Overige pagina's
   { path: '/over-ons/', priority: 0.9, changeFreq: 'monthly' },
   { path: '/contact/', priority: 0.9, changeFreq: 'monthly' },
   { path: '/werkwijze/', priority: 0.9, changeFreq: 'monthly' },
   { path: '/cases/', priority: 0.8, changeFreq: 'weekly' },
   { path: '/sectoren/', priority: 0.8, changeFreq: 'monthly' },
-  
+
+  // Sectoren
+  { path: '/projectontwikkeling/', priority: 0.8, changeFreq: 'monthly' },
+  { path: '/industrie/', priority: 0.8, changeFreq: 'monthly' },
+  { path: '/vastgoed/', priority: 0.8, changeFreq: 'monthly' },
+
   // Advies
   { path: '/advies/', priority: 0.8, changeFreq: 'monthly' },
   { path: '/advies/breeam/', priority: 0.7, changeFreq: 'monthly' },
   { path: '/advies/energielabels/', priority: 0.7, changeFreq: 'monthly' },
   { path: '/advies/esg/', priority: 0.7, changeFreq: 'monthly' },
   { path: '/advies/paris-proof/', priority: 0.7, changeFreq: 'monthly' },
+
+  // Kennisbank
+  { path: '/kennisbank/', priority: 0.8, changeFreq: 'monthly' },
+  { path: '/kennisbank/cable-pooling/', priority: 0.7, changeFreq: 'monthly' },
+  { path: '/kennisbank/transportrechten/', priority: 0.7, changeFreq: 'monthly' },
+  { path: '/kennisbank/zelfaanleg/', priority: 0.7, changeFreq: 'monthly' },
+  { path: '/kennisbank/energiewet-2026/', priority: 0.7, changeFreq: 'monthly' },
+
+  // Whitepapers
+  { path: '/whitepapers/netcongestie-bedrijventerreinen/', priority: 0.7, changeFreq: 'monthly' },
 ];
 
 const currentDate = new Date().toISOString().split('T')[0];
