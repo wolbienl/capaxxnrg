@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     'ICP Independent Cable Provider',
     '2,3 MVA drempel',
     'openbare aanbesteding netaansluiting',
-    'Watt Infra',
   ],
 }
 
@@ -122,9 +121,8 @@ export default function ZelfaanlegPage() {
               <div className="bg-white border border-slate-100 rounded-[2rem] p-8 md:p-10">
                 <p className="text-xl font-bold text-secondary leading-relaxed italic">
                   In de praktijk schakelen projectontwikkelaars een Independent Cable Provider (ICP)
-                  in — marktleider is Watt Infra uit Eindhoven — die het kabeltracé, de
-                  beveiligingsvoorzieningen en vaak het inkoopstation realiseert. Na oplevering
-                  wordt de aansluiting overgedragen aan de netbeheerder.
+                  in die het kabeltracé, de beveiligingsvoorzieningen en vaak het inkoopstation
+                  realiseert. Na oplevering wordt de aansluiting overgedragen aan de netbeheerder.
                 </p>
               </div>
             </FadeIn>
