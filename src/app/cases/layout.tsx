@@ -3,17 +3,17 @@ import { generatePageMetadata } from '@/lib/seo/metadata';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Cases',
-  description: 'Ontdek onze energie-projecten in Twente. Concrete resultaten van zonnepanelen, energieopslag en laadinfra installaties bij commercieel vastgoed. Data en ROI per project.',
+  description: 'Ontdek onze energie-projecten. Van energiegemeenschappen tot collectieve opwek: concrete resultaten bij commercieel vastgoed met data en ROI per project.',
   keywords: [
     'cases',
     'projecten',
     'referenties',
-    'portfolio',
-    'resultaten',
-    'voorbeelden',
+    'energiegemeenschap',
+    'netcongestie',
     'succesverhalen',
-    'klanten',
-    'realisaties'
+    'realisaties',
+    'woonboulevard almelo',
+    'noabernet'
   ],
   path: '/cases'
 });

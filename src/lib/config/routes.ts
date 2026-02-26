@@ -81,7 +81,14 @@ export const ROUTES = {
   cases: {
     path: '/cases',
     priority: 0.8,
-    changeFreq: 'weekly' as const
+    changeFreq: 'weekly' as const,
+    children: {
+      noabernetAlmelo: {
+        path: '/cases/noabernet-almelo',
+        priority: 0.7,
+        changeFreq: 'monthly' as const
+      }
+    }
   },
   
   sectoren: {
