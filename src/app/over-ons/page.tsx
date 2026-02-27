@@ -128,6 +128,30 @@ export default function OverOnsPage() {
         </div>
       </section>
 
+      {/* Certificering */}
+      <section className="py-16 md:py-24 lg:py-32 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeIn className="max-w-4xl mx-auto bg-gradient-to-br from-slate-50 to-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 relative overflow-hidden border border-slate-100 shadow-xl">
+            <div className="absolute top-0 right-0 p-8 opacity-5">
+              <ShieldCheck className="w-32 md:w-48 h-32 md:h-48 text-primary" />
+            </div>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-secondary mb-6 md:mb-8 tracking-tight">Gecertificeerd EP-adviseur</h2>
+            <p className="text-base md:text-lg lg:text-xl text-slate-500 mb-8 md:mb-10 leading-relaxed italic">
+              CAPAXX Energy is gecertificeerd voor Energieprestatie Gebouwen conform BRL 9500-U (SKG-IKOB). 
+              Onze EP-adviseurs zijn vakbekwaam EP-U/D — de hoogste kwalificatie, detailmethode utiliteitsbouw — waarmee ook woningbouw is gedekt.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {['BRL 9500-U', 'EP-U/D', 'SKG-IKOB'].map((label) => (
+                <div key={label} className="flex items-center space-x-2 p-4 bg-orange-50 rounded-2xl border border-orange-100">
+                  <ShieldCheck className="w-5 h-5 text-primary" />
+                  <p className="text-sm font-black text-secondary uppercase tracking-widest">{label}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Werkwijze Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">

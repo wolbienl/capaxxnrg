@@ -14,7 +14,8 @@ import {
   Battery,
   Thermometer,
   Wind,
-  ClipboardList
+  ClipboardList,
+  ShieldCheck
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import SolutionHero from '@/components/SolutionHero'
@@ -308,6 +309,68 @@ export default function EnergielabelsPage() {
                 <p className="text-sm font-bold text-secondary">
                   Strengere eisen komen eraan. Wacht niet tot het moet.
                 </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificering */}
+      <section className="py-16 md:py-24 lg:py-32 bg-slate-900 overflow-hidden relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(240,106,0,0.08),transparent_60%)]" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <FadeIn>
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                  <ShieldCheck className="w-7 h-7" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white tracking-tight">
+                    Gecertificeerd <span className="text-primary italic">EP-adviseur</span>
+                  </h2>
+                </div>
+              </div>
+
+              <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-3xl">
+                CAPAXX Energy is gecertificeerd voor Energieprestatie Gebouwen conform BRL 9500-U (SKG-IKOB). 
+                Wij stellen energielabels zelf officieel vast. Geen doorverwijzing, wel zekerheid.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-10">
+                <div className="flex items-center space-x-2 px-5 py-3 bg-white/5 border border-white/10 rounded-2xl">
+                  <ShieldCheck className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-black text-white uppercase tracking-widest">BRL 9500-U</span>
+                </div>
+                <div className="flex items-center space-x-2 px-5 py-3 bg-white/5 border border-white/10 rounded-2xl">
+                  <ShieldCheck className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-black text-white uppercase tracking-widest">EP-U/D</span>
+                </div>
+                <div className="flex items-center space-x-2 px-5 py-3 bg-white/5 border border-white/10 rounded-2xl">
+                  <ShieldCheck className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-black text-white uppercase tracking-widest">SKG-IKOB</span>
+                </div>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-sm font-black text-primary uppercase tracking-widest mb-3">Detailmethode utiliteitsbouw</h3>
+                    <p className="text-slate-400 leading-relaxed">
+                      Onze EP-adviseurs zijn vakbekwaam EP-U/D — de hoogste kwalificatie. 
+                      Daarmee zijn we ook bevoegd voor woningbouw.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-black text-primary uppercase tracking-widest mb-3">Wat dat betekent</h3>
+                    <p className="text-slate-400 leading-relaxed">
+                      Wij voeren de opname uit, berekenen het label en registreren het. 
+                      Je hebt geen externe partij nodig voor de certificering.
+                    </p>
+                  </div>
+                </div>
               </div>
             </FadeIn>
           </div>

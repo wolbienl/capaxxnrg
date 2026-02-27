@@ -25,6 +25,9 @@ export default function Footer() {
             <p className="text-slate-400 max-w-xs leading-relaxed italic">
               Maximale capaciteit uit een vol net.
             </p>
+            <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">
+              BRL 9500-U gecertificeerd · SKG-IKOB
+            </p>
             <div className="flex space-x-4">
               <TransitionLink href="#" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
