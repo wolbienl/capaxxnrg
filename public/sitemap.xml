@@ -133,6 +133,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://capaxx-energy.nl/quickscan-zonnepark/</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capaxx-energy.nl/quickscan-windpark/</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capaxx-energy.nl/roi-laadinfra-vastgoed/</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://capaxx-energy.nl/advies/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>

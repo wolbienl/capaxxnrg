@@ -149,6 +149,24 @@ export const ROUTES = {
     changeFreq: 'monthly' as const
   },
 
+  quickscanZonnepark: {
+    path: '/quickscan-zonnepark',
+    priority: 0.7,
+    changeFreq: 'monthly' as const,
+  },
+
+  quickscanWindpark: {
+    path: '/quickscan-windpark',
+    priority: 0.7,
+    changeFreq: 'monthly' as const,
+  },
+
+  roiLaadinfraVastgoed: {
+    path: '/roi-laadinfra-vastgoed',
+    priority: 0.7,
+    changeFreq: 'monthly' as const,
+  },
+
   advies: {
     path: '/advies',
     priority: 0.8,
