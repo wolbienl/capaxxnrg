@@ -55,6 +55,15 @@ if [ ! -f "package.json" ]; then
 fi
 print_success "Project directory correct"
 
+# Genereer sitemap vanuit routes.ts (single source of truth)
+print_status "Generating sitemap from routes..."
+if npx tsx scripts/generate-sitemap.ts; then
+    print_success "Sitemap generated"
+else
+    print_error "Sitemap generation failed"
+    exit 1
+fi
+
 # Lokale build
 print_status "Building static website..."
 echo -e "${YELLOW}Building...${NC}"
@@ -80,25 +89,14 @@ fi
 print_status "Copying public assets to out folder..."
 rsync -av public/ out/
 
-# Genereer sitemap
-print_status "Checking sitemap..."
-if [ -f ".next/server/app/sitemap.xml/route.js" ] || [ -f ".next/server/app/sitemap.xml.body" ]; then
-    if [ -f ".next/server/app/sitemap.xml.body" ]; then
-        cp .next/server/app/sitemap.xml.body out/sitemap.xml
-        print_success "Sitemap copied to out folder"
-        print_info "Sitemap contains $(grep -c '<url>' out/sitemap.xml) URLs"
-    else
-        print_warning "Sitemap route found but body not generated yet"
-    fi
-elif [ -f "out/sitemap.xml" ]; then
-    print_success "Sitemap already in out folder"
-    print_info "Sitemap contains $(grep -c '<url>' out/sitemap.xml) URLs"
-elif [ -f "public/sitemap.xml" ]; then
-    cp public/sitemap.xml out/sitemap.xml
-    print_success "Sitemap copied from public folder"
+# Sitemap check (is al gegenereerd voor de build en meegekopieerd via rsync)
+print_status "Verifying sitemap..."
+if [ -f "out/sitemap.xml" ]; then
+    print_success "Sitemap present in out folder"
     print_info "Sitemap contains $(grep -c '<url>' out/sitemap.xml) URLs"
 else
-    print_warning "No sitemap found, skipping"
+    print_error "Sitemap missing from out folder!"
+    exit 1
 fi
 
 # Controleer of robots.txt bestaat

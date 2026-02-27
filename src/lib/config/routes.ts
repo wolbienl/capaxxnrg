@@ -143,6 +143,12 @@ export const ROUTES = {
     }
   },
   
+  whitepapers: {
+    path: '/whitepapers/netcongestie-bedrijventerreinen',
+    priority: 0.7,
+    changeFreq: 'monthly' as const
+  },
+
   advies: {
     path: '/advies',
     priority: 0.8,
