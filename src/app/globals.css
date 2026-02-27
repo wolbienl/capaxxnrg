@@ -40,6 +40,14 @@ body {
   text-wrap: balance;
 }
 
+.recharts-wrapper,
+.recharts-wrapper *,
+.recharts-surface,
+.recharts-surface * {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .premium-gradient {
   background: radial-gradient(circle at top right, rgba(240, 106, 0, 0.05), transparent),
               radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.03), transparent);

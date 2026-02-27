@@ -66,12 +66,6 @@ const adviesItems = [
     href: '/advies/energielabels',
     icon: TrendingUp,
   },
-  {
-    title: 'Alle advies',
-    description: 'Bekijk ons complete adviesaanbod.',
-    href: '/advies',
-    icon: ArrowRight,
-  },
 ]
 
 const netcongestieVoorWie = [
@@ -127,14 +121,16 @@ const navLinks = [
   { title: 'Over ons', href: '/over-ons' },
 ]
 
+type MegaMenu = 'watwedoen' | 'netcongestie' | null
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [openMegaMenu, setOpenMegaMenu] = useState<'oplossingen' | 'advies' | 'netcongestie' | null>(null)
+  const [openMegaMenu, setOpenMegaMenu] = useState<MegaMenu>(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const handleMenuEnter = (menu: 'oplossingen' | 'advies' | 'netcongestie') => {
+  const handleMenuEnter = (menu: NonNullable<MegaMenu>) => {
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current)
       closeTimerRef.current = null
@@ -155,10 +151,7 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
-    
-    // Check initial scroll position
     handleScroll()
-    
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -176,9 +169,8 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-24">
-          {/* Logo - switches between light and dark */}
+          {/* Logo */}
           <TransitionLink href="/" className="flex items-center space-x-2 group relative">
-            {/* Dark logo (default, shown when scrolled or not on homepage) */}
             <Image
               src="/images/logo-dark.svg"
               alt="CAPAXX ENERGY"
@@ -189,7 +181,6 @@ export default function Header() {
                 isTransparent ? "opacity-0 lg:opacity-100" : "opacity-100"
               )}
             />
-            {/* Light logo (shown on mobile homepage when not scrolled) */}
             <Image
               src="/images/logo-light.svg"
               alt="CAPAXX ENERGY"
@@ -204,27 +195,15 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-10">
-            {/* Oplossingen Mega Menu */}
+            {/* Wat wij doen Mega Menu */}
             <div
               className="relative"
-              onMouseEnter={() => handleMenuEnter('oplossingen')}
+              onMouseEnter={() => handleMenuEnter('watwedoen')}
               onMouseLeave={handleMenuLeave}
             >
               <button className="flex items-center space-x-1.5 text-secondary font-bold hover:text-primary transition-colors py-2">
-                <span>Oplossingen</span>
-                <ChevronDown className={cn("w-4 h-4 transition-transform duration-300 ease-in-out", openMegaMenu === 'oplossingen' && "rotate-180")} />
-              </button>
-            </div>
-
-            {/* Advies Mega Menu */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMenuEnter('advies')}
-              onMouseLeave={handleMenuLeave}
-            >
-              <button className="flex items-center space-x-1.5 text-secondary font-bold hover:text-primary transition-colors py-2">
-                <span>Advies</span>
-                <ChevronDown className={cn("w-4 h-4 transition-transform duration-300 ease-in-out", openMegaMenu === 'advies' && "rotate-180")} />
+                <span>Wat wij doen</span>
+                <ChevronDown className={cn("w-4 h-4 transition-transform duration-300 ease-in-out", openMegaMenu === 'watwedoen' && "rotate-180")} />
               </button>
             </div>
 
@@ -254,108 +233,89 @@ export default function Header() {
 
           {/* Full-Width Mega Menus */}
           <AnimatePresence>
-            {openMegaMenu === 'oplossingen' && (
+            {openMegaMenu === 'watwedoen' && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.2 }}
                 className="hidden lg:block absolute top-full left-0 right-0"
-                onMouseEnter={() => handleMenuEnter('oplossingen')}
+                onMouseEnter={() => handleMenuEnter('watwedoen')}
                 onMouseLeave={handleMenuLeave}
               >
                 <div className="bg-white shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                   <div className="container mx-auto px-4 md:px-6 py-6">
-                    {/* Solutions Grid */}
-                    <div className="grid grid-cols-3 gap-3 mb-4">
-                      {solutions.map((solution) => (
-                        <TransitionLink
-                          key={solution.title}
-                          href={solution.href}
-                          className="flex items-start p-3 rounded-2xl hover:bg-slate-50 transition-all group/item"
-                          onClick={() => setOpenMegaMenu(null)}
-                        >
-                          <div className="p-2 rounded-xl bg-orange-50 text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300 mr-3 shrink-0">
-                            <solution.icon className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-secondary group-hover/item:text-primary transition-colors text-sm">{solution.title}</h3>
-                            <p className="text-xs text-slate-400 mt-0.5 leading-relaxed italic">{solution.description}</p>
-                          </div>
-                        </TransitionLink>
-                      ))}
+                    <div className="grid grid-cols-2 gap-8">
+                      {/* Oplossingen */}
+                      <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 ml-3">Oplossingen</p>
+                        <div className="space-y-1">
+                          {solutions.map((solution) => (
+                            <TransitionLink
+                              key={solution.title}
+                              href={solution.href}
+                              className="flex items-start p-3 rounded-2xl hover:bg-slate-50 transition-all group/item"
+                              onClick={() => setOpenMegaMenu(null)}
+                            >
+                              <div className="p-2 rounded-xl bg-orange-50 text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300 mr-3 shrink-0">
+                                <solution.icon className="w-5 h-5" />
+                              </div>
+                              <div>
+                                <h3 className="font-bold text-secondary group-hover/item:text-primary transition-colors text-sm">{solution.title}</h3>
+                                <p className="text-xs text-slate-400 mt-0.5 leading-relaxed italic">{solution.description}</p>
+                              </div>
+                            </TransitionLink>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Advies */}
+                      <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 ml-3">Advies</p>
+                        <div className="space-y-1">
+                          {adviesItems.map((item) => (
+                            <TransitionLink
+                              key={item.title}
+                              href={item.href}
+                              className="flex items-start p-3 rounded-2xl hover:bg-slate-50 transition-all group/item"
+                              onClick={() => setOpenMegaMenu(null)}
+                            >
+                              <div className="p-2 rounded-xl bg-orange-50 text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300 mr-3 shrink-0">
+                                <item.icon className="w-5 h-5" />
+                              </div>
+                              <div>
+                                <h3 className="font-bold text-secondary group-hover/item:text-primary transition-colors text-sm">{item.title}</h3>
+                                <p className="text-xs text-slate-400 mt-0.5 leading-relaxed italic">{item.description}</p>
+                              </div>
+                            </TransitionLink>
+                          ))}
+                        </div>
+                      </div>
                     </div>
 
                     {/* CTA Banner */}
-                    <div className="bg-gradient-to-r from-slate-50 to-orange-50/30 rounded-2xl p-4 flex items-center justify-between border-t border-slate-100 pt-4">
-                      <div className="flex items-center gap-6">
-                        <div>
-                          <h3 className="text-sm font-bold text-secondary mb-1">Complete energie-integratie</h3>
-                          <p className="text-xs text-slate-600">Al onze oplossingen werken naadloos samen via één platform.</p>
-                        </div>
+                    <div className="bg-gradient-to-r from-slate-50 to-orange-50/30 rounded-2xl p-4 flex items-center justify-between border-t border-slate-100 mt-4 pt-4">
+                      <div>
+                        <h3 className="text-sm font-bold text-secondary mb-1">Complete energie-integratie</h3>
+                        <p className="text-xs text-slate-600">Al onze oplossingen en advies werken naadloos samen via één platform.</p>
                       </div>
-                      <TransitionLink
-                        href="/oplossingen"
-                        className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-accent transition-all text-sm whitespace-nowrap"
-                        onClick={() => setOpenMegaMenu(null)}
-                      >
-                        Bekijk alle oplossingen
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </TransitionLink>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {openMegaMenu === 'advies' && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.2 }}
-                className="hidden lg:block absolute top-full left-0 right-0"
-                onMouseEnter={() => handleMenuEnter('advies')}
-                onMouseLeave={handleMenuLeave}
-              >
-                <div className="bg-white shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
-                  <div className="container mx-auto px-4 md:px-6 py-6">
-                    {/* Advies Grid */}
-                    <div className="grid grid-cols-3 gap-3 mb-4">
-                      {adviesItems.map((item) => (
+                      <div className="flex items-center gap-3">
                         <TransitionLink
-                          key={item.title}
-                          href={item.href}
-                          className="flex items-start p-3 rounded-2xl hover:bg-slate-50 transition-all group/item"
+                          href="/oplossingen"
+                          className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-accent transition-all text-sm whitespace-nowrap"
                           onClick={() => setOpenMegaMenu(null)}
                         >
-                          <div className="p-2 rounded-xl bg-orange-50 text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-300 mr-3 shrink-0">
-                            <item.icon className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-secondary group-hover/item:text-primary transition-colors text-sm">{item.title}</h3>
-                            <p className="text-xs text-slate-400 mt-0.5 leading-relaxed italic">{item.description}</p>
-                          </div>
+                          Alle oplossingen
+                          <ArrowRight className="w-4 h-4 ml-2" />
                         </TransitionLink>
-                      ))}
-                    </div>
-
-                    {/* CTA Banner */}
-                    <div className="bg-gradient-to-r from-slate-50 to-blue-50/30 rounded-2xl p-4 flex items-center justify-between border-t border-slate-100 pt-4">
-                      <div className="flex items-center gap-6">
-                        <div>
-                          <h3 className="text-sm font-bold text-secondary mb-1">Data-gedreven duurzaamheid</h3>
-                          <p className="text-xs text-slate-600">Compliance en certificering op basis van meetbare data uit jouw eigen installaties.</p>
-                        </div>
+                        <TransitionLink
+                          href="/advies"
+                          className="inline-flex items-center justify-center px-5 py-2.5 bg-slate-100 text-secondary font-bold rounded-xl hover:bg-slate-200 transition-all text-sm whitespace-nowrap"
+                          onClick={() => setOpenMegaMenu(null)}
+                        >
+                          Alle advies
+                        </TransitionLink>
                       </div>
-                      <TransitionLink
-                        href="/advies"
-                        className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-accent transition-all text-sm whitespace-nowrap"
-                        onClick={() => setOpenMegaMenu(null)}
-                      >
-                        Bekijk alle advies
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </TransitionLink>
                     </div>
                   </div>
                 </div>
@@ -422,23 +382,40 @@ export default function Header() {
                       </div>
                     </div>
 
-                    {/* CTA Banner */}
-                    <div className="bg-gradient-to-r from-slate-50 to-orange-50/30 rounded-2xl p-4 flex items-center justify-between border-t border-slate-100 mt-4 pt-4">
-                      <div className="flex items-center gap-3">
-                        <Zap className="w-5 h-5 text-primary" />
-                        <div>
-                          <h3 className="text-sm font-bold text-secondary mb-1">22.000+ bedrijven op de wachtlijst</h3>
-                          <p className="text-xs text-slate-600">Wij zorgen dat jij er niet bij hoort.</p>
-                        </div>
-                      </div>
+                    {/* Bottom row: Energieprijzen + Quickscan */}
+                    <div className="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-100">
                       <TransitionLink
-                        href="/contact?type=quickscan"
-                        className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-bold rounded-xl hover:bg-accent transition-all text-sm whitespace-nowrap"
+                        href="/energieprijzen"
+                        className="flex items-center gap-3 p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100 hover:bg-emerald-50 transition-all group/live"
                         onClick={() => setOpenMegaMenu(null)}
                       >
-                        Gratis quickscan
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <span className="relative flex h-2.5 w-2.5 shrink-0">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                        </span>
+                        <div>
+                          <h3 className="font-bold text-secondary group-hover/live:text-emerald-700 transition-colors text-sm">Live Energieprijzen</h3>
+                          <p className="text-xs text-slate-400 mt-0.5 italic">EPEX Spot Day-Ahead voor vandaag.</p>
+                        </div>
                       </TransitionLink>
+
+                      <div className="flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-slate-50 to-orange-50/30">
+                        <div className="flex items-center gap-3">
+                          <Zap className="w-5 h-5 text-primary shrink-0" />
+                          <div>
+                            <h3 className="text-sm font-bold text-secondary">22.000+ op de wachtlijst</h3>
+                            <p className="text-xs text-slate-600">Wij zorgen dat jij er niet bij hoort.</p>
+                          </div>
+                        </div>
+                        <TransitionLink
+                          href="/contact?type=quickscan"
+                          className="inline-flex items-center px-4 py-2 bg-primary text-white font-bold rounded-xl hover:bg-accent transition-all text-sm whitespace-nowrap ml-4"
+                          onClick={() => setOpenMegaMenu(null)}
+                        >
+                          Quickscan
+                          <ArrowRight className="w-4 h-4 ml-1.5" />
+                        </TransitionLink>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -493,7 +470,7 @@ export default function Header() {
             className="lg:hidden bg-white border-t border-gray-100 max-h-[calc(100vh-6rem)] overflow-y-auto"
           >
             <div className="container mx-auto px-4 py-6 space-y-4 pb-8">
-              {/* Oplossingen Section */}
+              {/* Wat wij doen Section */}
               <div className="space-y-2">
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Oplossingen</p>
                 {solutions.map((solution) => (
@@ -514,6 +491,27 @@ export default function Header() {
                 >
                   <ArrowRight className="w-5 h-5 text-primary" />
                   <span className="font-bold text-primary">Alle oplossingen</span>
+                </TransitionLink>
+
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 mt-4 pt-2">Advies</p>
+                {adviesItems.map((item) => (
+                  <TransitionLink
+                    key={item.title}
+                    href={item.href}
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <item.icon className="w-5 h-5 text-primary" />
+                    <span className="font-medium text-secondary">{item.title}</span>
+                  </TransitionLink>
+                ))}
+                <TransitionLink
+                  href="/advies"
+                  className="flex items-center space-x-3 p-3 rounded-lg bg-orange-50 hover:bg-orange-100 border border-orange-100"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <ArrowRight className="w-5 h-5 text-primary" />
+                  <span className="font-bold text-primary">Alle advies</span>
                 </TransitionLink>
               </div>
 
@@ -544,36 +542,15 @@ export default function Header() {
                   </TransitionLink>
                 ))}
                 <TransitionLink
-                  href="/kennisbank"
-                  className="flex items-center space-x-3 p-3 rounded-lg bg-orange-50 hover:bg-orange-100 border border-orange-100"
+                  href="/energieprijzen"
+                  className="flex items-center space-x-3 p-3 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-100 mt-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  <ArrowRight className="w-5 h-5 text-primary" />
-                  <span className="font-bold text-primary">Alle kennisbank</span>
-                </TransitionLink>
-              </div>
-
-              {/* Advies Section */}
-              <div className="border-t border-gray-100 pt-4 space-y-2">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Advies</p>
-                {adviesItems.slice(0, 4).map((item) => (
-                  <TransitionLink
-                    key={item.title}
-                    href={item.href}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <item.icon className="w-5 h-5 text-primary" />
-                    <span className="font-medium text-secondary">{item.title}</span>
-                  </TransitionLink>
-                ))}
-                <TransitionLink
-                  href="/advies"
-                  className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 border border-blue-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <ArrowRight className="w-5 h-5 text-primary" />
-                  <span className="font-bold text-primary">Alle advies</span>
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                  </span>
+                  <span className="font-bold text-secondary">Live Energieprijzen</span>
                 </TransitionLink>
               </div>
 
