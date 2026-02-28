@@ -194,7 +194,7 @@ export default function OplossingenPage() {
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
             <FadeIn direction="right">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-8 md:mb-12 tracking-tight leading-tight">
-                Waarom oplossingen <br />bij <span className="text-primary italic">CAPAXX</span>?
+                Waarom oplossingen <br />bij <span className="text-primary italic">CAPAXX Energy</span>?
               </h2>
               
               <div className="space-y-6 md:space-y-10">

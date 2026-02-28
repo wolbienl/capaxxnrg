@@ -129,7 +129,7 @@ export default function NetcongestieAlliandersPage() {
         'Via non-firm contracten en FlexPower zijn er snellere routes beschikbaar — in veel gevallen binnen 6 tot 18 maanden realiseerbaar voor bedrijven met een flexibel profiel.',
         'Liander is transparanter dan gemiddeld over haar wachtrijen en communiceert actief via haar capaciteitskaart en klantcommunicatie. Dit maakt de eigen positie beter inschatbaar.',
         'De documentatievereisten bij Liander zijn omvangrijker dan bij kleinere netbeheerders. Een goed onderbouwde aanvraag met energiedata vergroot de kans op snelle behandeling.',
-        'Voor GTO-aanvragen en cable pooling-constructies is een projectcoördinator nodig. CAPAXX kan deze rol vervullen als trekker van het gezamenlijke aanvraagproces.',
+        'Voor GTO-aanvragen en cable pooling-constructies is een projectcoördinator nodig. CAPAXX Energy kan deze rol vervullen als trekker van het gezamenlijke aanvraagproces.',
       ]}
       closingText="In het Liander-werkgebied is de druk op het net het hoogst van Nederland — maar juist hier zijn de alternatieve routes het best ontwikkeld. Het loont om die te kennen."
     />

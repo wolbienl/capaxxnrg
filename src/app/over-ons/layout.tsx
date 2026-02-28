@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Over Ons',
-  description: 'CAPAXX Energy is specialist in energie-oplossingen voor commercieel vastgoed in Twente. Klein team, harde focus. Data-gedreven en resultaatgericht. Spinoff van CAPAXX.',
+  description: 'CAPAXX Energy is specialist in energie-oplossingen voor commercieel vastgoed in Twente. Klein team, harde focus. Data-gedreven en resultaatgericht.',
   keywords: [
     'over ons',
     'team',
@@ -12,8 +12,7 @@ export const metadata: Metadata = generatePageMetadata({
     'ervaring',
     'specialisten',
     'energie-experts',
-    'CAPAXX',
-    'spinoff'
+    'CAPAXX Energy',
   ],
   path: '/over-ons'
 });

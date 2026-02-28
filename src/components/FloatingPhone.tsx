@@ -77,7 +77,7 @@ const PhoneScreen = () => {
         <div className="flex items-center justify-between py-1.5">
           <Image
             src="/images/logo-light.svg"
-            alt="CAPAXX"
+            alt="CAPAXX Energy"
             width={70}
             height={18}
             className="h-3.5 w-auto opacity-90"

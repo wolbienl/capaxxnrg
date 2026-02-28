@@ -25,7 +25,7 @@ export default function WatWijDoenLayout({
 }) {
   const serviceSchema = generateServiceSchema({
     name: 'Geintegreerde energieoplossingen en advies',
-    description: 'CAPAXX combineert technische oplossingen en adviesdiensten voor commercieel vastgoed. Van energiescan en businesscase tot realisatie, rapportage en optimalisatie.',
+    description: 'CAPAXX Energy combineert technische oplossingen en adviesdiensten voor commercieel vastgoed. Van energiescan en businesscase tot realisatie, rapportage en optimalisatie.',
     serviceType: 'Integrated Energy Solutions and Advisory Services',
     image: '/images/solar-hero.png'
   });

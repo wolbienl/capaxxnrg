@@ -514,7 +514,7 @@ export default function EnergieprijzenPage() {
                       Slim sturen op EPEX prijzen?
                     </h3>
                     <p className="text-sm text-slate-500 leading-relaxed">
-                      Met een EMS stuurt CAPAXX je batterij, zonnepanelen en laadinfra automatisch aan
+                      Met een EMS stuurt CAPAXX Energy je batterij, zonnepanelen en laadinfra automatisch aan
                       op basis van deze uurprijzen. Laden als het goedkoop is, ontladen als het duur is.
                     </p>
                   </div>

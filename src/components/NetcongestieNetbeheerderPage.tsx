@@ -300,7 +300,7 @@ export default function NetcongestieNetbeheerderPage({
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6 tracking-tight">
-              Hoe CAPAXX <span className="text-primary italic">helpt</span>
+              Hoe CAPAXX Energy <span className="text-primary italic">helpt</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Van de eerste quickscan tot en met de opgeleverde installatie — wij regelen het hele traject.

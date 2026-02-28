@@ -88,7 +88,7 @@ const aanvraagStappen = [
     nummer: '1',
     titel: 'Projectvoorbereiding',
     omschrijving:
-      'Stel een projectdossier samen met technische omschrijving, energieprestatie-onderbouwing en een begroting. CAPAXX helpt bij het opstellen van het technische deel.',
+      'Stel een projectdossier samen met technische omschrijving, energieprestatie-onderbouwing en een begroting. CAPAXX Energy helpt bij het opstellen van het technische deel.',
   },
   {
     nummer: '2',
@@ -346,7 +346,7 @@ export default function Sprila2026Page() {
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-6 tracking-tight">
-              Hoe CAPAXX <span className="text-primary italic">helpt</span>
+              Hoe CAPAXX Energy <span className="text-primary italic">helpt</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
               Wij regelen SPRILA van A tot Z — van het eerste dossier tot en met de opgeleverde installatie.

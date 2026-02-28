@@ -57,7 +57,7 @@ export default function NetcongestieEnexisPage() {
         {
           title: 'Congestiemanagement bij >60 MW',
           description:
-            'Bedrijven met meer dan 60 MW gecontracteerd transportvermogen zijn wettelijk verplicht deel te nemen aan congestiemanagement. Enexis heeft hiervoor een gestructureerd aanbestedingsproces met duidelijke rapportageverplichtingen. CAPAXX begeleidt je door dit traject.',
+            'Bedrijven met meer dan 60 MW gecontracteerd transportvermogen zijn wettelijk verplicht deel te nemen aan congestiemanagement. Enexis heeft hiervoor een gestructureerd aanbestedingsproces met duidelijke rapportageverplichtingen. CAPAXX Energy begeleidt je door dit traject.',
         },
         {
           title: 'Zelfaanleg (artikel 3.39 Energiewet)',
@@ -127,8 +127,8 @@ export default function NetcongestieEnexisPage() {
         'Een formele aanvraag bij Enexis krijgt doorgaans binnen 3 tot 10 werkdagen een eerste reactie. De haalbaarheidscheck in congestiegebieden duurt 4 tot 8 weken.',
         'Voor een grootverbruikaansluiting in een congestiegebied moet je rekening houden met een doorlooptijd van 1 tot 3 jaar voor volledige technische realisatie door Enexis.',
         'Enexis werkt met een prioriteringskader: aanvragen met flexibiliteitspotentieel, maatschappelijk belang of aantoonbare duurzaamheidsprestaties worden hoger geprioriteerd.',
-        'Voor non-firm contracten gelden documentatievereisten over je energieprofiel en flexibiliteitsmogelijkheden. Hoe concreter het dossier, hoe sneller het traject. CAPAXX stelt dit dossier voor je op.',
-        'GTO-trajecten met meerdere bedrijven op een terrein vereisen een trekker die het gezamenlijke verzoek bij Enexis indient. CAPAXX vervult deze trekkersrol en coördineert de aanvraag voor alle deelnemers.',
+        'Voor non-firm contracten gelden documentatievereisten over je energieprofiel en flexibiliteitsmogelijkheden. Hoe concreter het dossier, hoe sneller het traject. CAPAXX Energy stelt dit dossier voor je op.',
+        'GTO-trajecten met meerdere bedrijven op een terrein vereisen een trekker die het gezamenlijke verzoek bij Enexis indient. CAPAXX Energy vervult deze trekkersrol en coördineert de aanvraag voor alle deelnemers.',
       ]}
       closingText="Enexis is transparanter over congestie dan de meeste netbeheerders — maar het systeem is complex. Weten welke route voor jou het snelst werkt, vraagt om kennis van de regels én de contacten."
     />
