@@ -147,6 +147,31 @@ export const ROUTES = {
         path: '/kennisbank/energiewet-2026',
         priority: 0.8,
         changeFreq: 'monthly' as const
+      },
+      regio_twente: {
+        path: '/netcongestie/twente',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      regio_hengelo: {
+        path: '/netcongestie/hengelo',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      regio_enschede: {
+        path: '/netcongestie/enschede',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      regio_almelo: {
+        path: '/netcongestie/almelo',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      regio_oldenzaal: {
+        path: '/netcongestie/oldenzaal',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
       }
     }
   },
