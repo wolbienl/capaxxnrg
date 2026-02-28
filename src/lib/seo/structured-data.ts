@@ -211,6 +211,61 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
 }
 
 /**
+ * Article Schema Generator - Voor kennisbank-artikelen en cases
+ *
+ * Genereert rich results voor Google Search: headline, auteur, publicatiedatum,
+ * publisher logo en canonical URL. Essentieel voor vindbaarheid van diepgaande content.
+ */
+export function generateArticleSchema({
+  title,
+  description,
+  path,
+  datePublished,
+  dateModified,
+  image,
+}: {
+  title: string
+  description: string
+  path: string
+  datePublished: string
+  dateModified?: string
+  image?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    author: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_CONFIG.url}${SITE_CONFIG.images.logo}`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_CONFIG.url}${path}`,
+    },
+    datePublished,
+    dateModified: dateModified || datePublished,
+    inLanguage: 'nl',
+    ...(image && {
+      image: {
+        '@type': 'ImageObject',
+        url: image.startsWith('http') ? image : `${SITE_CONFIG.url}${image}`,
+      },
+    }),
+  };
+}
+
+/**
  * FAQ Schema Generator
  * Gebruik voor pagina's met veelgestelde vragen
  */
