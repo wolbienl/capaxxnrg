@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { Battery, Cable, Network, Scale, Wrench, BookOpen, ArrowRight, Zap } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
@@ -9,55 +10,70 @@ export const metadata: Metadata = {
   keywords: ['netcongestie kennisbank', 'cable pooling', 'transportrechten', 'zelfaanleg', 'energiewet 2026', 'energiehubs', 'flex-e subsidie', 'SPRILA 2026'],
 }
 
-const pillars = [
+type KennisbankItem = {
+  icon: LucideIcon
+  title: string
+  description: string
+  href: string
+}
+
+const categories: { label: string; items: KennisbankItem[] }[] = [
   {
-    icon: Cable,
-    title: 'Cable pooling & energiegemeenschappen',
-    description: 'Aansluiting delen met maximaal vier partijen, groepstransportovereenkomsten, en hoe je een energiegemeenschap opricht op je bedrijventerrein.',
-    href: '/kennisbank/cable-pooling',
-    stats: 'Max 4 partijen • Vanaf 100 kVA',
+    label: 'Oplossingen',
+    items: [
+      {
+        icon: Cable,
+        title: 'Cable pooling & energiegemeenschappen',
+        description: 'Aansluiting delen met max. vier partijen en GTO\'s op je bedrijventerrein.',
+        href: '/kennisbank/cable-pooling',
+      },
+      {
+        icon: Scale,
+        title: 'Flexibele transportrechten',
+        description: 'Non-firm, tijdsblokgebonden en TDTR — welk type past bij jouw situatie?',
+        href: '/kennisbank/transportrechten',
+      },
+      {
+        icon: Wrench,
+        title: 'Zelfaanleg (artikel 3.39)',
+        description: 'Drempel verlaagd naar 2,3 MVA. Hoe werkt het en wanneer loont het?',
+        href: '/kennisbank/zelfaanleg',
+      },
+      {
+        icon: Network,
+        title: 'Energiehubs',
+        description: 'Gedeelde opwek, opslag en verbruik op één locatie — netcongestie omzeilen.',
+        href: '/kennisbank/energiehubs',
+      },
+    ],
   },
   {
-    icon: Scale,
-    title: 'Flexibele transportrechten',
-    description: 'Non-firm, tijdsblokgebonden en tijdsduurgebonden transportrechten. Welk type past bij jouw situatie en wat levert het op?',
-    href: '/kennisbank/transportrechten',
-    stats: '50-65% nettariefkorting • 4 vormen',
+    label: 'Wet & regelgeving',
+    items: [
+      {
+        icon: BookOpen,
+        title: 'Energiewet 2026',
+        description: 'Nieuwe spelregels sinds 1 januari 2026 — kansen voor jouw situatie.',
+        href: '/kennisbank/energiewet-2026',
+      },
+    ],
   },
   {
-    icon: Wrench,
-    title: 'Zelfaanleg (artikel 3.39)',
-    description: 'De drempel is verlaagd van 10 MVA naar 2,3 MVA. Hoe werkt zelfaanleg, wat kost het, en wanneer is het de juiste route?',
-    href: '/kennisbank/zelfaanleg',
-    stats: 'Drempel 2,3 MVA • Snellere realisatie',
-  },
-  {
-    icon: BookOpen,
-    title: 'Energiewet 2026',
-    description: 'Sinds 1 januari 2026 gelden nieuwe spelregels. Wat verandert er voor jou en welke kansen creëert de nieuwe wet?',
-    href: '/kennisbank/energiewet-2026',
-    stats: 'Per 1 jan 2026 • Fundamentele wijzigingen',
-  },
-  {
-    icon: Network,
-    title: 'Energiehubs',
-    description: 'Gedeelde opwek, opslag en verbruik op één locatie. Hoe een energiehub netcongestie omzeilt, kosten verdeelt en benutting verhoogt.',
-    href: '/kennisbank/energiehubs',
-    stats: 'Bedrijventerreinen • Vastgoedportefeuilles',
-  },
-  {
-    icon: Battery,
-    title: 'Flex-e subsidie 2026',
-    description: '€62 miljoen voor batterijen, EMS en flexibiliteitsmaatregelen. Tot €300.000 per investering, combineerbaar met EIA (40%) en MIA/Vamil.',
-    href: '/kennisbank/flex-e-subsidie-2026',
-    stats: '€62 miljoen • Tot €300.000 per project',
-  },
-  {
-    icon: Zap,
-    title: 'SPRILA 2026',
-    description: 'Subsidie voor energie-infrastructuurprojecten die netcongestie verlichten. Wie komt in aanmerking en hoe vraag je aan via RVO?',
-    href: '/kennisbank/sprila-2026',
-    stats: 'Via RVO • Combineerbaar met EIA',
+    label: 'Subsidies',
+    items: [
+      {
+        icon: Battery,
+        title: 'Flex-e subsidie 2026',
+        description: '€62 miljoen voor batterijen, EMS en flexibiliteitsmaatregelen.',
+        href: '/kennisbank/flex-e-subsidie-2026',
+      },
+      {
+        icon: Zap,
+        title: 'SPRILA 2026',
+        description: 'Subsidie voor energie-infrastructuurprojecten die netcongestie verlichten.',
+        href: '/kennisbank/sprila-2026',
+      },
+    ],
   },
 ]
 
@@ -88,31 +104,37 @@ export default function KennisbankPage() {
       </section>
 
       <section className="py-16 md:py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {pillars.map((pillar, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <Link href={pillar.href} className="group block h-full">
-                  <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-8 md:p-10 hover:border-primary/20 hover:bg-white hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full flex flex-col">
-                    <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-secondary group-hover:bg-primary group-hover:text-white transition-all duration-500 mb-8">
-                      <pillar.icon className="w-8 h-8" />
-                    </div>
-                    <h2 className="text-2xl font-bold text-secondary mb-4 tracking-tight group-hover:text-primary transition-colors">
-                      {pillar.title}
-                    </h2>
-                    <p className="text-slate-500 mb-6 leading-relaxed flex-grow">
-                      {pillar.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                        {pillar.stats}
-                      </span>
-                      <div className="flex items-center text-secondary font-bold group-hover:text-primary transition-colors">
-                        Lees meer <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="space-y-10 md:space-y-14">
+            {categories.map((category, ci) => (
+              <FadeIn key={ci} delay={ci * 0.12}>
+                <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-4 pl-1">
+                  {category.label}
+                </h2>
+                <div className="bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden">
+                  {category.items.map((item, ii) => (
+                    <Link
+                      key={ii}
+                      href={item.href}
+                      className={`group flex items-center gap-4 md:gap-6 px-5 py-4 md:px-7 md:py-5 hover:bg-orange-50/60 transition-colors duration-200 ${
+                        ii < category.items.length - 1 ? 'border-b border-slate-100' : ''
+                      }`}
+                    >
+                      <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-white shadow-sm flex items-center justify-center text-secondary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+                        <item.icon className="w-5 h-5" />
                       </div>
-                    </div>
-                  </div>
-                </Link>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-base md:text-lg font-bold text-secondary group-hover:text-primary transition-colors duration-200 tracking-tight">
+                          {item.title}
+                        </span>
+                        <span className="hidden md:inline text-slate-400 ml-3">
+                          {item.description}
+                        </span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-slate-300 shrink-0 group-hover:text-primary group-hover:translate-x-1 transition-all duration-200" />
+                    </Link>
+                  ))}
+                </div>
               </FadeIn>
             ))}
           </div>

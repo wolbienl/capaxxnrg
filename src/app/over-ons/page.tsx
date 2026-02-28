@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle2, ArrowRight, ShieldCheck, MessageCircle, Target, Users, Zap } from 'lucide-react'
+import { CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 
@@ -62,68 +62,46 @@ export default function OverOnsPage() {
       </section>
 
       <section className="py-16 md:py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
-            <FadeIn direction="right" className="grid grid-cols-2 gap-6">
-              {[
-                { icon: MessageCircle, title: 'Eerlijk', color: 'from-orange-500 to-amber-500' },
-                { icon: Target, title: 'Resultaat', color: 'from-blue-500 to-cyan-500' },
-                { icon: Users, title: 'Samen', color: 'from-emerald-500 to-green-500' },
-                { icon: Zap, title: 'Pragmatisch', color: 'from-purple-500 to-pink-500' }
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -8 }}
-                  className="aspect-square bg-slate-900 rounded-[2.5rem] p-8 flex flex-col items-center justify-center border border-slate-800 shadow-2xl relative overflow-hidden group cursor-pointer"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-white/10 transition-colors">
-                    <item.icon className="w-8 h-8 text-white/80 group-hover:text-white transition-colors" />
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-secondary mb-12 md:mb-16 tracking-tight text-center">
+              Waar we voor <span className="text-primary italic">staan.</span>
+            </h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10 md:gap-y-14">
+            {[
+              {
+                title: 'Eerlijk',
+                desc: 'We zeggen wat wel en niet kan. Geen loze beloftes als de data het niet ondersteunt.',
+              },
+              {
+                title: 'Resultaat',
+                desc: 'Meten, bijsturen, opleveren als het werkt. We zijn pas klaar als het systeem rendeert.',
+              },
+              {
+                title: 'Samen',
+                desc: 'Met eigenaar, beheerder en huurder aan één plan. Energie is een gedeeld belang.',
+              },
+              {
+                title: 'Pragmatisch',
+                desc: 'Liever simpel en effectief dan complex en traag. We houden van actie.',
+              },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.08}>
+                <div className="group">
+                  <div className="flex items-baseline gap-4 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-primary shrink-0 translate-y-[-2px]" />
+                    <h3 className="text-2xl md:text-3xl font-black text-secondary tracking-tight">
+                      {item.title}
+                    </h3>
                   </div>
-                  <span className="text-white font-black text-xl tracking-tight">{item.title}</span>
-                </motion.div>
-              ))}
-            </FadeIn>
-            
-            <div className="space-y-10 md:space-y-16">
-              <FadeIn direction="left">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-secondary mb-8 md:mb-12 tracking-tight">Waar we voor staan.</h2>
+                  <p className="text-lg text-slate-500 leading-relaxed pl-6 italic">
+                    &quot;{item.desc}&quot;
+                  </p>
+                </div>
               </FadeIn>
-              <div className="space-y-8 md:space-y-12">
-                {[
-                  {
-                    title: 'Eerlijk',
-                    desc: 'We zeggen wat wel en niet kan. Geen loze beloftes als de data het niet ondersteunt.'
-                  },
-                  {
-                    title: 'Resultaat',
-                    desc: 'Meten, bijsturen, opleveren als het werkt. We zijn pas klaar als het systeem rendeert.'
-                  },
-                  {
-                    title: 'Samen',
-                    desc: 'Met eigenaar, beheerder en huurder aan één plan. Energie is een gedeeld belang.'
-                  },
-                  {
-                    title: 'Pragmatisch',
-                    desc: 'Liever simpel en effectief dan complex en traag. We houden van actie.'
-                  }
-                ].map((item, i) => (
-                  <FadeIn key={i} delay={i * 0.1} direction="left" className="flex items-start group">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-primary shrink-0 mr-8 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                      <CheckCircle2 className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-black text-secondary mb-3 tracking-tight">{item.title}</h3>
-                      <p className="text-xl text-slate-500 leading-relaxed italic">&quot;{item.desc}&quot;</p>
-                    </div>
-                  </FadeIn>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
