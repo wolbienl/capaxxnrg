@@ -148,6 +148,21 @@ export const ROUTES = {
         priority: 0.8,
         changeFreq: 'monthly' as const
       },
+      kennisbankEnergiehubs: {
+        path: '/kennisbank/energiehubs',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      kennisbankFlexeSubsidie2026: {
+        path: '/kennisbank/flex-e-subsidie-2026',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      kennisbankSprila2026: {
+        path: '/kennisbank/sprila-2026',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
       regio_twente: {
         path: '/netcongestie/twente',
         priority: 0.8,
@@ -170,6 +185,21 @@ export const ROUTES = {
       },
       regio_oldenzaal: {
         path: '/netcongestie/oldenzaal',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      netbeheerder_enexis: {
+        path: '/netcongestie/enexis',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      netbeheerder_coteq: {
+        path: '/netcongestie/coteq',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      netbeheerder_alliander: {
+        path: '/netcongestie/alliander',
         priority: 0.8,
         changeFreq: 'monthly' as const
       }

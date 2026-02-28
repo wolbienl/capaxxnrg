@@ -10,7 +10,8 @@ import {
   Scale,
   Wrench,
   BookOpen,
-  Zap
+  Zap,
+  Network,
 } from 'lucide-react';
 import FadeIn from '@/components/FadeIn';
 import SolutionHero from '@/components/SolutionHero';
@@ -60,7 +61,34 @@ const kennisbank = [
     description: 'Nieuwe regels en kansen voor congestiemanagement en flexibele netinzet.',
     href: '/kennisbank/energiewet-2026',
     icon: BookOpen
-  }
+  },
+  {
+    title: 'Energiehubs',
+    description: 'Gedeelde opwek, opslag en verbruik op locatie — netcongestie omzeilen via intern net.',
+    href: '/kennisbank/energiehubs',
+    icon: Network
+  },
+];
+
+const netbeheerders = [
+  {
+    title: 'Netcongestie bij Enexis',
+    description: 'Capaciteitskaart, Flexmarkt, non-firm contracten en GTO\'s. Wat werkt er en hoe doorloop je het proces?',
+    href: '/netcongestie/enexis',
+    werkgebied: 'Twente · Overijssel · Noord- en Oost-NL',
+  },
+  {
+    title: 'Netcongestie bij Coteq',
+    description: 'Regionaal netbeheerder in Overijssel (Hardenberg, Ommen, Coevorden). Zelfde instrumenten als Enexis, directere aanspreekbaarheid.',
+    href: '/netcongestie/coteq',
+    werkgebied: 'Hardenberg · Ommen · Coevorden',
+  },
+  {
+    title: 'Netcongestie bij Alliander / Liander',
+    description: 'FlexPower, non-firm en TDTR-contracten. Hoe werkt het proces bij Liander en welke routes zijn het meest effectief?',
+    href: '/netcongestie/alliander',
+    werkgebied: 'Noord-Holland · Gelderland · Friesland',
+  },
 ];
 
 export default function NetcongestiePage() {
@@ -131,6 +159,39 @@ export default function NetcongestiePage() {
                     <p className="text-slate-500 italic leading-relaxed mb-5">{item.description}</p>
                     <span className="inline-flex items-center font-bold text-secondary group-hover:text-primary transition-colors">
                       Lees meer <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Netbeheerders */}
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeIn className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6 md:mb-8 tracking-tight">
+              Per <span className="text-primary italic">netbeheerder</span> verschilt het
+            </h2>
+            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              Enexis, Coteq en Liander hanteren elk hun eigen processen, programma's en prioriteiten. Weet wat bij jouw netbeheerder werkt.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {netbeheerders.map((item, idx) => (
+              <FadeIn key={item.title} delay={idx * 0.08}>
+                <Link href={item.href} className="group block h-full">
+                  <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-200 hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all h-full flex flex-col">
+                    <div className="text-xs font-bold text-primary uppercase tracking-wider mb-3 bg-primary/10 px-3 py-1 rounded-full w-fit">
+                      {item.werkgebied}
+                    </div>
+                    <h3 className="text-2xl font-bold text-secondary mb-4 tracking-tight group-hover:text-primary transition-colors">{item.title}</h3>
+                    <p className="text-slate-500 italic leading-relaxed mb-6 flex-grow">{item.description}</p>
+                    <span className="inline-flex items-center font-bold text-secondary group-hover:text-primary transition-colors">
+                      Bekijk routes <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
                 </Link>

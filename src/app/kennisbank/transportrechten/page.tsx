@@ -127,7 +127,7 @@ export default function TransportrechtenPage() {
                 <span className="uppercase tracking-widest text-xs">Kennisbank</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary leading-[1.05] tracking-tight mb-6 md:mb-8">
-                &quot;Flexibele&quot; <span className="text-primary italic">transportrechten.</span>
+                Flexibele <span className="text-primary italic">transportrechten.</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-2xl">
                 De ACM heeft in 2024 een reeks codebesluiten genomen die het speelveld fundamenteel

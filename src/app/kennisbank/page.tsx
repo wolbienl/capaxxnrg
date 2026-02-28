@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Cable, Scale, Wrench, BookOpen, ArrowRight } from 'lucide-react'
+import { Battery, Cable, Network, Scale, Wrench, BookOpen, ArrowRight, Zap } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 
 export const metadata: Metadata = {
-  title: 'Kennisbank Netcongestie | CAPAXX Energy',
-  description: 'Alles over netcongestie oplossen: cable pooling, flexibele transportrechten, zelfaanleg en de Energiewet 2026. Diepgaande kennis voor professionals.',
-  keywords: ['netcongestie kennisbank', 'cable pooling', 'transportrechten', 'zelfaanleg', 'energiewet 2026'],
+  title: 'Kennisbank Netcongestie & Energie | CAPAXX Energy',
+  description: 'Alles over netcongestie oplossen: cable pooling, flexibele transportrechten, zelfaanleg, Energiewet 2026, energiehubs en subsidies zoals Flex-e en SPRILA. Diepgaande kennis voor professionals.',
+  keywords: ['netcongestie kennisbank', 'cable pooling', 'transportrechten', 'zelfaanleg', 'energiewet 2026', 'energiehubs', 'flex-e subsidie', 'SPRILA 2026'],
 }
 
 const pillars = [
@@ -38,6 +38,27 @@ const pillars = [
     href: '/kennisbank/energiewet-2026',
     stats: 'Per 1 jan 2026 • Fundamentele wijzigingen',
   },
+  {
+    icon: Network,
+    title: 'Energiehubs',
+    description: 'Gedeelde opwek, opslag en verbruik op één locatie. Hoe een energiehub netcongestie omzeilt, kosten verdeelt en benutting verhoogt.',
+    href: '/kennisbank/energiehubs',
+    stats: 'Bedrijventerreinen • Vastgoedportefeuilles',
+  },
+  {
+    icon: Battery,
+    title: 'Flex-e subsidie 2026',
+    description: '€62 miljoen voor batterijen, EMS en flexibiliteitsmaatregelen. Tot €300.000 per investering, combineerbaar met EIA (40%) en MIA/Vamil.',
+    href: '/kennisbank/flex-e-subsidie-2026',
+    stats: '€62 miljoen • Tot €300.000 per project',
+  },
+  {
+    icon: Zap,
+    title: 'SPRILA 2026',
+    description: 'Subsidie voor energie-infrastructuurprojecten die netcongestie verlichten. Wie komt in aanmerking en hoe vraag je aan via RVO?',
+    href: '/kennisbank/sprila-2026',
+    stats: 'Via RVO • Combineerbaar met EIA',
+  },
 ]
 
 export default function KennisbankPage() {
@@ -55,10 +76,10 @@ export default function KennisbankPage() {
                 <span className="uppercase tracking-widest text-xs">Kennisbank</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary leading-[1.05] tracking-tight mb-6 md:mb-8">
-                Netcongestie <span className="text-primary italic">doorgrond.</span>
+                Netcongestie & energie <span className="text-primary italic">doorgrond.</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-2xl">
-                Diepgaande kennis over de vier pijlers van netcongestie-oplossingen. 
+                Diepgaande kennis over netcongestie-oplossingen, energiehubs en subsidies.
                 Met cijfers, juridische context en praktijkvoorbeelden.
               </p>
             </FadeIn>
@@ -68,7 +89,7 @@ export default function KennisbankPage() {
 
       <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {pillars.map((pillar, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <Link href={pillar.href} className="group block h-full">
