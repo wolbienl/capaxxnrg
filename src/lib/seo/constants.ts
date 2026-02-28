@@ -1,6 +1,6 @@
 /**
  * SEO Constants - Single Source of Truth voor alle SEO-gerelateerde configuratie
- * 
+ *
  * Update dit bestand om bedrijfsinformatie, contact details, en locatie-gegevens
  * overal op de website te wijzigen.
  */
@@ -8,98 +8,126 @@
 export const SITE_CONFIG = {
   name: 'CAPAXX Energy',
   url: 'https://www.capaxxenergy.nl',
-  description: 'Energie-oplossingen voor commercieel vastgoed in Twente. Zonnepanelen, energieopslag, laadinfra en EMS voor duurzame bedrijfspanden.',
+  description: 'Energie-oplossingen en advies voor commercieel vastgoed in Twente. Zonnepanelen, energieopslag, laadinfra, EMS, energielabels en duurzaamheidsadvies.',
   tagline: 'Maak energie een asset voor jouw vastgoed.',
   locale: 'nl_NL',
-  
+
   contact: {
-    email: 'info@capaxxenergy.nl',
+    email: 'mail@capaxx-energy.nl',
     phone: '+31532065066',
     phoneDisplay: '+31 (0)53 206 5066',
     address: {
-      street: '', // Vul in indien gewenst
-      city: 'Enschede',
-      postalCode: '', // Vul in indien gewenst
+      street: 'Jan Tinbergenstraat 202',
+      city: 'Hengelo',
+      postalCode: '7559 ST',
       region: 'Overijssel',
       country: 'Nederland',
-      countryCode: 'NL'
-    }
+      countryCode: 'NL',
+    },
   },
-  
+
   location: {
-    city: 'Enschede',
+    city: 'Hengelo',
     region: 'Overijssel',
     areaServed: 'Twente',
     country: 'NL',
-    // Coördinaten voor centrum Twente (bij Enschede)
     coordinates: {
-      latitude: 52.2215,
-      longitude: 6.8937
+      latitude: 52.29038,
+      longitude: 6.78171,
     },
-    // Service radius in kilometers (50km = groot Twente gebied)
-    radiusKm: 50
+    radiusKm: 50,
   },
-  
+
   social: {
-    // Voeg toe indien beschikbaar
     linkedin: '',
     twitter: '',
-    facebook: ''
+    facebook: '',
   },
-  
+
   images: {
     logo: '/images/logo.svg',
     logoLight: '/images/logo-light.svg',
     logoDark: '/images/logo-dark.svg',
     ogDefault: '/images/storage-render.jpg',
-    twitterCard: '/images/storage-render.jpg'
+    twitterCard: '/images/storage-render.jpg',
   },
-  
-  // Business info voor structured data
+
   business: {
-    foundingDate: '2024', // Pas aan indien bekend
+    foundingDate: '2024',
     legalName: 'CAPAXX Energy',
     type: 'ProfessionalService' as const,
-    priceRange: '€€€'
-  }
+    priceRange: '€€€',
+  },
 } as const;
 
 /**
- * Default keywords die op elke pagina worden toegevoegd
- * Combineer deze met pagina-specifieke keywords
+ * Default keywords — worden aan elke pagina toegevoegd.
+ * Houd deze lijst beperkt tot termen die site-breed relevant zijn.
+ * Pagina-specifieke termen staan in de page/layout metadata zelf.
+ *
+ * Strategie:
+ *  1. Brand
+ *  2. Service-categorieën (oplossingen + advies)
+ *  3. Key differentiator (netcongestie)
+ *  4. Doelgroep
+ *  5. Primaire geo-termen (kantoor Hengelo + werkgebied Twente)
+ *  6. Generieke waarde-termen
  */
 export const DEFAULT_KEYWORDS = [
   'CAPAXX Energy',
-  'energie',
-  'energieoplossingen',
-  'commercieel vastgoed',
-  'Twente',
-  'Enschede',
-  'Overijssel',
-  'duurzame energie',
+
+  'energie-oplossingen',
+  'energieadvies',
+  'duurzaamheidsadvies',
+  'verduurzaming vastgoed',
+
   'zonnepanelen',
   'energieopslag',
+  'batterijopslag',
   'laadinfrastructuur',
-  'laadpalen',
   'EMS',
   'energy management',
-  'peak shaving',
+
+  'energielabel',
+  'EP-advies',
+  'BREEAM',
+  'ESG rapportage',
+
   'netcongestie',
-  'batterijopslag',
-  'solar carports',
+  'netcongestie oplossen',
+  'cable pooling',
+  'transportrechten',
+
+  'commercieel vastgoed',
   'bedrijfspanden',
-  'vastgoedeigenaren'
+  'vastgoedeigenaren',
+  'bedrijventerrein',
+
+  'Hengelo',
+  'Twente',
+  'Enschede',
+  'Almelo',
+  'Overijssel',
+  'Oost-Nederland',
+
+  'duurzame energie',
+  'energietransitie',
 ] as const;
 
 /**
- * Twente-specifieke keywords voor lokale SEO
+ * Twente-specifieke geo-keywords voor lokale SEO landingspagina's
  */
 export const TWENTE_KEYWORDS = [
   'Twente',
-  'Enschede',
   'Hengelo',
+  'Enschede',
   'Almelo',
   'Oldenzaal',
+  'Borne',
+  'Haaksbergen',
+  'Losser',
+  'Wierden',
+  'Rijssen-Holten',
   'Overijssel',
-  'Oost-Nederland'
+  'Oost-Nederland',
 ] as const;

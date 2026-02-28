@@ -23,9 +23,11 @@ export function generateOrganizationSchema() {
     
     address: {
       '@type': 'PostalAddress',
-      addressLocality: SITE_CONFIG.location.city,
-      addressRegion: SITE_CONFIG.location.region,
-      addressCountry: SITE_CONFIG.location.country
+      streetAddress: SITE_CONFIG.contact.address.street,
+      addressLocality: SITE_CONFIG.contact.address.city,
+      postalCode: SITE_CONFIG.contact.address.postalCode,
+      addressRegion: SITE_CONFIG.contact.address.region,
+      addressCountry: SITE_CONFIG.contact.address.countryCode,
     },
     
     geo: {
@@ -61,19 +63,19 @@ export function generateOrganizationSchema() {
  */
 export function generateLocalBusinessSchema() {
   const orgSchema = generateOrganizationSchema();
-  
+
   return {
     ...orgSchema,
     '@type': 'LocalBusiness',
+    legalName: SITE_CONFIG.business.legalName,
+    foundingDate: SITE_CONFIG.business.foundingDate,
     priceRange: SITE_CONFIG.business.priceRange,
-    
-    // Opening hours indien relevant
-    // openingHoursSpecification: {
-    //   '@type': 'OpeningHoursSpecification',
-    //   dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    //   opens: '09:00',
-    //   closes: '17:00'
-    // }
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:30',
+      closes: '17:30',
+    },
   };
 }
 
