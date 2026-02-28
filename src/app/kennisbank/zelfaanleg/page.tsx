@@ -13,11 +13,12 @@ import {
   HardHat,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Zelfaanleg Netaansluiting (Art. 3.39) | Kennisbank | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Zelfaanleg Netaansluiting (Art. 3.39)',
   description:
-    'Zelfaanleg netaansluiting via artikel 3.39 Energiewet. Drempel verlaagd naar 2,3 MVA. Openbare aanbesteding, ICP inschakelen, snellere realisatie en lagere kosten. 16c aansluiting voor distributiecentra en zonneparken.',
+    'Zelfaanleg netaansluiting via artikel 3.39 Energiewet. Drempel verlaagd naar 2,3 MVA. Snellere realisatie en lagere kosten.',
   keywords: [
     'zelfaanleg netaansluiting',
     'artikel 3.39 energiewet',
@@ -26,7 +27,8 @@ export const metadata: Metadata = {
     '2,3 MVA drempel',
     'openbare aanbesteding netaansluiting',
   ],
-}
+  path: '/kennisbank/zelfaanleg',
+})
 
 const voordelen = [
   {

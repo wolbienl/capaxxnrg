@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata'
 import QuickscanWindparkContent from './content'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Quickscan Windpark | Haalbaarheid & Aansluiting',
+  title: 'Quickscan Windpark | Haalbaarheid',
   description:
     'Gratis quickscan voor jouw windpark. Wij beoordelen netcapaciteit, cable pooling met zon, flexibele transportrechten en zelfaanleg mogelijkheden. Advies binnen 1 week.',
   keywords: [

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import DoelgroepPage from '@/components/DoelgroepPage'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Projectontwikkeling Zon & Wind | Netcongestie oplossen | CAPAXX Energy',
-  description: 'Je zonnepark krijgt geen aansluiting? CAPAXX Energy begeleidt zelfaanleg, cable pooling en flexibele transportrechten voor projectontwikkelaars in hernieuwbare energie.',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Projectontwikkeling Zon & Wind',
+  description: 'Zonnepark krijgt geen aansluiting? CAPAXX Energy begeleidt zelfaanleg, cable pooling en transportrechten voor projectontwikkelaars.',
   keywords: ['netcongestie zonnepark', 'zelfaanleg aansluiting', 'cable pooling zon wind', 'transportrechten', 'SDE++ netcongestie'],
-}
+  path: '/projectontwikkeling',
+})
 
 export default function ProjectontwikkelingPage() {
   return (

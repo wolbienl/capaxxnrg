@@ -13,11 +13,12 @@ import {
   Lightbulb,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Flexibele Transportrechten | Kennisbank | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Flexibele Transportrechten | Kennisbank',
   description:
-    'Non-firm transportrecht, TDTR, tijdsduurgebonden en tijdsblokgebonden transportrechten. ACM-codebesluiten 2024, netcongestie oplossen met 50-65% nettariefkorting. Vergelijk firm vs non-firm vs TDTR.',
+    'Non-firm, TDTR en tijdsblokgebonden transportrechten. Netcongestie oplossen met 50-65% nettariefkorting. Vergelijk firm vs non-firm vs TDTR.',
   keywords: [
     'non-firm transportrecht',
     'TDTR',
@@ -28,7 +29,8 @@ export const metadata: Metadata = {
     'ACM codebesluit transportrechten',
     'netbeheerder transportcapaciteit',
   ],
-}
+  path: '/kennisbank/transportrechten',
+})
 
 const transportrechten = [
   {

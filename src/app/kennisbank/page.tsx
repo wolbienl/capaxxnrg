@@ -3,12 +3,14 @@ import type { LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { Battery, Cable, Network, Scale, Wrench, BookOpen, ArrowRight, Zap } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Kennisbank Netcongestie & Energie | CAPAXX Energy',
-  description: 'Alles over netcongestie oplossen: cable pooling, flexibele transportrechten, zelfaanleg, Energiewet 2026, energiehubs en subsidies zoals Flex-e en SPRILA. Diepgaande kennis voor professionals.',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Kennisbank Netcongestie & Energie',
+  description: 'Alles over netcongestie oplossen: cable pooling, transportrechten, zelfaanleg, Energiewet 2026, energiehubs en subsidies. Kennis voor professionals.',
   keywords: ['netcongestie kennisbank', 'cable pooling', 'transportrechten', 'zelfaanleg', 'energiewet 2026', 'energiehubs', 'flex-e subsidie', 'SPRILA 2026'],
-}
+  path: '/kennisbank',
+})
 
 type KennisbankItem = {
   icon: LucideIcon

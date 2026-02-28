@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import DoelgroepPage from '@/components/DoelgroepPage'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Vastgoed & Bedrijventerreinen | Netcongestie oplossen | CAPAXX Energy',
-  description: 'Je bedrijventerrein kan niet uitbreiden door netcongestie? CAPAXX Energy organiseert energiegemeenschappen, cable pooling en GTO\'s zodat jouw terrein weer kan groeien.',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Vastgoed & Bedrijventerreinen',
+  description: 'Bedrijventerrein kan niet uitbreiden door netcongestie? CAPAXX Energy organiseert energiegemeenschappen, cable pooling en GTO\'s.',
   keywords: ['netcongestie vastgoed', 'bedrijventerrein netcongestie', 'cable pooling bedrijventerrein', 'energiegemeenschap', 'GTO'],
-}
+  path: '/vastgoed',
+})
 
 export default function VastgoedPage() {
   return (

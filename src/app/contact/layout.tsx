@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/lib/seo/constants';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Contact',
-  description: `Neem contact op met CAPAXX Energy in ${SITE_CONFIG.location.areaServed}. Plan een energiescan of vraag advies over zonnepanelen, energieopslag of laadinfra voor jouw vastgoed. Tel: ${SITE_CONFIG.contact.phoneDisplay}`,
+  description: `Neem contact op met CAPAXX Energy in ${SITE_CONFIG.location.areaServed}. Plan een energiescan of vraag advies over verduurzaming van jouw vastgoed.`,
   keywords: [
     'contact',
     'advies',

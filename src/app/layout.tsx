@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   ...generatePageMetadata({
     title: 'Home',
-    description: `Energie-oplossingen voor commercieel vastgoed in ${SITE_CONFIG.location.areaServed}. Zonnepanelen, energieopslag, laadinfra en EMS. Data-gedreven, resultaatgericht. Geen dikke praat, wel resultaat.`,
+    description: `Energie-oplossingen en advies voor commercieel vastgoed in ${SITE_CONFIG.location.areaServed}. Zonnepanelen, energieopslag, laadinfra en EMS. Data-gedreven en resultaatgericht.`,
     keywords: [
       'energieoplossingen',
       'commercieel vastgoed',

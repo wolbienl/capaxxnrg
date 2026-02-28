@@ -16,11 +16,12 @@ import {
   Zap,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Energiehubs | Kennisbank | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Energiehubs | Kennisbank',
   description:
-    'Wat is een energiehub? Gedeelde energie-infrastructuur voor bedrijventerreinen en vastgoedparken. Opwek, opslag en verdeling gecombineerd op één locatie — netcongestie omzeilen en kosten delen.',
+    'Wat is een energiehub? Gedeelde energie-infrastructuur op bedrijventerreinen. Opwek, opslag en verdeling op één locatie — netcongestie omzeilen.',
   keywords: [
     'energiehub',
     'energiehubs bedrijventerrein',
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
     'collectieve energievoorziening',
     'energiehub vastgoed',
   ],
-}
+  path: '/kennisbank/energiehubs',
+})
 
 const hoeWerktHet = [
   {

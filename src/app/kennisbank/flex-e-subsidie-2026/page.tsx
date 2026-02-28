@@ -15,11 +15,12 @@ import {
   Zap,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Flex-e subsidie 2026 | Kennisbank | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Flex-e subsidie 2026 | Kennisbank',
   description:
-    'Flex-e subsidie 2026: €62 miljoen voor batterijen, EMS en flexibiliteitsmaatregelen. Tot €300.000 per investering via RVO. Combineerbaar met EIA (40%) en MIA/Vamil (14%). Alles over Flex-e voor bedrijven.',
+    'Flex-e subsidie 2026: €62 miljoen voor batterijen, EMS en flexibiliteitsmaatregelen. Tot €300.000 per investering via RVO. Combineerbaar met EIA en MIA/Vamil.',
   keywords: [
     'Flex-e subsidie 2026',
     'Flex-e subsidie batterij',
@@ -31,7 +32,8 @@ export const metadata: Metadata = {
     'Flex-e aanvragen',
     'subsidie energieopslag bedrijven',
   ],
-}
+  path: '/kennisbank/flex-e-subsidie-2026',
+})
 
 const watVergoedt = [
   {

@@ -13,11 +13,12 @@ import {
   Factory,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Energiewet 2026 | Kennisbank | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Energiewet 2026 | Kennisbank',
   description:
-    'Energiewet 2026, nieuwe energiewet, energiewet netcongestie. Sinds 1 januari 2026 is de Elektriciteitswet 1998 vervangen. Cable pooling, GTO\'s, zelfaanleg en flexibele transportrechten fundamenteel gewijzigd.',
+    'Sinds 1 januari 2026 is de Elektriciteitswet 1998 vervangen. Cable pooling, GTO\'s, zelfaanleg en transportrechten fundamenteel gewijzigd.',
   keywords: [
     'energiewet 2026',
     'nieuwe energiewet',
@@ -27,7 +28,8 @@ export const metadata: Metadata = {
     'groepstransportovereenkomst',
     'zelfaanleg 2,3 MVA',
   ],
-}
+  path: '/kennisbank/energiewet-2026',
+})
 
 const kernveranderingen = [
   {

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import DoelgroepPage from '@/components/DoelgroepPage'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Industrie & Grootverbruikers | Netcongestie oplossen | CAPAXX Energy',
-  description: 'Je elektrificatie kan niet door vanwege netcongestie? CAPAXX Energy adviseert over alternatieve transportrechten, peak shaving en zelfaanleg voor industriële afnemers.',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Industrie & Grootverbruikers',
+  description: 'Elektrificatie geblokkeerd door netcongestie? CAPAXX Energy adviseert over transportrechten, peak shaving en zelfaanleg voor industriële afnemers.',
   keywords: ['netcongestie industrie', 'elektrificatie netcongestie', 'TDTR transportrecht', 'peak shaving industrie', 'congestiemanagement'],
-}
+  path: '/industrie',
+})
 
 export default function IndustriePage() {
   return (

@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata'
 import RoiLaadinfraContent from './content'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'ROI Laadinfra Vastgoed | Rendement Laadpalen Bedrijfspand',
+  title: 'ROI Laadinfra Vastgoed',
   description:
     'Wat levert laadinfrastructuur op voor jouw vastgoed? ROI-berekening, terugverdientijd en huurpremie. Laadpalen als waardeverhoging voor commercieel vastgoed.',
   keywords: [

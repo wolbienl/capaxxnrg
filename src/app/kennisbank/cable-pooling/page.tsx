@@ -11,11 +11,12 @@ import {
   CheckCircle2,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Cable Pooling & Energiegemeenschappen | Kennisbank | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Cable Pooling & Energiegemeenschappen',
   description:
-    'Cable pooling bedrijventerrein: aansluiting delen met maximaal vier partijen vanaf 100 kVA. Energiegemeenschap oprichten en groepstransportovereenkomst (GTO) afsluiten. Praktijkvoorbeelden en juridische structurering.',
+    'Cable pooling bedrijventerrein: aansluiting delen met max. vier partijen vanaf 100 kVA. Energiegemeenschap oprichten en GTO afsluiten.',
   keywords: [
     'cable pooling bedrijventerrein',
     'energiegemeenschap oprichten',
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
     'aansluiting delen',
     'energiewet 2026',
   ],
-}
+  path: '/kennisbank/cable-pooling',
+})
 
 const gtoExamples = [
   {

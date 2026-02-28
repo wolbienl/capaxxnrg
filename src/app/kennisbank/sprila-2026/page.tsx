@@ -15,11 +15,12 @@ import {
   Zap,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'SPRILA 2026 | Subsidie energie-infrastructuur | CAPAXX Energy',
+export const metadata: Metadata = generatePageMetadata({
+  title: 'SPRILA 2026 | Kennisbank',
   description:
-    'SPRILA 2026: subsidie voor energie-infrastructuurprojecten die netcongestie verlichten. Wie komt in aanmerking, hoeveel subsidie is er beschikbaar en hoe vraag je aan? Alles over SPRILA voor bedrijven.',
+    'SPRILA 2026: subsidie voor energie-infrastructuurprojecten die netcongestie verlichten. Wie komt in aanmerking en hoe vraag je aan via RVO?',
   keywords: [
     'SPRILA 2026',
     'SPRILA subsidie',
@@ -30,7 +31,8 @@ export const metadata: Metadata = {
     'subsidie bedrijventerrein energie',
     'SPRILA Twente',
   ],
-}
+  path: '/kennisbank/sprila-2026',
+})
 
 const aanMerkingsVereisten = [
   {
