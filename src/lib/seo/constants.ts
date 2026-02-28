@@ -7,7 +7,7 @@
 
 export const SITE_CONFIG = {
   name: 'CAPAXX Energy',
-  url: 'https://www.capaxxenergy.nl',
+  url: 'https://capaxx-energy.nl',
   description: 'Energie-oplossingen en advies voor commercieel vastgoed in Twente. Zonnepanelen, energieopslag, laadinfra, EMS, energielabels en duurzaamheidsadvies.',
   tagline: 'Maak energie een asset voor jouw vastgoed.',
   locale: 'nl_NL',
