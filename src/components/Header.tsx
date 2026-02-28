@@ -201,10 +201,13 @@ export default function Header() {
               onMouseEnter={() => handleMenuEnter('watwedoen')}
               onMouseLeave={handleMenuLeave}
             >
-              <button className="flex items-center space-x-1.5 text-secondary font-bold hover:text-primary transition-colors py-2">
+              <TransitionLink
+                href="/wat-wij-doen"
+                className="flex items-center space-x-1.5 text-secondary font-bold hover:text-primary transition-colors py-2"
+              >
                 <span>Wat wij doen</span>
                 <ChevronDown className={cn("w-4 h-4 transition-transform duration-300 ease-in-out", openMegaMenu === 'watwedoen' && "rotate-180")} />
-              </button>
+              </TransitionLink>
             </div>
 
             {/* Netcongestie Mega Menu */}
@@ -213,10 +216,13 @@ export default function Header() {
               onMouseEnter={() => handleMenuEnter('netcongestie')}
               onMouseLeave={handleMenuLeave}
             >
-              <button className="flex items-center space-x-1.5 text-secondary font-bold hover:text-primary transition-colors py-2">
+              <TransitionLink
+                href="/netcongestie"
+                className="flex items-center space-x-1.5 text-secondary font-bold hover:text-primary transition-colors py-2"
+              >
                 <span>Netcongestie</span>
                 <ChevronDown className={cn("w-4 h-4 transition-transform duration-300 ease-in-out", openMegaMenu === 'netcongestie' && "rotate-180")} />
-              </button>
+              </TransitionLink>
             </div>
 
             {navLinks.map((link) => (

@@ -14,6 +14,8 @@ interface SolutionHeroProps {
   ctaHref: string
   backgroundImage?: string
   showScrollIndicator?: boolean
+  size?: 'default' | 'compact'
+  label?: string
 }
 
 export default function SolutionHero({
@@ -24,10 +26,14 @@ export default function SolutionHero({
   ctaText,
   ctaHref,
   backgroundImage,
-  showScrollIndicator = true
+  showScrollIndicator = true,
+  size = 'default',
+  label = 'Oplossing'
 }: SolutionHeroProps) {
+  const isCompact = size === 'compact'
+
   return (
-    <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+    <section className={`relative bg-white overflow-hidden ${isCompact ? 'pt-24 pb-10 md:pt-28 md:pb-14' : 'pt-28 pb-16 md:pt-40 md:pb-24'}`}>
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-50" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 -skew-x-12 translate-x-1/4" />
@@ -55,17 +61,17 @@ export default function SolutionHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="inline-flex items-center space-x-2 text-primary font-bold mb-8 px-4 py-2 bg-orange-50 rounded-full border border-orange-100">
+            <div className={`inline-flex items-center space-x-2 text-primary font-bold px-4 py-2 bg-orange-50 rounded-full border border-orange-100 ${isCompact ? 'mb-4 md:mb-6' : 'mb-8'}`}>
               <Icon className="w-5 h-5" />
-              <span className="uppercase tracking-widest text-xs">Oplossing</span>
+              <span className="uppercase tracking-widest text-xs">{label}</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-secondary leading-[1.05] tracking-tight mb-6 md:mb-8">
+            <h1 className={`${isCompact ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] mb-4 md:mb-6' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] mb-6 md:mb-8'} font-black text-secondary tracking-tight`}>
               {title} <br />
               <span className="text-primary italic">{titleHighlight}</span>
             </h1>
             
-            <p className="text-lg md:text-xl lg:text-2xl text-slate-500 mb-8 md:mb-12 leading-relaxed max-w-2xl text-balance">
+            <p className={`${isCompact ? 'text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl' : 'text-lg md:text-xl lg:text-2xl mb-8 md:mb-12 max-w-2xl'} text-slate-500 leading-relaxed text-balance`}>
               {description}
             </p>
             

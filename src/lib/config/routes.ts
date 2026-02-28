@@ -97,45 +97,53 @@ export const ROUTES = {
     changeFreq: 'monthly' as const
   },
 
-  vastgoed: {
-    path: '/vastgoed',
+  watWijDoen: {
+    path: '/wat-wij-doen',
     priority: 0.9,
     changeFreq: 'weekly' as const
   },
 
-  projectontwikkeling: {
-    path: '/projectontwikkeling',
-    priority: 0.9,
-    changeFreq: 'weekly' as const
-  },
-
-  industrie: {
-    path: '/industrie',
-    priority: 0.9,
-    changeFreq: 'weekly' as const
-  },
-
-  kennisbank: {
-    path: '/kennisbank',
+  netcongestie: {
+    path: '/netcongestie',
     priority: 0.9,
     changeFreq: 'weekly' as const,
     children: {
-      cablePooling: {
+      vastgoed: {
+        path: '/vastgoed',
+        priority: 0.9,
+        changeFreq: 'weekly' as const
+      },
+      projectontwikkeling: {
+        path: '/projectontwikkeling',
+        priority: 0.9,
+        changeFreq: 'weekly' as const
+      },
+      industrie: {
+        path: '/industrie',
+        priority: 0.9,
+        changeFreq: 'weekly' as const
+      },
+      kennisbank: {
+        path: '/kennisbank',
+        priority: 0.9,
+        changeFreq: 'weekly' as const
+      },
+      kennisbankCablePooling: {
         path: '/kennisbank/cable-pooling',
         priority: 0.8,
         changeFreq: 'monthly' as const
       },
-      transportrechten: {
+      kennisbankTransportrechten: {
         path: '/kennisbank/transportrechten',
         priority: 0.8,
         changeFreq: 'monthly' as const
       },
-      zelfaanleg: {
+      kennisbankZelfaanleg: {
         path: '/kennisbank/zelfaanleg',
         priority: 0.8,
         changeFreq: 'monthly' as const
       },
-      energiewet2026: {
+      kennisbankEnergiewet2026: {
         path: '/kennisbank/energiewet-2026',
         priority: 0.8,
         changeFreq: 'monthly' as const
@@ -207,8 +215,15 @@ export function getAllRoutes() {
     priority: number; 
     changeFreq: RouteConfig['changeFreq'] 
   }> = [];
+
+  type RouteNode = {
+    path?: string;
+    priority?: number;
+    changeFreq?: RouteConfig['changeFreq'];
+    children?: Record<string, RouteNode>;
+  };
   
-  function traverse(obj: any) {
+  function traverse(obj: RouteNode) {
     if (obj.path) {
       routes.push({
         path: obj.path,
@@ -222,7 +237,7 @@ export function getAllRoutes() {
     }
   }
   
-  Object.values(ROUTES).forEach(traverse);
+  Object.values(ROUTES as Record<string, RouteNode>).forEach(traverse);
   
   return routes;
 }
