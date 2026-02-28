@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { CheckCircle2, ArrowRight, Phone, Mail } from 'lucide-react'
 
 export const metadata = {
-  title: 'Bedankt voor je aanvraag | Whitepaper Netcongestie',
+  title: 'Bedankt voor je aanvraag | CAPAXX Energy',
   description: 'Je whitepaper is onderweg. Bekijk ook de andere oplossingen van CAPAXX Energy.',
 }
 
