@@ -15,6 +15,7 @@ import {
   Moon,
   Sunrise,
   Sunset,
+  Wind,
 } from 'lucide-react'
 import {
   XAxis,
@@ -500,6 +501,31 @@ export default function EnergieprijzenPage() {
                     </ResponsiveContainer>
                   </div>
                 </div>
+              </FadeIn>
+            </div>
+          </section>
+
+          {/* Cross-link: Energieweerbericht */}
+          <section className="py-6 md:py-10 bg-white">
+            <div className="container mx-auto px-4 md:px-6">
+              <FadeIn>
+                <Link
+                  href="/energieweerbericht"
+                  className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-blue-50/70 rounded-2xl border border-blue-100 p-5 md:p-6 hover:bg-blue-50 transition-all group"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 shrink-0">
+                    <Wind className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base font-black text-secondary tracking-tight mb-0.5">
+                      Bekijk ook het Energieweerbericht
+                    </h3>
+                    <p className="text-sm text-slate-500 leading-relaxed">
+                      Hoeveel wind- en zonne-energie wordt er de komende 7 dagen opgewekt? Combineer de energieprijs met het aanbod van groene stroom.
+                    </p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" />
+                </Link>
               </FadeIn>
             </div>
           </section>

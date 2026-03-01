@@ -230,6 +230,12 @@ export const ROUTES = {
     changeFreq: 'monthly' as const,
   },
 
+  energieweerbericht: {
+    path: '/energieweerbericht',
+    priority: 0.8,
+    changeFreq: 'hourly' as const,
+  },
+
   advies: {
     path: '/advies',
     priority: 0.8,

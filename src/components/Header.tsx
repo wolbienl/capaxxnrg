@@ -388,8 +388,8 @@ export default function Header() {
                       </div>
                     </div>
 
-                    {/* Bottom row: Energieprijzen + Quickscan */}
-                    <div className="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-100">
+                    {/* Bottom row: Energieprijzen + Energieweerbericht + Quickscan */}
+                    <div className="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-slate-100">
                       <TransitionLink
                         href="/energieprijzen"
                         className="flex items-center gap-3 p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100 hover:bg-emerald-50 transition-all group/live"
@@ -402,6 +402,21 @@ export default function Header() {
                         <div>
                           <h3 className="font-bold text-secondary group-hover/live:text-emerald-700 transition-colors text-sm">Live Energieprijzen</h3>
                           <p className="text-xs text-slate-400 mt-0.5 italic">EPEX Spot Day-Ahead voor vandaag.</p>
+                        </div>
+                      </TransitionLink>
+
+                      <TransitionLink
+                        href="/energieweerbericht"
+                        className="flex items-center gap-3 p-4 rounded-2xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 transition-all group/weer"
+                        onClick={() => setOpenMegaMenu(null)}
+                      >
+                        <span className="relative flex h-2.5 w-2.5 shrink-0">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500" />
+                        </span>
+                        <div>
+                          <h3 className="font-bold text-secondary group-hover/weer:text-blue-700 transition-colors text-sm">Energieweerbericht</h3>
+                          <p className="text-xs text-slate-400 mt-0.5 italic">7-daagse wind &amp; zon prognose.</p>
                         </div>
                       </TransitionLink>
 
@@ -557,6 +572,17 @@ export default function Header() {
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                   </span>
                   <span className="font-bold text-secondary">Live Energieprijzen</span>
+                </TransitionLink>
+                <TransitionLink
+                  href="/energieweerbericht"
+                  className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 border border-blue-100 mt-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500" />
+                  </span>
+                  <span className="font-bold text-secondary">Energieweerbericht</span>
                 </TransitionLink>
               </div>
 
