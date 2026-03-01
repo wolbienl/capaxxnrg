@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Menu, X, Sun, Battery, EvCharger, Car, BarChart3, ClipboardCheck, Award, Globe, TrendingUp, ArrowRight, Building2, Factory, Zap, Cable, Scale, Wrench, BookOpen } from 'lucide-react'
+import { ChevronDown, Menu, X, Sun, Battery, EvCharger, Car, BarChart3, ClipboardCheck, Award, Globe, TrendingUp, ArrowRight, Building2, Factory, Zap, Cable, Scale, Wrench, BookOpen, MapIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import TransitionLink from './TransitionLink'
 
@@ -90,6 +90,12 @@ const netcongestieVoorWie = [
 ]
 
 const kennisbankItems = [
+  {
+    title: 'Netcapaciteitskaart',
+    description: 'Interactieve kaart van netcongestie per provincie.',
+    href: '/netcapaciteitskaart',
+    icon: MapIcon,
+  },
   {
     title: 'Cable pooling',
     description: 'Energiegemeenschappen en GTO\'s.',

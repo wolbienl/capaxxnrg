@@ -202,6 +202,11 @@ export const ROUTES = {
         path: '/netcongestie/alliander',
         priority: 0.8,
         changeFreq: 'monthly' as const
+      },
+      netcapaciteitskaart: {
+        path: '/netcapaciteitskaart',
+        priority: 0.9,
+        changeFreq: 'weekly' as const
       }
     }
   },
