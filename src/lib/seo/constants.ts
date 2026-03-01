@@ -39,7 +39,7 @@ export const SITE_CONFIG = {
   },
 
   social: {
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/company/capaxx-energy/',
     twitter: '',
     facebook: '',
   },

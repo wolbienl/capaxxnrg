@@ -4,52 +4,57 @@ import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
 import TransitionLink from './TransitionLink'
 
+const LINKEDIN_URL = 'https://www.linkedin.com/company/capaxx-energy/'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-secondary text-white pt-16 pb-8 md:pt-24 md:pb-12 lg:pt-32 lg:pb-16">
+    <footer className="bg-secondary text-white pt-12 pb-8 md:pt-16 md:pb-10">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-8 mb-12 md:mb-20 lg:mb-24">
-          {/* Brand Column */}
-          <div className="space-y-8">
-            <TransitionLink href="/" className="inline-block transition-transform hover:scale-105">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6 mb-10 md:mb-14">
+
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 space-y-4 mb-2 lg:mb-0">
+            <TransitionLink href="/" className="inline-block">
               <Image
                 src="/images/logo-light.svg"
                 alt="CAPAXX ENERGY"
-                width={200}
-                height={50}
-                className="h-10 w-auto"
+                width={160}
+                height={40}
+                className="h-8 w-auto"
               />
             </TransitionLink>
-            <p className="text-slate-400 max-w-xs leading-relaxed italic">
-              Maximale capaciteit uit een vol net.
+            <p className="text-slate-400 text-sm max-w-xs leading-relaxed italic">
+              Maak energie een asset voor jouw vastgoed.
             </p>
-            <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">
-              BRL 9500-U gecertificeerd · SKG-IKOB
+            <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+              BRL 9500-U · SKG-IKOB
             </p>
-            <div className="flex space-x-4">
-              <TransitionLink href="#" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all duration-300">
-                <Linkedin className="w-5 h-5" />
-              </TransitionLink>
-            </div>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary transition-all"
+              aria-label="CAPAXX Energy op LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
           </div>
 
-          {/* Netcongestie */}
+          {/* Oplossingen */}
           <div>
-            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Netcongestie</h4>
-            <ul className="space-y-5">
+            <h4 className="text-xs font-black mb-4 uppercase tracking-widest text-slate-300">Oplossingen</h4>
+            <ul className="space-y-2.5">
               {[
-                { label: 'Vastgoed', href: '/vastgoed' },
-                { label: 'Projectontwikkeling', href: '/projectontwikkeling' },
-                { label: 'Industrie', href: '/industrie' },
+                { label: 'Zonnepanelen', href: '/oplossingen/zonnepanelen' },
+                { label: 'Energieopslag', href: '/oplossingen/energieopslag' },
+                { label: 'EMS', href: '/oplossingen/ems' },
+                { label: 'Laadinfra', href: '/oplossingen/laadinfra' },
+                { label: 'Solar carports', href: '/oplossingen/solar-carports' },
               ].map((item) => (
                 <li key={item.label}>
-                  <TransitionLink 
-                    href={item.href} 
-                    className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
-                  >
-                    <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
+                  <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
                     {item.label}
                   </TransitionLink>
                 </li>
@@ -57,22 +62,51 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Kennisbank */}
+          {/* Netcongestie */}
           <div>
-            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Kennisbank</h4>
-            <ul className="space-y-5">
+            <h4 className="text-xs font-black mb-4 uppercase tracking-widest text-slate-300">Netcongestie</h4>
+            <ul className="space-y-2.5">
               {[
+                { label: 'Overzicht', href: '/netcongestie' },
+                { label: 'Vastgoed', href: '/vastgoed' },
+                { label: 'Projectontwikkeling', href: '/projectontwikkeling' },
+                { label: 'Industrie', href: '/industrie' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
+                    {item.label}
+                  </TransitionLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Advies & Kennisbank */}
+          <div>
+            <h4 className="text-xs font-black mb-4 uppercase tracking-widest text-slate-300">Advies</h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: 'Energielabels', href: '/advies/energielabels' },
+                { label: 'BREEAM', href: '/advies/breeam' },
+                { label: 'ESG rapportage', href: '/advies/esg' },
+                { label: 'Paris Proof', href: '/advies/paris-proof' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
+                    {item.label}
+                  </TransitionLink>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-xs font-black mt-6 mb-4 uppercase tracking-widest text-slate-300">Kennisbank</h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: 'Alle artikelen', href: '/kennisbank' },
                 { label: 'Cable pooling', href: '/kennisbank/cable-pooling' },
-                { label: 'Transportrechten', href: '/kennisbank/transportrechten' },
-                { label: 'Zelfaanleg', href: '/kennisbank/zelfaanleg' },
                 { label: 'Energiewet 2026', href: '/kennisbank/energiewet-2026' },
               ].map((item) => (
                 <li key={item.label}>
-                  <TransitionLink 
-                    href={item.href} 
-                    className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
-                  >
-                    <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
+                  <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
                     {item.label}
                   </TransitionLink>
                 </li>
@@ -82,21 +116,18 @@ export default function Footer() {
 
           {/* Navigatie */}
           <div>
-            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Navigatie</h4>
-            <ul className="space-y-5">
+            <h4 className="text-xs font-black mb-4 uppercase tracking-widest text-slate-300">Navigatie</h4>
+            <ul className="space-y-2.5">
               {[
-                { label: 'Oplossingen', href: '/oplossingen' },
-                { label: 'Advies', href: '/advies' },
+                { label: 'Over ons', href: '/over-ons' },
                 { label: 'Werkwijze', href: '/werkwijze' },
                 { label: 'Cases', href: '/cases' },
-                { label: 'Over ons', href: '/over-ons' },
+                { label: 'Energieprijzen', href: '/energieprijzen' },
+                { label: 'Energieweerbericht', href: '/energieweerbericht' },
+                { label: 'Contact', href: '/contact' },
               ].map((item) => (
                 <li key={item.label}>
-                  <TransitionLink 
-                    href={item.href} 
-                    className="text-slate-400 hover:text-primary transition-all flex items-center group font-medium"
-                  >
-                    <span className="w-0 h-[1px] bg-primary group-hover:w-4 transition-all mr-0 group-hover:mr-2" />
+                  <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
                     {item.label}
                   </TransitionLink>
                 </li>
@@ -106,37 +137,34 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg md:text-xl font-black mb-6 md:mb-8 tracking-tight">Direct Contact</h4>
-            <ul className="space-y-6">
-              <li className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-primary shrink-0">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <span className="text-slate-400 text-sm leading-relaxed">Jan Tinbergenstraat 202,<br />7559ST Hengelo</span>
+            <h4 className="text-xs font-black mb-4 uppercase tracking-widest text-slate-300">Contact</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span className="text-sm text-slate-400 leading-relaxed">
+                  Jan Tinbergenstraat 202<br />7559 ST Hengelo
+                </span>
               </li>
-              <li className="flex items-center space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-primary shrink-0">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <a href="tel:+31532065066" className="text-slate-400 hover:text-white transition-colors font-medium">
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <a href="tel:+31532065066" className="text-sm text-slate-400 hover:text-white transition-colors">
                   +31 (0)53 206 5066
                 </a>
               </li>
-              <li className="flex items-center space-x-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-primary shrink-0">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <a href="mailto:mail@capaxx-energy.nl" className="text-slate-400 hover:text-white transition-colors font-medium">
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                <a href="mailto:mail@capaxx-energy.nl" className="text-sm text-slate-400 hover:text-white transition-colors">
                   mail@capaxx-energy.nl
                 </a>
               </li>
             </ul>
           </div>
+
         </div>
 
-        <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs font-bold text-slate-500 uppercase tracking-widest">
-          <p>© {currentYear} CAPAXX Energy. Geen dikke praat, wel resultaat.</p>
-          <div className="flex space-x-8">
+        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+          <p>&copy; {currentYear} CAPAXX Energy</p>
+          <div className="flex gap-6">
             <TransitionLink href="/privacy" className="hover:text-white transition-colors">Privacy</TransitionLink>
             <TransitionLink href="/voorwaarden" className="hover:text-white transition-colors">Voorwaarden</TransitionLink>
           </div>
