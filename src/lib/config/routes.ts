@@ -207,6 +207,11 @@ export const ROUTES = {
         path: '/netcapaciteitskaart',
         priority: 0.9,
         changeFreq: 'weekly' as const
+      },
+      netcapaciteitskaartOverijssel: {
+        path: '/netcapaciteitskaart/overijssel',
+        priority: 0.8,
+        changeFreq: 'weekly' as const
       }
     }
   },

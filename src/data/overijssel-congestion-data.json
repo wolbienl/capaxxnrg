@@ -1,0 +1,1206 @@
+{
+  "voedingsgebieden": [
+    {
+      "id": "zwolle",
+      "name": "Zwolle",
+      "vgIds": [
+        "ZLF",
+        "ZLH",
+        "ZLW"
+      ],
+      "gemeenten": [
+        "GM0193"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 544,
+          "2": 0,
+          "3": 3294,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 3838,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 268,
+        "benodigdeAfname": 205,
+        "aanwezigeInvoeding": 265,
+        "benodigdeInvoeding": 132,
+        "wachtrijAfname": 98,
+        "wachtrijInvoeding": 126,
+        "verzoekAfname": 152,
+        "verzoekInvoeding": 106
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "ZLF_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ZLW_2031",
+          "jaar": 2031,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2031,
+        "invoeding": 2031
+      }
+    },
+    {
+      "id": "kampen",
+      "name": "Kampen",
+      "vgIds": [
+        "KP",
+        "ISM"
+      ],
+      "gemeenten": [
+        "GM0166"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1317,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 1317,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 128,
+        "benodigdeAfname": 67,
+        "aanwezigeInvoeding": 124,
+        "benodigdeInvoeding": 71,
+        "wachtrijAfname": 33,
+        "wachtrijInvoeding": 60,
+        "verzoekAfname": 42,
+        "verzoekInvoeding": 59
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "KP_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ISM_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "KP_2032",
+          "jaar": 2032,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2029,
+        "invoeding": 2025
+      }
+    },
+    {
+      "id": "almelo",
+      "name": "Almelo",
+      "vgIds": [
+        "AMLM",
+        "AMLU"
+      ],
+      "gemeenten": [
+        "GM0141",
+        "GM0189"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 1485,
+          "2": 0,
+          "3": 1076,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 2561,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 149,
+        "benodigdeAfname": 344,
+        "aanwezigeInvoeding": 141,
+        "benodigdeInvoeding": 44,
+        "wachtrijAfname": 33,
+        "wachtrijInvoeding": 67,
+        "verzoekAfname": 44,
+        "verzoekInvoeding": 56
+      },
+      "netbeheerders": [
+        "Coteq",
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "AMLU_2028",
+          "jaar": 2028,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "AMLM_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "AMLM_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2028,
+        "invoeding": 2028
+      }
+    },
+    {
+      "id": "deventer",
+      "name": "Deventer",
+      "vgIds": [
+        "DVTB",
+        "DVTP"
+      ],
+      "gemeenten": [
+        "GM0150"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 315,
+          "1": 1387,
+          "2": 0,
+          "3": 1204,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 2906,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 134,
+        "benodigdeAfname": 96,
+        "aanwezigeInvoeding": 132,
+        "benodigdeInvoeding": 44,
+        "wachtrijAfname": 16,
+        "wachtrijInvoeding": 13,
+        "verzoekAfname": 59,
+        "verzoekInvoeding": 69
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "DVTP_2028",
+          "jaar": 2028,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "DVTB_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2029,
+        "invoeding": 2025
+      }
+    },
+    {
+      "id": "enschede",
+      "name": "Enschede",
+      "vgIds": [
+        "ESDH",
+        "ESDM",
+        "ESDV",
+        "ESDW"
+      ],
+      "gemeenten": [
+        "GM0153"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 210,
+          "1": 1,
+          "2": 0,
+          "3": 3913,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 2634,
+          "1": 0,
+          "2": 0,
+          "3": 1490,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 219,
+        "benodigdeAfname": 153,
+        "aanwezigeInvoeding": 217,
+        "benodigdeInvoeding": 54,
+        "wachtrijAfname": 32,
+        "wachtrijInvoeding": 14,
+        "verzoekAfname": 80,
+        "verzoekInvoeding": 57
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "ESDW_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ESDM_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ESDW_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ESDH_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ESDM_2036",
+          "jaar": 2036,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2030,
+        "invoeding": 2029
+      }
+    },
+    {
+      "id": "hengelo",
+      "name": "Hengelo",
+      "vgIds": [
+        "HGLB",
+        "HGLW"
+      ],
+      "gemeenten": [
+        "GM0164",
+        "GM0147"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 3637,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 3637,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 140,
+        "benodigdeAfname": 124,
+        "aanwezigeInvoeding": 140,
+        "benodigdeInvoeding": 102,
+        "wachtrijAfname": 24,
+        "wachtrijInvoeding": 31,
+        "verzoekAfname": 85,
+        "verzoekInvoeding": 62
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "HGLB_2027",
+          "jaar": 2027,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "HGLW_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2029,
+        "invoeding": 2029
+      }
+    },
+    {
+      "id": "steenwijkerland",
+      "name": "Steenwijkerland",
+      "vgIds": [
+        "SW",
+        "VO",
+        "VLH"
+      ],
+      "gemeenten": [
+        "GM1708"
+      ],
+      "afname": {
+        "colorCode": 2,
+        "colorDistribution": {
+          "0": 1632,
+          "1": 0,
+          "2": 675,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 1335,
+          "1": 0,
+          "2": 0,
+          "3": 972,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 144,
+        "benodigdeAfname": 78,
+        "aanwezigeInvoeding": 144,
+        "benodigdeInvoeding": 75,
+        "wachtrijAfname": 25,
+        "wachtrijInvoeding": 24,
+        "verzoekAfname": 37,
+        "verzoekInvoeding": 45
+      },
+      "netbeheerders": [
+        "Enexis",
+        "Rendo"
+      ],
+      "projecten": [
+        {
+          "naam": "SW_2031",
+          "jaar": 2031,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "VO_2031",
+          "jaar": 2031,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "VLH_2032",
+          "jaar": 2032,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2032,
+        "invoeding": 2031
+      }
+    },
+    {
+      "id": "hardenberg",
+      "name": "Hardenberg",
+      "vgIds": [
+        "HDB",
+        "DDV"
+      ],
+      "gemeenten": [
+        "GM0160"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 533,
+          "1": 895,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 712,
+          "1": 0,
+          "2": 0,
+          "3": 716,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 94,
+        "benodigdeAfname": 58,
+        "aanwezigeInvoeding": 90,
+        "benodigdeInvoeding": 61,
+        "wachtrijAfname": 23,
+        "wachtrijInvoeding": 30,
+        "verzoekAfname": 75,
+        "verzoekInvoeding": 53
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "HDB_2027",
+          "jaar": 2027,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "DDV_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2027,
+        "invoeding": 2029
+      }
+    },
+    {
+      "id": "hof-van-twente",
+      "name": "Hof van Twente",
+      "vgIds": [
+        "GO"
+      ],
+      "gemeenten": [
+        "GM1735"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 0,
+          "1": 959,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 959,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 72,
+        "benodigdeAfname": 42,
+        "aanwezigeInvoeding": 72,
+        "benodigdeInvoeding": 61,
+        "wachtrijAfname": 3,
+        "wachtrijInvoeding": 4,
+        "verzoekAfname": 23,
+        "verzoekInvoeding": 14
+      },
+      "netbeheerders": [
+        "Coteq",
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "GO_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2025,
+        "invoeding": 2030
+      }
+    },
+    {
+      "id": "haaksbergen",
+      "name": "Haaksbergen",
+      "vgIds": [
+        "HBG"
+      ],
+      "gemeenten": [
+        "GM0158"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 0,
+          "1": 689,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 689,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 41,
+        "benodigdeAfname": 32,
+        "aanwezigeInvoeding": 41,
+        "benodigdeInvoeding": 33,
+        "wachtrijAfname": 6,
+        "wachtrijInvoeding": 4,
+        "verzoekAfname": 25,
+        "verzoekInvoeding": 16
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "HBG_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2030,
+        "invoeding": 2030
+      }
+    },
+    {
+      "id": "losser",
+      "name": "Losser",
+      "vgIds": [
+        "LS"
+      ],
+      "gemeenten": [
+        "GM0168"
+      ],
+      "afname": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 621,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 621,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 41,
+        "benodigdeAfname": 18,
+        "aanwezigeInvoeding": 41,
+        "benodigdeInvoeding": 32,
+        "wachtrijAfname": 1,
+        "wachtrijInvoeding": 31,
+        "verzoekAfname": 11,
+        "verzoekInvoeding": 8
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [],
+      "verwachtOpgelost": {
+        "afname": 2025,
+        "invoeding": null
+      }
+    },
+    {
+      "id": "hellendoorn",
+      "name": "Hellendoorn",
+      "vgIds": [
+        "NVD"
+      ],
+      "gemeenten": [
+        "GM0163"
+      ],
+      "afname": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 811,
+          "1": 92,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 903,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 43,
+        "benodigdeAfname": 37,
+        "aanwezigeInvoeding": 43,
+        "benodigdeInvoeding": 8,
+        "wachtrijAfname": 6,
+        "wachtrijInvoeding": 2,
+        "verzoekAfname": 28,
+        "verzoekInvoeding": 21
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "NVD_2026",
+          "jaar": 2026,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "NVD_2030",
+          "jaar": 2030,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2026,
+        "invoeding": 2025
+      }
+    },
+    {
+      "id": "oldenzaal",
+      "name": "Oldenzaal",
+      "vgIds": [
+        "ODZ"
+      ],
+      "gemeenten": [
+        "GM0173",
+        "GM1774"
+      ],
+      "afname": {
+        "colorCode": 2,
+        "colorDistribution": {
+          "0": 928,
+          "1": 0,
+          "2": 925,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 1853,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 84,
+        "benodigdeAfname": 59,
+        "aanwezigeInvoeding": 82,
+        "benodigdeInvoeding": 41,
+        "wachtrijAfname": 5,
+        "wachtrijInvoeding": 1,
+        "verzoekAfname": 28,
+        "verzoekInvoeding": 21
+      },
+      "netbeheerders": [
+        "Coteq",
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "ODZ_2026",
+          "jaar": 2026,
+          "netbeheerder": "Enexis"
+        },
+        {
+          "naam": "ODZ_2029",
+          "jaar": 2029,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2025,
+        "invoeding": 2025
+      }
+    },
+    {
+      "id": "olst-wijhe",
+      "name": "Olst-Wijhe",
+      "vgIds": [
+        "OL"
+      ],
+      "gemeenten": [
+        "GM1773"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 0,
+          "1": 475,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 475,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 43,
+        "benodigdeAfname": 19,
+        "aanwezigeInvoeding": 43,
+        "benodigdeInvoeding": 37,
+        "wachtrijAfname": 2,
+        "wachtrijInvoeding": 16,
+        "verzoekAfname": 5,
+        "verzoekInvoeding": 7
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "OL_2034",
+          "jaar": 2034,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2025,
+        "invoeding": 2034
+      }
+    },
+    {
+      "id": "ommen",
+      "name": "Ommen",
+      "vgIds": [
+        "OMD"
+      ],
+      "gemeenten": [
+        "GM0175",
+        "GM0148"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 739,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 739,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 35,
+        "benodigdeAfname": 31,
+        "aanwezigeInvoeding": 34,
+        "benodigdeInvoeding": 38,
+        "wachtrijAfname": 13,
+        "wachtrijInvoeding": 5,
+        "verzoekAfname": 35,
+        "verzoekInvoeding": 25
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "OMD_2028",
+          "jaar": 2028,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2028,
+        "invoeding": 2028
+      }
+    },
+    {
+      "id": "raalte",
+      "name": "Raalte",
+      "vgIds": [
+        "RT"
+      ],
+      "gemeenten": [
+        "GM0177"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1695,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1695,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 54,
+        "benodigdeAfname": 48,
+        "aanwezigeInvoeding": 53,
+        "benodigdeInvoeding": 50,
+        "wachtrijAfname": 5,
+        "wachtrijInvoeding": 14,
+        "verzoekAfname": 48,
+        "verzoekInvoeding": 48
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "RT_2027",
+          "jaar": 2027,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2027,
+        "invoeding": 2027
+      }
+    },
+    {
+      "id": "rijssen-holten",
+      "name": "Rijssen-Holten",
+      "vgIds": [
+        "RS"
+      ],
+      "gemeenten": [
+        "GM1742"
+      ],
+      "afname": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1003,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 3,
+        "colorDistribution": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1003,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 44,
+        "benodigdeAfname": 39,
+        "aanwezigeInvoeding": 44,
+        "benodigdeInvoeding": 42,
+        "wachtrijAfname": 15,
+        "wachtrijInvoeding": 22,
+        "verzoekAfname": 58,
+        "verzoekInvoeding": 56
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "RS_2028",
+          "jaar": 2028,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2028,
+        "invoeding": 2028
+      }
+    },
+    {
+      "id": "tubbergen",
+      "name": "Tubbergen",
+      "vgIds": [
+        "TBG"
+      ],
+      "gemeenten": [
+        "GM0183"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 0,
+          "1": 752,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 752,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 45,
+        "benodigdeAfname": 18,
+        "aanwezigeInvoeding": 44,
+        "benodigdeInvoeding": 26,
+        "wachtrijAfname": 2,
+        "wachtrijInvoeding": 3,
+        "verzoekAfname": 15,
+        "verzoekInvoeding": 21
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [],
+      "verwachtOpgelost": {
+        "afname": 2025,
+        "invoeding": null
+      }
+    },
+    {
+      "id": "twenterand",
+      "name": "Twenterand",
+      "vgIds": [
+        "VH"
+      ],
+      "gemeenten": [
+        "GM1700"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 0,
+          "1": 1126,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 1097,
+          "1": 0,
+          "2": 0,
+          "3": 29,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 72,
+        "benodigdeAfname": 53,
+        "aanwezigeInvoeding": 69,
+        "benodigdeInvoeding": 55,
+        "wachtrijAfname": 19,
+        "wachtrijInvoeding": 37,
+        "verzoekAfname": 43,
+        "verzoekInvoeding": 42
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "VH_2028",
+          "jaar": 2028,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2028,
+        "invoeding": null
+      }
+    },
+    {
+      "id": "zwartewaterland",
+      "name": "Zwartewaterland",
+      "vgIds": [
+        "ZS"
+      ],
+      "gemeenten": [
+        "GM1896",
+        "GM0180"
+      ],
+      "afname": {
+        "colorCode": 1,
+        "colorDistribution": {
+          "0": 0,
+          "1": 749,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "invoeding": {
+        "colorCode": 0,
+        "colorDistribution": {
+          "0": 749,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "-1": 0
+        }
+      },
+      "capacity": {
+        "aanwezigeAfname": 65,
+        "benodigdeAfname": 46,
+        "aanwezigeInvoeding": 62,
+        "benodigdeInvoeding": 24,
+        "wachtrijAfname": 7,
+        "wachtrijInvoeding": 18,
+        "verzoekAfname": 20,
+        "verzoekInvoeding": 35
+      },
+      "netbeheerders": [
+        "Enexis"
+      ],
+      "projecten": [
+        {
+          "naam": "ZS_2031",
+          "jaar": 2031,
+          "netbeheerder": "Enexis"
+        }
+      ],
+      "verwachtOpgelost": {
+        "afname": 2025,
+        "invoeding": 2031
+      }
+    }
+  ],
+  "gemeenteToCluster": {
+    "GM0193": "Zwolle",
+    "GM0166": "Kampen",
+    "GM0141": "Almelo",
+    "GM0189": "Almelo",
+    "GM0150": "Deventer",
+    "GM0153": "Enschede",
+    "GM0164": "Hengelo",
+    "GM0147": "Hengelo",
+    "GM1708": "Steenwijkerland",
+    "GM0160": "Hardenberg",
+    "GM1735": "Hof van Twente",
+    "GM0158": "Haaksbergen",
+    "GM0168": "Losser",
+    "GM0163": "Hellendoorn",
+    "GM0173": "Oldenzaal",
+    "GM1774": "Oldenzaal",
+    "GM1773": "Olst-Wijhe",
+    "GM0175": "Ommen",
+    "GM0148": "Ommen",
+    "GM0177": "Raalte",
+    "GM1742": "Rijssen-Holten",
+    "GM0183": "Tubbergen",
+    "GM1700": "Twenterand",
+    "GM1896": "Zwartewaterland",
+    "GM0180": "Zwartewaterland"
+  },
+  "totals": {
+    "wachtrijAfname": 368,
+    "wachtrijInvoeding": 522,
+    "aantalProjecten": 34,
+    "gebiedenMetCongestie": 12
+  }
+}

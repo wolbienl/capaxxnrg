@@ -6,15 +6,16 @@ import Link from 'next/link'
 import {
   Map,
   ArrowRight,
+  ArrowLeft,
   AlertTriangle,
   Zap,
   Wrench,
   Clock,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
-import NetherlandsMap from '@/components/NetherlandsMap'
-import ProvinceDetailPanel from '@/components/ProvinceDetailPanel'
-import congestionData from '@/data/province-congestion-data.json'
+import OverijsselMap from '@/components/OverijsselMap'
+import VoedingsgebiedDetailPanel from '@/components/VoedingsgebiedDetailPanel'
+import congestionData from '@/data/overijssel-congestion-data.json'
 
 type Mode = 'afname' | 'invoeding'
 
@@ -25,26 +26,35 @@ const LEGEND = [
   { code: 3, color: '#ef4444', label: 'Vol' },
 ]
 
-export default function NetcapaciteitskaartPage() {
+export default function OverijsselKaartPage() {
   const [mode, setMode] = useState<Mode>('afname')
-  const [selectedProvince, setSelectedProvince] = useState<string | null>(null)
+  const [selectedCluster, setSelectedCluster] = useState<string | null>(null)
 
-  const selectedData = selectedProvince
-    ? congestionData.provinces.find((p) => p.name === selectedProvince) ?? null
+  const selectedData = selectedCluster
+    ? congestionData.voedingsgebieden.find((v) => v.name === selectedCluster) ?? null
     : null
 
   return (
     <>
-      {/* Map Section */}
       <section className="bg-secondary pt-28 md:pt-36 pb-16 md:pb-24 relative overflow-hidden">
-        {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-[0.03]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/[0.03] rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          {/* Section header */}
+          <FadeIn>
+            <div className="mb-6">
+              <Link
+                href="/netcapaciteitskaart"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white/40 hover:text-white/70 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Terug naar Nederland
+              </Link>
+            </div>
+          </FadeIn>
+
           <FadeIn>
             <div className="text-center mb-10 md:mb-14">
               <div className="inline-flex items-center space-x-2 text-primary font-bold px-4 py-2 bg-orange-500/10 rounded-full border border-orange-500/20 mb-6">
@@ -53,16 +63,15 @@ export default function NetcapaciteitskaartPage() {
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">
                 Netcapaciteitskaart{' '}
-                <span className="text-primary italic">Nederland</span>
+                <span className="text-primary italic">Overijssel</span>
               </h1>
               <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-                Bekijk de congestiestatus per provincie. Ontdek waar
+                Bekijk de congestiestatus per voedingsgebied in Overijssel. Ontdek waar
                 transportcapaciteit beschikbaar is — en waar de wachtrij oploopt.
               </p>
             </div>
           </FadeIn>
 
-          {/* Toggle */}
           <FadeIn delay={0.1}>
             <div className="flex justify-center mb-10">
               <div className="inline-flex bg-white/[0.06] rounded-2xl p-1.5 border border-white/10">
@@ -75,7 +84,7 @@ export default function NetcapaciteitskaartPage() {
                   >
                     {mode === m && (
                       <motion.div
-                        layoutId="modeIndicator"
+                        layoutId="overijsselModeIndicator"
                         className="absolute inset-0 bg-primary rounded-xl"
                         transition={{ type: 'spring', bounce: 0.15, duration: 0.5 }}
                       />
@@ -89,19 +98,17 @@ export default function NetcapaciteitskaartPage() {
             </div>
           </FadeIn>
 
-          {/* Map + Detail layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Map */}
             <FadeIn delay={0.2}>
               <div className="relative">
-                <NetherlandsMap
-                  data={congestionData.provinces}
+                <OverijsselMap
+                  data={congestionData.voedingsgebieden}
+                  gemeenteToCluster={congestionData.gemeenteToCluster}
                   mode={mode}
-                  selectedProvince={selectedProvince}
-                  onSelectProvince={setSelectedProvince}
+                  selectedCluster={selectedCluster}
+                  onSelectCluster={setSelectedCluster}
                 />
 
-                {/* Legend */}
                 <div className="flex items-center justify-center gap-5 md:gap-8 mt-6">
                   {LEGEND.map((item) => (
                     <div key={item.code} className="flex items-center gap-2">
@@ -115,30 +122,17 @@ export default function NetcapaciteitskaartPage() {
                     </div>
                   ))}
                 </div>
-
-                {selectedProvince === 'Overijssel' && (
-                  <div className="flex justify-center mt-4">
-                    <Link
-                      href="/netcapaciteitskaart/overijssel"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 hover:bg-primary/20 border border-primary/20 rounded-xl text-sm font-black text-primary transition-colors"
-                    >
-                      Bekijk Overijssel in detail
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                )}
               </div>
             </FadeIn>
 
-            {/* Detail panel */}
             <FadeIn delay={0.3} direction="right">
               <div className="lg:sticky lg:top-28">
-                <ProvinceDetailPanel
-                  province={selectedData}
+                <VoedingsgebiedDetailPanel
+                  voedingsgebied={selectedData}
                   totals={congestionData.totals}
-                  allProvinces={congestionData.provinces}
+                  allVoedingsgebieden={congestionData.voedingsgebieden}
                   mode={mode}
-                  onClose={() => setSelectedProvince(null)}
+                  onClose={() => setSelectedCluster(null)}
                 />
               </div>
             </FadeIn>
@@ -146,18 +140,17 @@ export default function NetcapaciteitskaartPage() {
         </div>
       </section>
 
-      {/* National stats */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-secondary tracking-tight mb-4">
-                Nederland in{' '}
+                Overijssel in{' '}
                 <span className="text-primary italic">cijfers</span>
               </h2>
               <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-                Landelijk overzicht van de netcongestie-situatie op basis van
-                data van alle regionale netbeheerders en TenneT.
+                Regionaal overzicht van de netcongestie-situatie in Overijssel
+                op basis van data van de regionale netbeheerders en TenneT.
               </p>
             </div>
           </FadeIn>
@@ -166,9 +159,9 @@ export default function NetcapaciteitskaartPage() {
             {[
               {
                 icon: AlertTriangle,
-                value: congestionData.totals.provinciesMetCongestie,
-                label: 'Provincies met congestie',
-                suffix: '/ 12',
+                value: congestionData.totals.gebiedenMetCongestie,
+                label: 'Gebieden met congestie',
+                suffix: `/ ${congestionData.voedingsgebieden.length}`,
               },
               {
                 icon: Zap,
@@ -210,7 +203,6 @@ export default function NetcapaciteitskaartPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
@@ -228,7 +220,7 @@ export default function NetcapaciteitskaartPage() {
                   <span className="text-primary italic">voor u?</span>
                 </h2>
                 <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
-                  Wij analyseren de situatie voor uw specifieke locatie en
+                  Wij analyseren de situatie voor uw specifieke locatie in Overijssel en
                   adviseren over de beste strategie — van cable pooling tot
                   energieopslag.
                 </p>
