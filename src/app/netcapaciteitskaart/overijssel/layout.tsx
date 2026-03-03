@@ -1,16 +1,12 @@
-import type { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
-  title: 'Netcapaciteitskaart Overijssel | Congestiestatus per voedingsgebied | CAPAXX Energy',
+export const metadata = generatePageMetadata({
+  title: 'Netcapaciteitskaart Overijssel | Congestiestatus per voedingsgebied',
   description:
     'Bekijk de actuele netcongestiestatus per voedingsgebied in Overijssel. Inzicht in transportcapaciteit, wachtrijen en geplande netuitbreidingen in de regio.',
-  openGraph: {
-    title: 'Netcapaciteitskaart Overijssel — CAPAXX Energy',
-    description:
-      'Interactieve kaart van Overijssel met congestiestatus per voedingsgebied. Bekijk beschikbare transportcapaciteit voor afname en invoeding.',
-    type: 'website',
-  },
-}
+  keywords: ['netcapaciteitskaart overijssel', 'netcongestie overijssel', 'voedingsgebied', 'transportcapaciteit overijssel'],
+  path: '/netcapaciteitskaart/overijssel/',
+})
 
 export default function OverijsselLayout({
   children,
