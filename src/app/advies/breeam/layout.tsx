@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateAdvisoryMetadata(
   'BREEAM',
-  'BREEAM certificering voor commercieel vastgoed. Behaal de hoogste scores met onze energie-expertise. Van assessment tot certified rating.',
+  'BREEAM certificering voor commercieel vastgoed. Behaal de hoogste scores met onze energie-expertise.',
   [
     'BREEAM certificering',
     'BREEAM advies',

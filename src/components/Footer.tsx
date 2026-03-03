@@ -52,6 +52,7 @@ export default function Footer() {
                 { label: 'EMS', href: '/oplossingen/ems' },
                 { label: 'Laadinfra', href: '/oplossingen/laadinfra' },
                 { label: 'Solar carports', href: '/oplossingen/solar-carports' },
+                { label: 'ROI laadinfra', href: '/roi-laadinfra-vastgoed' },
               ].map((item) => (
                 <li key={item.label}>
                   <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
@@ -71,6 +72,23 @@ export default function Footer() {
                 { label: 'Vastgoed', href: '/vastgoed' },
                 { label: 'Projectontwikkeling', href: '/projectontwikkeling' },
                 { label: 'Industrie', href: '/industrie' },
+                { label: 'Sectoren', href: '/sectoren' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
+                    {item.label}
+                  </TransitionLink>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-xs font-black mt-6 mb-4 uppercase tracking-widest text-slate-300">Regio&apos;s</h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: 'Twente', href: '/netcongestie/twente' },
+                { label: 'Enschede', href: '/netcongestie/enschede' },
+                { label: 'Hengelo', href: '/netcongestie/hengelo' },
+                { label: 'Almelo', href: '/netcongestie/almelo' },
+                { label: 'Oldenzaal', href: '/netcongestie/oldenzaal' },
               ].map((item) => (
                 <li key={item.label}>
                   <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
@@ -104,6 +122,7 @@ export default function Footer() {
                 { label: 'Alle artikelen', href: '/kennisbank' },
                 { label: 'Cable pooling', href: '/kennisbank/cable-pooling' },
                 { label: 'Energiewet 2026', href: '/kennisbank/energiewet-2026' },
+                { label: 'Whitepaper netcongestie', href: '/whitepapers/netcongestie-bedrijventerreinen' },
               ].map((item) => (
                 <li key={item.label}>
                   <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">
@@ -125,6 +144,8 @@ export default function Footer() {
                 { label: 'Energieprijzen', href: '/energieprijzen' },
                 { label: 'Energieweerbericht', href: '/energieweerbericht' },
                 { label: 'Contact', href: '/contact' },
+                { label: 'Quickscan zonnepark', href: '/quickscan-zonnepark' },
+                { label: 'Quickscan windpark', href: '/quickscan-windpark' },
               ].map((item) => (
                 <li key={item.label}>
                   <TransitionLink href={item.href} className="text-sm text-slate-400 hover:text-primary transition-colors">

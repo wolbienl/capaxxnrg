@@ -5,7 +5,7 @@ import QuickscanZonneparkContent from './content'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Quickscan Zonnepark | Haalbaarheid',
   description:
-    'Gratis quickscan voor jouw zonnepark. Wij checken netcapaciteit, curtailment-risico, SDE++-haalbaarheid en cable pooling mogelijkheden. Helder advies binnen 1 week.',
+    'Gratis quickscan voor jouw zonnepark. Netcapaciteit, curtailment-risico, SDE++-haalbaarheid en cable pooling gecheckt. Advies binnen 1 week.',
   keywords: [
     'quickscan zonnepark',
     'haalbaarheid zonnepark',

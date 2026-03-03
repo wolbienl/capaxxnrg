@@ -5,7 +5,7 @@ import QuickscanWindparkContent from './content'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Quickscan Windpark | Haalbaarheid',
   description:
-    'Gratis quickscan voor jouw windpark. Wij beoordelen netcapaciteit, cable pooling met zon, flexibele transportrechten en zelfaanleg mogelijkheden. Advies binnen 1 week.',
+    'Gratis quickscan voor jouw windpark. Netcapaciteit, cable pooling, transportrechten en zelfaanleg beoordeeld. Advies binnen 1 week.',
   keywords: [
     'quickscan windpark',
     'haalbaarheid windpark',

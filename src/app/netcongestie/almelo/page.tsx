@@ -5,7 +5,7 @@ import NetcongestieRegioPage from '@/components/NetcongestieRegioPage'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Almelo',
   description:
-    'Het stroomnet in Almelo zit vol. Twee nieuwe hoogspanningsstations zijn in voorbereiding, waarvan de werkzaamheden al zijn gestart. Leer wat netcongestie in Almelo betekent en welke oplossingen er zijn.',
+    'Het stroomnet in Almelo zit vol. Twee nieuwe hoogspanningsstations zijn in voorbereiding. Leer wat netcongestie in Almelo betekent en welke oplossingen er zijn.',
   keywords: [
     'netcongestie Almelo',
     'stroomnet vol Almelo',

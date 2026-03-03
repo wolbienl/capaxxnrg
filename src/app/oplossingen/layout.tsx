@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Oplossingen',
-  description: 'Complete energie-oplossingen voor commercieel vastgoed in Twente. Zonnepanelen, energieopslag, laadinfra, solar carports en energy management systemen. Maatwerk voor bedrijfspanden.',
+  description: 'Complete energie-oplossingen voor commercieel vastgoed in Twente. Zonnepanelen, energieopslag, laadinfra, solar carports en EMS. Maatwerk voor bedrijfspanden.',
   keywords: [
     'energie-oplossingen',
     'zonnepanelen bedrijf',

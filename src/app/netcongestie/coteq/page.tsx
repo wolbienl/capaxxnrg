@@ -5,7 +5,7 @@ import NetcongestieNetbeheerderPage from '@/components/NetcongestieNetbeheerderP
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Coteq — wat werkt er?',
   description:
-    'Coteq netcongestie oplossing voor bedrijven in Overijssel en de grensregio Drenthe. Wat werkt bij Coteq Netbeheer, hoe ziet het aanvraagproces eruit en welke routes creëren ruimte?',
+    'Coteq netcongestie voor bedrijven in Overijssel en de grensregio Drenthe. Wat werkt bij Coteq Netbeheer en welke routes creëren ruimte voor uw aansluiting?',
   keywords: [
     'Coteq netcongestie',
     'netcongestie Coteq oplossing',

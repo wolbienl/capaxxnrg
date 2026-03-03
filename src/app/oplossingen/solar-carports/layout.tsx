@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateSolutionMetadata(
   'Solar Carports',
-  'Solar carports voor bedrijventerreinen. Dubbel gebruik van parkeerruimte: opwek en laden op één plek. Maximale benutting van beschikbare ruimte.',
+  'Solar carports voor bedrijventerreinen. Dubbel gebruik van parkeerruimte: opwek en laden op één plek. Maximale benutting van uw terrein.',
   [
     'solar carport',
     'zonnepanelen carport',

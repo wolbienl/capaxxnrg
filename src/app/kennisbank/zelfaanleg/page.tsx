@@ -131,7 +131,7 @@ export default function ZelfaanlegPage() {
             <FadeIn direction="left">
               <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden border border-slate-100 shadow-xl">
                 <Image
-                  src="/images/capaxx-energy-zelf-kabel-leggen16c.png"
+                  src="/images/capaxx-energy-zelf-kabel-leggen16c.webp"
                   alt="Zelfaanleg netaansluiting - artikel 3.39 Energiewet, 16c aansluiting"
                   fill
                   className="object-cover"

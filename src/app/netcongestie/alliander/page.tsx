@@ -5,7 +5,7 @@ import NetcongestieNetbeheerderPage from '@/components/NetcongestieNetbeheerderP
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Alliander / Liander — wat werkt er?',
   description:
-    'Alliander en Liander netcongestie oplossing voor bedrijven in Noord-Holland, Gelderland, Friesland en Flevoland. FlexPower, non-firm contracten en GTO\'s: wat werkt bij Liander en hoe doorloop je het proces?',
+    'Alliander en Liander netcongestie voor bedrijven in Noord-Holland, Gelderland en Friesland. FlexPower, non-firm contracten en GTO\'s: wat werkt?',
   keywords: [
     'Alliander netcongestie',
     'Liander netcongestie',

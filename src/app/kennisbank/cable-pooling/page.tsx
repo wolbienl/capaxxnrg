@@ -121,7 +121,7 @@ export default function CablePoolingPage() {
             <FadeIn direction="left">
               <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden border border-slate-100 shadow-xl">
                 <Image
-                  src="/images/capaxx-energy-energiegemeenschap.png"
+                  src="/images/capaxx-energy-energiegemeenschap.webp"
                   alt="Energiegemeenschap op bedrijventerrein - cable pooling en groepstransport"
                   fill
                   className="object-cover"

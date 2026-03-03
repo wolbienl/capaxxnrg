@@ -17,7 +17,7 @@ export default function ProjectontwikkelingPage() {
       title="Je park krijgt geen"
       titleHighlight="aansluiting."
       subtitle="De businesscase van zonneparken staat onder druk. Curtailment stijgt, negatieve prijsuren nemen toe, en in congestiegebieden wordt geen transportindicatie afgegeven. Wij zorgen dat je project toch van de grond komt."
-      heroImage="/images/capaxx-energy-zelf-kabel-leggen16c.png"
+      heroImage="/images/capaxx-energy-zelf-kabel-leggen16c.webp"
       heroImageAlt="Zelfaanleg van netaansluiting voor zonnepark"
       pijnpunten={[
         {

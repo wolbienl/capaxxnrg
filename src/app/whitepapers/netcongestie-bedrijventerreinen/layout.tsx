@@ -4,7 +4,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Whitepaper: Netcongestie op bedrijventerreinen',
   description:
-    'Download de gratis whitepaper van CAPAXX Energy: vijf concrete routes om netcongestie op bedrijventerreinen op te lossen. Met rekenvoorbeelden, beslisboom en stappenplan.',
+    'Gratis whitepaper: vijf concrete routes om netcongestie op bedrijventerreinen op te lossen. Met rekenvoorbeelden, beslisboom en stappenplan van CAPAXX Energy.',
   keywords: [
     'netcongestie',
     'bedrijventerreinen',

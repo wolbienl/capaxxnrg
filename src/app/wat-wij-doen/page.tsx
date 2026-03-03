@@ -42,7 +42,7 @@ export default function WatWijDoenPage() {
         description="We combineren oplossingen en advies tot een integraal energiesysteem dat presteert op kosten, capaciteit en compliance."
         ctaText="Bekijk focusgebieden"
         ctaHref="#focusgebieden"
-        backgroundImage="/images/capaxx-energy-energiegemeenschap.png"
+        backgroundImage="/images/capaxx-energy-energiegemeenschap.webp"
         showScrollIndicator={false}
         size="compact"
       />

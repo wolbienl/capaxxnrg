@@ -5,7 +5,7 @@ import NetcongestieRegioPage from '@/components/NetcongestieRegioPage'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Oldenzaal',
   description:
-    'Het stroomnet in Oldenzaal zit vol. Kavels op bedrijventerreinen langs de A1 zijn niet meer bouwrijp te leveren. Natura 2000-ligging vergroot de complexiteit. Ontdek uw opties.',
+    'Het stroomnet in Oldenzaal zit vol. Kavels langs de A1 zijn niet meer bouwrijp te leveren. Natura 2000-ligging vergroot de complexiteit. Ontdek uw opties.',
   keywords: [
     'netcongestie Oldenzaal',
     'stroomnet vol Oldenzaal',

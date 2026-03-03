@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateAdvisoryMetadata(
   'ESG',
-  'ESG rapportage voor vastgoedeigenaren. Meet en rapporteer duurzaamheidsprestaties. CSRD-ready en GRESB-optimalisatie voor vastgoedportefeuilles.',
+  'ESG rapportage voor vastgoedeigenaren. Meet en rapporteer duurzaamheidsprestaties. CSRD-ready en GRESB-optimalisatie.',
   [
     'ESG rapportage',
     'ESG advies',

@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateSolutionMetadata(
   'Energy Management System',
-  'Realtime inzicht en automatische sturing van energie-assets. Monitor opwek, verbruik en opslag. Optimaliseer pieken en bespaar op energiekosten.',
+  'Realtime inzicht en sturing van energie-assets. Monitor opwek, verbruik en opslag. Optimaliseer pieken en bespaar op energiekosten.',
   [
     'EMS',
     'energy management',

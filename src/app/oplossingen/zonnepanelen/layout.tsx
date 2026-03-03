@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateSolutionMetadata(
   'Zonnepanelen',
-  'Zonnepanelen voor commercieel vastgoed. Maximale opbrengst op dak en terrein. Ontwerp, realisatie en monitoring van zonne-energie installaties.',
+  'Zonnepanelen voor commercieel vastgoed. Maximale opbrengst op dak en terrein. Ontwerp, realisatie en monitoring van zonne-installaties.',
   [
     'zonnepanelen',
     'solar panels',

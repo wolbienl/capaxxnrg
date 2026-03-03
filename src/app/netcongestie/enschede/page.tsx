@@ -5,7 +5,7 @@ import NetcongestieRegioPage from '@/components/NetcongestieRegioPage'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Enschede',
   description:
-    'Het stroomnet in Enschede zit vol. Twee nieuwe hoogspanningsstations staan gepland, maar realisatie duurt tot 2034–2038. Ontdek wat bedrijven in Enschede nu al kunnen doen.',
+    'Het stroomnet in Enschede zit vol. Twee nieuwe HS-stations gepland, maar realisatie duurt tot 2034–2038. Ontdek wat bedrijven nu al kunnen doen.',
   keywords: [
     'netcongestie Enschede',
     'stroomnet vol Enschede',

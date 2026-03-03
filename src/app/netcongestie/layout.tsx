@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie',
-  description: 'Netcongestie aanpak voor commercieel vastgoed en energieprojecten in Twente. Van wachtlijst naar werkbare netstrategie met opslag, sturing en slimme contractvormen.',
+  description: 'Netcongestie aanpak voor commercieel vastgoed in Twente. Van wachtlijst naar werkbare netstrategie met opslag, sturing en slimme contractvormen.',
   keywords: [
     'netcongestie',
     'congestiemanagement',

@@ -1,0 +1,52 @@
+---
+description: SEO-conventies voor capaxx-energy.nl — meta descriptions, footer-links, afbeeldingen en nieuwe pagina's
+alwaysApply: true
+---
+
+# SEO-conventies capaxx-energy.nl
+
+## 1. Meta descriptions — maximaal 160 tekens
+
+De metadata-helpers voegen automatisch een suffix toe. Houd hier rekening mee:
+
+| Helper | Automatische suffix | Max. basistekst |
+|---|---|---|
+| `generateSolutionMetadata` | ` Specialisten in Twente.` (+24) | ≤ 136 tekens |
+| `generateAdvisoryMetadata` | ` Specialist advies voor vastgoed in Twente.` (+43) | ≤ 117 tekens |
+| `generatePageMetadata` direct | geen suffix | ≤ 160 tekens |
+
+```ts
+// ❌ Te lang (143 + 24 = 167 tekens)
+generateSolutionMetadata('Zonnepanelen', 'Zonnepanelen voor commercieel vastgoed. Maximale opbrengst op dak en terrein. Ontwerp, realisatie en monitoring van zonne-energie installaties.')
+
+// ✅ Correct (135 + 24 = 159 tekens)
+generateSolutionMetadata('Zonnepanelen', 'Zonnepanelen voor commercieel vastgoed. Maximale opbrengst op dak en terrein. Ontwerp, realisatie en monitoring van zonne-installaties.')
+```
+
+## 2. Nieuwe pagina's — altijd ook intern linken
+
+Elke nieuwe route die aan `public/sitemap.xml` wordt toegevoegd **moet** ook intern gelinkt worden, anders is het een orphan page. Voeg de link toe in `src/components/Footer.tsx` in de meest logische kolom:
+
+- Oplossingen-pagina → **Oplossingen-kolom**
+- Netcongestie regio → **Regio's-subkopje in Netcongestie-kolom**
+- Kennisbank/whitepaper → **Kennisbank-sectie**
+- Overige → **Navigatie-kolom**
+
+## 3. Privacy en Voorwaarden — routes moeten bestaan
+
+De footer linkt altijd naar `/privacy` en `/voorwaarden`. Bij een nieuw project of nieuwe omgeving: controleer of `src/app/privacy/page.tsx` en `src/app/voorwaarden/page.tsx` bestaan.
+
+## 4. Afbeeldingen — gebruik WebP, geen zware PNG's
+
+Nieuwe afbeeldingen altijd als `.webp` aanleveren. Bestaande PNG's converteren met `sharp`:
+
+```js
+const sharp = require('sharp');
+await sharp('public/images/foto.png').webp({ quality: 70 }).toFile('public/images/foto.webp');
+```
+
+Richtlijn: foto's < 200 KB, illustraties/logo's < 50 KB. Gebruik `next/image` zodat Next.js automatisch optimaliseert.
+
+## 5. Footer-links controleren na elke sprint
+
+Na het toevoegen van nieuwe routes: verifieer in `src/components/Footer.tsx` of alle sitemap-URL's intern bereikbaar zijn. Orphan pages zijn onzichtbaar voor interne linkjuice en moeilijker te indexeren.

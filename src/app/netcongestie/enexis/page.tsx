@@ -5,7 +5,7 @@ import NetcongestieNetbeheerderPage from '@/components/NetcongestieNetbeheerderP
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Enexis — wat werkt er?',
   description:
-    'Enexis netcongestie oplossing voor bedrijven in Twente en Overijssel. Capaciteitskaart, Flexmarkt, non-firm contracten en GTO\'s: wat werkt bij Enexis en hoe ziet het proces eruit?',
+    'Enexis netcongestie in Twente en Overijssel. Capaciteitskaart, Flexmarkt, non-firm contracten en GTO\'s: wat werkt bij Enexis en hoe doorloop je het proces?',
   keywords: [
     'Enexis netcongestie',
     'netcongestie Enexis oplossing',

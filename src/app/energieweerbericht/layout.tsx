@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/lib/seo/constants';
 export const metadata: Metadata = generatePageMetadata({
   title: 'Energieweerbericht Nederland | Wind & Zon Voorspelling',
   description:
-    'Bekijk het actuele energieweerbericht voor Nederland. Live voorspelling van windenergie en zonne-energie productie per dag. Gebruik het energieweerbericht voor slim laden, batterijopslag en energiebeheer.',
+    'Actueel energieweerbericht voor Nederland. Live voorspelling van windenergie en zonne-energie per dag. Gebruik voor slim laden, batterijopslag en energiebeheer.',
   keywords: [
     'energieweerbericht',
     'energieweerbericht nederland',

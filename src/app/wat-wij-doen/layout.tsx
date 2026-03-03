@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Wat wij doen',
-  description: 'Ontdek wat CAPAXX Energy doet: geïntegreerde energie-oplossingen en adviestrajecten voor vastgoed en bedrijven. Van ontwerp en realisatie tot continue optimalisatie.',
+  description: 'Ontdek wat CAPAXX Energy doet: energie-oplossingen en advies voor vastgoed en bedrijven. Van ontwerp en realisatie tot continue optimalisatie.',
   keywords: [
     'wat wij doen',
     'energie-oplossingen',

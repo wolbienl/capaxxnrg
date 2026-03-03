@@ -582,7 +582,7 @@ export default function Home() {
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white group">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/capaxx-energy-energiegemeenschap.png"
+                    src="/images/capaxx-energy-energiegemeenschap.webp"
                     alt="Energiegemeenschap op bedrijventerrein — cable pooling tussen gebouwen"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -706,7 +706,7 @@ export default function Home() {
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white group">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/capaxx-energy-zelf-kabel-leggen16c.png"
+                    src="/images/capaxx-energy-zelf-kabel-leggen16c.webp"
                     alt="Zelfaanleg van netaansluiting — kabel leggen in het veld"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"

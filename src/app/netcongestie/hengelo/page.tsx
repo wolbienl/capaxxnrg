@@ -5,7 +5,7 @@ import NetcongestieRegioPage from '@/components/NetcongestieRegioPage'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Hengelo',
   description:
-    'Het stroomnet in Hengelo zit vol. Uitbreiding van het hoogspanningsstation in de regio staat gepland voor 2027. Ontdek wat u nu al kunt doen om toch capaciteit te krijgen.',
+    'Het stroomnet in Hengelo zit vol. Uitbreiding van het HS-station staat gepland voor 2027. Ontdek wat u nu kunt doen om toch capaciteit te krijgen.',
   keywords: [
     'netcongestie Hengelo',
     'stroomnet vol Hengelo',

@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateSolutionMetadata(
   'Laadinfrastructuur',
-  'Laadpalen en laadinfra voor bedrijven. Slim laden met load balancing, klaar voor groei. Van enkele laadpunten tot complete charging hubs.',
+  'Laadpalen en laadinfra voor bedrijven. Slim laden met load balancing, klaar voor groei. Van enkele laadpunten tot charging hubs.',
   [
     'laadinfrastructuur',
     'laadpalen',

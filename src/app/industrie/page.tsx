@@ -17,7 +17,7 @@ export default function IndustriePage() {
       title="Je elektrificatie kan niet"
       titleHighlight="door."
       subtitle="75% van de industriële verduurzamingsplannen kan niet tijdig doorgaan door infrastructuurbeperkingen. De gemiste omzet wordt geschat op €10-35 miljard per jaar. Wij zorgen dat jouw fabriek wél kan elektrificeren."
-      heroImage="/images/capaxx-energy-zelf-kabel-leggen16c.png"
+      heroImage="/images/capaxx-energy-zelf-kabel-leggen16c.webp"
       heroImageAlt="Industriële netaansluiting"
       pijnpunten={[
         {

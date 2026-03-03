@@ -5,7 +5,7 @@ import NetcongestieRegioPage from '@/components/NetcongestieRegioPage'
 export const metadata: Metadata = generatePageMetadata({
   title: 'Netcongestie Twente',
   description:
-    'Het stroomnet in Twente zit vol. Bedrijven staan op wachtlijsten, uitbreidingen worden geblokkeerd. Leer wat netcongestie in Twente betekent voor jouw organisatie en welke oplossingen er nu al zijn.',
+    'Het stroomnet in Twente zit vol. Bedrijven staan op wachtlijsten en uitbreidingen worden geblokkeerd. Leer wat netcongestie in Twente betekent.',
   keywords: [
     'netcongestie Twente',
     'stroomnet vol Twente',

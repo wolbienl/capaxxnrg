@@ -17,7 +17,7 @@ export default function VastgoedPage() {
       title="Je terrein kan niet"
       titleHighlight="uitbreiden."
       subtitle="Huurders dreigen te vertrekken, laadpalen worden geblokkeerd, en de grond is niet meer bouwrijp. Niet omdat er geen ruimte is, maar omdat het net vol zit. Wij organiseren de oplossing op terreinniveau."
-      heroImage="/images/capaxx-energy-energiegemeenschap.png"
+      heroImage="/images/capaxx-energy-energiegemeenschap.webp"
       heroImageAlt="Energiegemeenschap op bedrijventerrein"
       pijnpunten={[
         {

@@ -8,7 +8,7 @@ const articleSchema = generateArticleSchema({
   path: '/kennisbank/cable-pooling',
   datePublished: '2026-01-20',
   dateModified: '2026-02-28',
-  image: '/images/capaxx-energy-energiegemeenschap.png',
+  image: '/images/capaxx-energy-energiegemeenschap.webp',
 })
 
 const breadcrumbSchema = generateBreadcrumbSchema([

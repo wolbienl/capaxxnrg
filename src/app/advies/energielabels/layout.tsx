@@ -5,7 +5,7 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = generateAdvisoryMetadata(
   'Energielabels',
-  'Verbeter het energielabel van jouw bedrijfspand. Van C naar A+++ met concrete maatregelen. EPA-U advies en uitvoering voor utiliteitsbouw.',
+  'Verbeter het energielabel van jouw bedrijfspand. Van C naar A+++. EPA-U advies en uitvoering voor utiliteitsbouw.',
   [
     'energielabel',
     'EPA-U',

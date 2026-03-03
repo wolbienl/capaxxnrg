@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Advies',
-  description: 'Specialist advies voor duurzaam vastgoed in Twente. BREEAM certificering, ESG rapportage, energielabels en Paris Proof trajecten. Data-gedreven en resultaatgericht.',
+  description: 'Specialist advies voor duurzaam vastgoed in Twente. BREEAM, ESG rapportage, energielabels en Paris Proof trajecten. Data-gedreven en resultaatgericht.',
   keywords: [
     'energieadvies',
     'duurzaamheidsadvies',

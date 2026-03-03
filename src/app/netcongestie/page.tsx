@@ -102,7 +102,7 @@ export default function NetcongestiePage() {
         description="We combineren strategie, techniek en uitvoering om netcongestie concreet op te lossen voor vastgoed, industrie en energieprojecten."
         ctaText="Bekijk voor wie"
         ctaHref="#voor-wie"
-        backgroundImage="/images/capaxx-energy-zelf-kabel-leggen16c.png"
+        backgroundImage="/images/capaxx-energy-zelf-kabel-leggen16c.webp"
         showScrollIndicator={false}
         size="compact"
       />
