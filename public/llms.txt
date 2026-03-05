@@ -1,0 +1,72 @@
+# CAPAXX Energy
+
+> CAPAXX Energy is een Nederlands advies- en realisatiebureau gespecialiseerd in energie-oplossingen voor commercieel vastgoed, industrie en projectontwikkeling in Twente en Oost-Nederland. Kernactiviteiten: netcongestie-aanpak, zonnepanelen, batterijopslag, laadinfrastructuur en energiemanagementsystemen (EMS). Kantoor: Jan Tinbergenstraat 202, 7559 ST Hengelo (OV). Telefoon: +31 53 206 5066. E-mail: mail@capaxx-energy.nl.
+
+## Netcongestie
+
+De meest urgente uitdaging voor bedrijven in Nederland: het elektriciteitsnet is vol. CAPAXX Energy biedt praktische oplossingen.
+
+- [Netcongestie — overzicht en aanpak](https://capaxx-energy.nl/netcongestie/): Wat is netcongestie, welke strategieën zijn er en hoe helpt CAPAXX.
+- [Cable Pooling & Energiegemeenschappen](https://capaxx-energy.nl/kennisbank/cable-pooling/): Netsaansluiting delen met maximaal vier partijen. Werkwijze, vereisten en GTO-contract.
+- [Transportrechten](https://capaxx-energy.nl/kennisbank/transportrechten/): Niet-firm ATO-contracten, congestiemanagement en hoe transportrechten werken.
+- [Zelfaanleg netinfrastructuur](https://capaxx-energy.nl/kennisbank/zelfaanleg/): Wanneer zelf aanleggen loont en hoe het traject eruitziet.
+- [Energiehubs](https://capaxx-energy.nl/kennisbank/energiehubs/): Collectieve energie-infrastructuur op bedrijventerreinen.
+- [Energiewet 2026](https://capaxx-energy.nl/kennisbank/energiewet-2026/): Wijzigingen per 2026 en gevolgen voor vastgoed en industrie.
+- [Flex-e subsidie 2026](https://capaxx-energy.nl/kennisbank/flex-e-subsidie-2026/): Subsidie voor flexibele netaansluiting — voorwaarden en aanvraag.
+- [SPRILA 2026](https://capaxx-energy.nl/kennisbank/sprila-2026/): Stimuleringsregeling voor productie-installaties en grote afnemers.
+
+## Netcongestie per regio
+
+- [Netcongestie Twente](https://capaxx-energy.nl/netcongestie/twente/): Situatie, knelpunten en oplossingen in Twente.
+- [Netcongestie Hengelo](https://capaxx-energy.nl/netcongestie/hengelo/): Lokale congestiestatus en kansen.
+- [Netcongestie Enschede](https://capaxx-energy.nl/netcongestie/enschede/)
+- [Netcongestie Almelo](https://capaxx-energy.nl/netcongestie/almelo/)
+- [Netcongestie Oldenzaal](https://capaxx-energy.nl/netcongestie/oldenzaal/)
+- [Enexis netcongestie](https://capaxx-energy.nl/netcongestie/enexis/): Aanpak bij Enexis als netbeheerder.
+- [Alliander netcongestie](https://capaxx-energy.nl/netcongestie/alliander/)
+- [Coteq netcongestie](https://capaxx-energy.nl/netcongestie/coteq/)
+
+## Energie-oplossingen
+
+- [Oplossingen overzicht](https://capaxx-energy.nl/oplossingen/): Alle technische en adviserende diensten van CAPAXX Energy.
+- [Zonnepanelen commercieel vastgoed](https://capaxx-energy.nl/oplossingen/zonnepanelen/): Ontwerp, realisatie en monitoring van PV-installaties op bedrijfsdaken en terreinen.
+- [Batterijopslag (BESS)](https://capaxx-energy.nl/oplossingen/energieopslag/): Piekafvlakking, arbitrage en congestiemanagement met batterijen.
+- [Laadinfrastructuur](https://capaxx-energy.nl/oplossingen/laadinfra/): Laadpalen en laadpleinen voor vastgoed en bedrijventerreinen.
+- [Solar Carports](https://capaxx-energy.nl/oplossingen/solar-carports/): Overkapping met geïntegreerde zonnepanelen voor parkeerterreinen.
+- [EMS — Energiemanagementsysteem](https://capaxx-energy.nl/oplossingen/ems/): Slim sturen van alle energiestromen op een locatie.
+
+## Advies
+
+- [Advies overzicht](https://capaxx-energy.nl/advies/)
+- [BREEAM certificering](https://capaxx-energy.nl/advies/breeam/)
+- [Energielabel verbetering](https://capaxx-energy.nl/advies/energielabels/)
+- [ESG rapportage](https://capaxx-energy.nl/advies/esg/)
+- [Paris Proof strategie](https://capaxx-energy.nl/advies/paris-proof/)
+
+## Doelgroepen
+
+- [Commercieel vastgoed](https://capaxx-energy.nl/vastgoed/)
+- [Industrie en productie](https://capaxx-energy.nl/industrie/)
+- [Projectontwikkeling](https://capaxx-energy.nl/projectontwikkeling/)
+- [Sectoren overzicht](https://capaxx-energy.nl/sectoren/)
+
+## Data & Tools
+
+- [Energieweerbericht](https://capaxx-energy.nl/energieweerbericht/): 7-daagse wind- en zonprognose voor Nederland via NED.nl — nuttig voor slim laden en ontladen.
+- [Live energieprijzen](https://capaxx-energy.nl/energieprijzen/): EPEX Spot dag-ahead stroomprijs per uur.
+- [Netcapaciteitskaart](https://capaxx-energy.nl/netcapaciteitskaart/): Actuele beschikbare netcapaciteit per regio.
+- [Netcapaciteitskaart Overijssel](https://capaxx-energy.nl/netcapaciteitskaart/overijssel/)
+
+## Over CAPAXX Energy
+
+- [Over ons](https://capaxx-energy.nl/over-ons/): Missie, team en achtergrond.
+- [Werkwijze](https://capaxx-energy.nl/werkwijze/): Hoe een traject eruitziet van quickscan tot oplevering.
+- [Cases](https://capaxx-energy.nl/cases/): Afgeronde projecten met resultaten.
+- [Contact](https://capaxx-energy.nl/contact/)
+
+## Whitepapers & Verdieping
+
+- [Whitepaper: Netcongestie op bedrijventerreinen](https://capaxx-energy.nl/whitepapers/netcongestie-bedrijventerreinen/)
+- [Quickscan zonnepark](https://capaxx-energy.nl/quickscan-zonnepark/)
+- [Quickscan windpark](https://capaxx-energy.nl/quickscan-windpark/)
+- [ROI-calculator laadinfra vastgoed](https://capaxx-energy.nl/roi-laadinfra-vastgoed/)

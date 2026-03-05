@@ -53,7 +53,12 @@ export function generateOrganizationSchema() {
       contactType: 'customer service',
       areaServed: SITE_CONFIG.location.country,
       availableLanguage: ['nl']
-    }
+    },
+
+    // sameAs helpt AI-systemen de entiteit te verifiëren als echte organisatie
+    sameAs: [
+      SITE_CONFIG.social.linkedin,
+    ].filter(Boolean)
   };
 }
 

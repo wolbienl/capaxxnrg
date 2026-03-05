@@ -1,35 +1,30 @@
 # robots.txt voor CAPAXX Energy
-# Laatste update: 2026-01-28
+# Laatste update: 2026-03-05
 
+# Standaard: alles toegestaan
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
 # Sitemap locatie
 Sitemap: https://capaxx-energy.nl/sitemap.xml
 
-# Blokkeer technische directories
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-
-# Crawl delay voor bots (optioneel, voorkomt overload)
-# Crawl-delay: 1
-
-# Specifieke bot configuraties
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# AI/LLM Crawlers - expliciet toestaan voor betere indexering
-User-agent: GPTBot
+# ── OpenAI ──────────────────────────────────────────────────
+# OAI-SearchBot = retrieval bot voor ChatGPT Search live citaties
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: CCBot
+# GPTBot = breder OpenAI crawler (training + retrieval)
+User-agent: GPTBot
+Allow: /
+
+# ── Anthropic ────────────────────────────────────────────────
+# ClaudeBot = retrieval crawler voor live Claude antwoorden
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-Web
@@ -38,5 +33,30 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# ── Perplexity ───────────────────────────────────────────────
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ── Google ───────────────────────────────────────────────────
+# Google-Extended beheert Gemini AI training (staat los van reguliere Search)
+User-agent: Google-Extended
+Allow: /
+
+# ── Overig ───────────────────────────────────────────────────
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
 Allow: /
