@@ -183,6 +183,32 @@ else
     exit 1
 fi
 
+# IndexNow bulk submit
+print_status "Submitting URLs to IndexNow..."
+INDEXNOW_URLS=$(grep -oP '(?<=<loc>)[^<]+' out/sitemap.xml | \
+  sed 's/.*/"&"/' | paste -sd ',' -)
+
+INDEXNOW_PAYLOAD=$(cat <<JSON
+{
+  "host": "capaxx-energy.nl",
+  "key": "191808d177a747b493566722694c5b0b",
+  "keyLocation": "https://capaxx-energy.nl/191808d177a747b493566722694c5b0b.txt",
+  "urlList": [$INDEXNOW_URLS]
+}
+JSON
+)
+
+HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+  -X POST "https://api.indexnow.org/IndexNow" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d "$INDEXNOW_PAYLOAD")
+
+if [ "$HTTP_STATUS" = "200" ] || [ "$HTTP_STATUS" = "202" ]; then
+    print_success "IndexNow: $(grep -c '<url>' out/sitemap.xml) URLs submitted (HTTP $HTTP_STATUS)"
+else
+    print_warning "IndexNow submission returned HTTP $HTTP_STATUS (niet kritiek, deployment geslaagd)"
+fi
+
 # Controleer of .htaccess nodig is
 print_status "Checking if .htaccess is needed..."
 if [ ! -f "out/.htaccess" ]; then
@@ -231,5 +257,6 @@ echo "• Check website manually: https://capaxx-energy.nl"
 echo "• Backup location: ~/website_backup_$BACKUP_DATE.tar.gz on Host Shock"
 echo "• Check sitemap: https://capaxx-energy.nl/sitemap.xml"
 echo "• Check robots.txt: https://capaxx-energy.nl/robots.txt"
+echo "• IndexNow key: https://capaxx-energy.nl/191808d177a747b493566722694c5b0b.txt"
 echo ""
 echo -e "${GREEN}Deployment Successful!${NC}"
