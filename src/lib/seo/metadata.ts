@@ -36,7 +36,7 @@ export function generatePageMetadata({
     ? `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline}`
     : `${title} | ${SITE_CONFIG.name}`;
   
-  const url = `${SITE_CONFIG.url}${path}`;
+  const url = `${SITE_CONFIG.url}${path.endsWith('/') ? path : `${path}/`}`;
   const ogImageUrl = ogImage || SITE_CONFIG.images.ogDefault;
   const twitterImageUrl = twitterImage || ogImageUrl;
   
