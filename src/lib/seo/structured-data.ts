@@ -30,12 +30,6 @@ export function generateOrganizationSchema() {
       addressCountry: SITE_CONFIG.contact.address.countryCode,
     },
     
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: SITE_CONFIG.location.coordinates.latitude,
-      longitude: SITE_CONFIG.location.coordinates.longitude
-    },
-    
     areaServed: {
       '@type': 'GeoCircle',
       geoMidpoint: {
