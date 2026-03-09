@@ -15,6 +15,7 @@ import {
   Zap,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import Breadcrumb, { type BreadcrumbItem } from '@/components/Breadcrumb'
 
 interface AanpakItem {
   title: string
@@ -44,6 +45,7 @@ interface NetcongestieNetbeheerderPageProps {
   watWerkt: WatWerktItem[]
   verwachtingen: string[]
   closingText?: string
+  breadcrumbItems?: BreadcrumbItem[]
 }
 
 export default function NetcongestieNetbeheerderPage({
@@ -57,6 +59,7 @@ export default function NetcongestieNetbeheerderPage({
   watWerkt,
   verwachtingen,
   closingText,
+  breadcrumbItems,
 }: NetcongestieNetbeheerderPageProps) {
 
   const capaxxHelpt = [
@@ -93,6 +96,9 @@ export default function NetcongestieNetbeheerderPage({
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
+          {breadcrumbItems && (
+            <Breadcrumb items={breadcrumbItems} className="mb-4 -mx-4 md:-mx-6" />
+          )}
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

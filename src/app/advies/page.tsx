@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import Breadcrumb from '@/components/Breadcrumb'
 import { 
   ClipboardCheck, 
   Award, 
@@ -103,6 +104,7 @@ export default function AdviesPage() {
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <Breadcrumb items={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Advies' }]} className="mb-4 -mx-4 md:-mx-6" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

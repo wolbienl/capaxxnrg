@@ -16,6 +16,7 @@ export default function EMSPage() {
         description="Realtime inzicht en automatische aansturing van opwek, opslag, laden en verbruik. Wij brengen de regie terug in jouw aansluiting."
         ctaText="Vraag een demo aan"
         ctaHref="/contact"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Oplossingen', url: '/oplossingen' }, { name: 'EMS' }]}
       />
 
       {/* Benefits Section */}

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, LucideIcon } from 'lucide-react'
+import Breadcrumb, { type BreadcrumbItem } from '@/components/Breadcrumb'
 
 interface SolutionHeroProps {
   icon: LucideIcon
@@ -16,6 +17,7 @@ interface SolutionHeroProps {
   showScrollIndicator?: boolean
   size?: 'default' | 'compact'
   label?: string
+  breadcrumbItems?: BreadcrumbItem[]
 }
 
 export default function SolutionHero({
@@ -28,7 +30,8 @@ export default function SolutionHero({
   backgroundImage,
   showScrollIndicator = true,
   size = 'default',
-  label = 'Oplossing'
+  label = 'Oplossing',
+  breadcrumbItems,
 }: SolutionHeroProps) {
   const isCompact = size === 'compact'
 
@@ -55,6 +58,9 @@ export default function SolutionHero({
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+        {breadcrumbItems && (
+          <Breadcrumb items={breadcrumbItems} className="mb-4 -mx-4 md:-mx-6" />
+        )}
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

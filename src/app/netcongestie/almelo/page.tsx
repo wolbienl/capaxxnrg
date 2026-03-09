@@ -22,6 +22,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieAlmeloPage() {
   return (
     <NetcongestieRegioPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Almelo' }]}
       stad="Almelo"
       heroSubtitle="In Almelo wordt gewerkt aan nieuwe hoogspanningsstations — maar netverzwaring laat in veel gebieden tot na 2030 op zich wachten. Bedrijven en vastgoedeigenaren die nu iets willen, hebben andere routes nodig."
       situatie="Almelo staat midden in een ingrijpende netuitbreiding. Er wordt actief gebouwd aan nieuwe hoogspanningsinfrastructuur in en rond de stad. Toch betekent dit niet dat de transportschaarste nu al is opgelost — de werkzaamheden lopen door tot in de jaren dertig."

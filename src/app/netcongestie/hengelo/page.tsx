@@ -22,6 +22,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieHengeloPage() {
   return (
     <NetcongestieRegioPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Hengelo' }]}
       stad="Hengelo"
       heroSubtitle="Bedrijven in Hengelo die willen uitbreiden of elektrificeren lopen aan tegen volle netten. De eerste verbetering in de regio staat gepland voor 2027 — maar tot die tijd zijn er al werkbare routes."
       situatie="Hengelo is een industrieel hart van Twente. De energievraag van maakindustrie, logistiek en groeiende bedrijventerreinen legt grote druk op het stroomnet. Terwijl de vraag naar elektrisch vermogen stijgt, kan het huidige netwerk dit nog niet bijbenen."

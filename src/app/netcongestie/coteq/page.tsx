@@ -23,6 +23,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestionCoteqPage() {
   return (
     <NetcongestieNetbeheerderPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Coteq' }]}
       netbeheerder="Coteq"
       werkgebied="Overijssel · Hardenberg · Ommen · Coevorden"
       heroSubtitel="Coteq Netbeheer beheert het elektriciteitsnet in delen van Overijssel en de grensregio met Drenthe. Als onderdeel van Enexis Groep werkt Coteq met vergelijkbare processen, maar met meer directe aanspreekbaarheid op regionaal niveau."

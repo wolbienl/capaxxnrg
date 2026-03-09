@@ -23,6 +23,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieEnexisPage() {
   return (
     <NetcongestieNetbeheerderPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Enexis' }]}
       netbeheerder="Enexis"
       werkgebied="Twente · Overijssel · Noord- en Oost-Nederland"
       heroSubtitel="Enexis beheert het elektriciteitsnet in Twente en groot deel van Noord- en Oost-Nederland. Het net zit vol, maar Enexis biedt specifieke routes die wél ruimte creëren — als je weet hoe het systeem werkt."

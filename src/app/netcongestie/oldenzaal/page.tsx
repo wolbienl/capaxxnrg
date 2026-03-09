@@ -23,6 +23,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieOldenzaalPage() {
   return (
     <NetcongestieRegioPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Oldenzaal' }]}
       stad="Oldenzaal"
       heroSubtitle="Bedrijventerreinen langs de A1 bij Oldenzaal kampen met netcongestie én aangrenzend Natura 2000-gebied. Kavels die jaren geleden als toplocatie golden, zijn niet meer bouwrijp te leveren. Maar er zijn routes die wél werken."
       situatie="Oldenzaal heeft een sterke ligging aan de A1, direct bij de grens. Bedrijventerreinen op zichtlocaties langs de snelweg behoren tot de meest gewilde commerciële grond in de regio. Toch blokkeren twee factoren de ontwikkeling: een elektriciteitsnet dat vol zit en de nabijheid van Natura 2000-beschermde natuur."

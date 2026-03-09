@@ -22,6 +22,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieEnschedePage() {
   return (
     <NetcongestieRegioPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Enschede' }]}
       stad="Enschede"
       heroSubtitle="Enschede krijgt twee nieuwe hoogspanningsstations — maar de locaties worden nog bepaald en realisatie staat gepland voor 2034 tot 2038. Voor bedrijven die nu willen uitbreiden, zijn er andere routes."
       situatie="Als grootste stad van Twente staat Enschede voor een substantieel netcongestieprobleem. De groeiende vraag vanuit industrie, kenniseconomie en woningbouw overstijgt de huidige netcapaciteit. Netbeheerders werken aan structurele oplossingen, maar de horizon is ver."

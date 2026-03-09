@@ -17,6 +17,7 @@ export default function EnergieopslagPage() {
         ctaText="Bereken jouw potentieel"
         ctaHref="/contact?type=peak-shaving"
         backgroundImage="/images/storage-hero.png"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Oplossingen', url: '/oplossingen' }, { name: 'Energieopslag' }]}
       />
 
       {/* Use Cases Section */}

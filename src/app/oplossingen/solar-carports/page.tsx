@@ -23,6 +23,7 @@ export default function SolarCarportsPage() {
         ctaText="Check haalbaarheid"
         ctaHref="/contact"
         backgroundImage="/images/solar-carport.webp"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Oplossingen', url: '/oplossingen' }, { name: 'Solar Carports' }]}
       />
 
       {/* Ideal For Section */}

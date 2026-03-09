@@ -13,6 +13,7 @@ import {
   Lightbulb,
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import Breadcrumb from '@/components/Breadcrumb'
 import { generatePageMetadata } from '@/lib/seo/metadata'
 
 export const metadata: Metadata = generatePageMetadata({
@@ -122,6 +123,7 @@ export default function TransportrechtenPage() {
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-30" />
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <Breadcrumb items={[{ name: 'Home', url: '/' }, { name: 'Kennisbank', url: '/kennisbank' }, { name: 'Transportrechten' }]} className="mb-4 -mx-4 md:-mx-6" />
           <div className="max-w-3xl">
             <FadeIn>
               <div className="inline-flex items-center space-x-2 text-primary font-bold mb-8 px-4 py-2 bg-orange-50 rounded-full border border-orange-100">

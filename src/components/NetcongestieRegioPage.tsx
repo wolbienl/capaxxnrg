@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, AlertTriangle, Clock, Zap, MapPin, CheckCircle2, Route } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
+import Breadcrumb, { type BreadcrumbItem } from '@/components/Breadcrumb'
 
 interface ImpactItem {
   title: string
@@ -31,6 +32,7 @@ interface NetcongestieRegioPageProps {
   impactItems: ImpactItem[]
   oplossingen: OplossingsItem[]
   closingText?: string
+  breadcrumbItems?: BreadcrumbItem[]
 }
 
 export default function NetcongestieRegioPage({
@@ -42,6 +44,7 @@ export default function NetcongestieRegioPage({
   impactItems,
   oplossingen,
   closingText,
+  breadcrumbItems,
 }: NetcongestieRegioPageProps) {
   return (
     <div className="flex flex-col w-full selection:bg-primary/30">
@@ -54,6 +57,9 @@ export default function NetcongestieRegioPage({
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
+          {breadcrumbItems && (
+            <Breadcrumb items={breadcrumbItems} className="mb-4 -mx-4 md:-mx-6" />
+          )}
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

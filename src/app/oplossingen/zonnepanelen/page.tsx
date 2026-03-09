@@ -16,6 +16,7 @@ export default function ZonnepanelenPage() {
         ctaText="Vraag een dakscan aan"
         ctaHref="/contact?type=dakscan"
         backgroundImage="/images/solar-commercial.jpg"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Oplossingen', url: '/oplossingen' }, { name: 'Zonnepanelen' }]}
       />
 
       {/* Content Section */}

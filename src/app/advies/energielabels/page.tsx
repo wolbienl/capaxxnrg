@@ -95,6 +95,7 @@ export default function EnergielabelsPage() {
         description="Labelverbetering met concrete maatregelen en harde ROI. We rekenen door welke stappen renderen en voeren ze uit. Resultaat: hogere waarde, betere verhuurbaarheid."
         ctaText="Vraag labelscan aan"
         ctaHref="/contact?type=labelscan"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Advies', url: '/advies' }, { name: 'Energielabels' }]}
       />
 
       {/* Wat is een energielabel */}

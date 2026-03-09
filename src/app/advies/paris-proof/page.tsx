@@ -54,6 +54,7 @@ export default function ParisProofPage() {
         description="Routekaart naar < 70 kWh/m² voor kantoren. Haalbaar, meetbaar, rendabel. We starten met meten, dan weet je precies hoeveel reductie nodig is en wat het kost."
         ctaText="Vraag Paris Proof-scan aan"
         ctaHref="/contact?type=paris-proof-scan"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Advies', url: '/advies' }, { name: 'Paris Proof' }]}
       />
 
       {/* Wat betekent Paris Proof */}

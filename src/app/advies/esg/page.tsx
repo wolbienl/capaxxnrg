@@ -52,6 +52,7 @@ export default function ESGPage() {
         description="Meetbare Environmental, Social en Governance prestaties voor jouw portfolio. Data uit jouw EMS, rapportages conform CSRD, focus op verbetering."
         ctaText="Vraag ESG-quickscan aan"
         ctaHref="/contact?type=esg-quickscan"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Advies', url: '/advies' }, { name: 'ESG' }]}
       />
 
       {/* Wat is ESG */}

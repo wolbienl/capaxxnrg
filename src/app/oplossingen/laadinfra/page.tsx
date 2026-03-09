@@ -65,6 +65,7 @@ export default function LaadinfraPage() {
         ctaText="Bespreek jouw laadplan"
         ctaHref="/contact"
         backgroundImage="/images/laadinfra-hero.jpg"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Oplossingen', url: '/oplossingen' }, { name: 'Laadinfra' }]}
       />
 
       {/* Snelladers Section */}

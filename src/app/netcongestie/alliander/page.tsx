@@ -24,6 +24,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieAlliandersPage() {
   return (
     <NetcongestieNetbeheerderPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Alliander' }]}
       netbeheerder="Alliander / Liander"
       werkgebied="Noord-Holland · Gelderland · Friesland · Flevoland"
       heroSubtitel="Liander, de uitvoerende netbeheerder van Alliander, beheert het elektriciteitsnet in Noord-Holland, Gelderland, Friesland en Flevoland. Het net staat er onder grote druk — maar Liander biedt specifieke programma's voor flexibiliteit en alternatieve aansluitroutes."

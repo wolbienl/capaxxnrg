@@ -22,6 +22,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function NetcongestieTwentePage() {
   return (
     <NetcongestieRegioPage
+      breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie', url: '/netcongestie' }, { name: 'Twente' }]}
       stad="Twente"
       heroSubtitle="Bedrijven staan op wachtlijsten van jaren. Uitbreidingen worden geblokkeerd. Nieuwbouw is niet meer zomaar bouwrijp. Netcongestie raakt de hele regio — maar er zijn vandaag al routes die werken."
       situatie="Twente maakt deel uit van de grootste energie-upgrade die Nederland ooit heeft gezien. De vraag naar elektrisch vermogen groeit sneller dan netbeheerders kunnen bijbouwen. Bedrijven die willen uitbreiden, elektrificeren of verduurzamen lopen vast op één knelpunt: er is geen transportcapaciteit beschikbaar."

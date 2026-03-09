@@ -67,6 +67,7 @@ export default function BREEAMPage() {
         description="Van analyse tot certificaat, gestuurd door meetbaar verbruik. We laten zien waar je staat, wat je certificering oplevert en hoe je daar komt."
         ctaText="Vraag BREEAM-analyse aan"
         ctaHref="/contact?type=breeam-analyse"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Wat wij doen', url: '/wat-wij-doen' }, { name: 'Advies', url: '/advies' }, { name: 'BREEAM' }]}
       />
 
       {/* Wat is BREEAM */}

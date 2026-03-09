@@ -105,6 +105,7 @@ export default function NetcongestiePage() {
         backgroundImage="/images/capaxx-energy-zelf-kabel-leggen16c.webp"
         showScrollIndicator={false}
         size="compact"
+        breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'Netcongestie' }]}
       />
 
       <section id="voor-wie" className="py-16 md:py-24 lg:py-32 bg-slate-50">
