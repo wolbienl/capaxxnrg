@@ -13,7 +13,9 @@ import {
   ArrowRight,
   Zap,
   TrendingUp,
+  TrendingDown,
   Shield,
+  ShieldCheck,
   Network
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
@@ -63,6 +65,42 @@ const oplossingen = [
     href: '/oplossingen/ems',
     color: 'from-slate-600 to-slate-800',
     features: ['Live monitoring', 'Automatische sturing', 'ROI-tracking']
+  },
+  {
+    title: 'Peak Shaving',
+    subtitle: 'Pieken afvlakken, kosten verlagen',
+    description: 'Eén piek van 15 minuten bepaalt jouw factuur. Met batterijopslag vlak je die af.',
+    icon: TrendingDown,
+    href: '/oplossingen/peak-shaving',
+    color: 'from-red-500 to-orange-500',
+    features: ['Piekafvlakking', 'Netkosten besparen', 'Kwartierdata']
+  },
+  {
+    title: 'Noodstroom',
+    subtitle: 'Bedrijfscontinuïteit zonder diesel',
+    description: 'Bij netuitval draait jouw batterij door. Combineer UPS met peak shaving voor dubbel rendement.',
+    icon: ShieldCheck,
+    href: '/oplossingen/noodstroom',
+    color: 'from-emerald-600 to-teal-500',
+    features: ['0ms reactietijd', 'Geen diesel', 'Dubbelfunctie']
+  },
+  {
+    title: 'Zelfconsumptie',
+    subtitle: 'Eigen opwek, eigen verbruik',
+    description: 'Terugleveren levert steeds minder op. Wij zorgen dat jouw opwek op het juiste moment wordt ingezet.',
+    icon: Sun,
+    href: '/oplossingen/zelfconsumptie',
+    color: 'from-yellow-500 to-amber-500',
+    features: ['Opslag', 'EMS-sturing', 'Saldering-proof']
+  },
+  {
+    title: 'DC-Snellader',
+    subtitle: 'Snelladen zonder netstress',
+    description: 'DC-snelladers van 50 tot 400 kW, slim gestuurd op jouw beschikbare netcapaciteit.',
+    icon: Zap,
+    href: '/oplossingen/dc-snellader',
+    color: 'from-violet-500 to-purple-600',
+    features: ['50-400 kW', 'Load balancing', 'Batterijbuffer']
   }
 ]
 

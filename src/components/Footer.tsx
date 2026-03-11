@@ -52,6 +52,10 @@ export default function Footer() {
                 { label: 'EMS', href: '/oplossingen/ems' },
                 { label: 'Laadinfra', href: '/oplossingen/laadinfra' },
                 { label: 'Solar carports', href: '/oplossingen/solar-carports' },
+                { label: 'Peak Shaving', href: '/oplossingen/peak-shaving' },
+                { label: 'Noodstroom', href: '/oplossingen/noodstroom' },
+                { label: 'Zelfconsumptie', href: '/oplossingen/zelfconsumptie' },
+                { label: 'DC-Snellader', href: '/oplossingen/dc-snellader' },
                 { label: 'ROI laadinfra', href: '/roi-laadinfra-vastgoed' },
               ].map((item) => (
                 <li key={item.label}>

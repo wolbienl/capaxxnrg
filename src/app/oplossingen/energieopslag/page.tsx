@@ -30,29 +30,48 @@ export default function EnergieopslagPage() {
             {[
               {
                 title: 'Peak shaving',
-                desc: 'Pieken afvlakken en capaciteit vrijspelen.'
+                desc: 'Pieken afvlakken en capaciteit vrijspelen.',
+                href: '/oplossingen/peak-shaving'
               },
               {
-                title: 'Zelfverbruik verhogen',
-                desc: 'Zonne-energie bewaren voor later gebruik.'
+                title: 'Zelfconsumptie',
+                desc: 'Zonne-energie bewaren voor later gebruik.',
+                href: '/oplossingen/zelfconsumptie'
               },
               {
-                title: 'Load balancing',
-                desc: 'Laden en processen laten draaien zonder netproblemen.'
+                title: 'Noodstroom',
+                desc: 'Bedrijfscontinuïteit bij netuitval zonder diesel.',
+                href: '/oplossingen/noodstroom'
               },
               {
                 title: 'Flexibiliteit',
-                desc: 'Voorbereid op dynamiek in prijzen en vraag.'
+                desc: 'Voorbereid op dynamiek in prijzen en vraag.',
+                href: null
               }
             ].map((useCase, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all h-full">
-                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm mb-8">
-                    <Zap className="w-6 h-6" />
+                {useCase.href ? (
+                  <Link href={useCase.href} className="block h-full group">
+                    <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all h-full">
+                      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm mb-8 group-hover:bg-orange-50 transition-colors">
+                        <Zap className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-secondary mb-4 tracking-tight group-hover:text-primary transition-colors">{useCase.title}</h3>
+                      <p className="text-slate-500 leading-relaxed italic mb-4">{useCase.desc}</p>
+                      <span className="inline-flex items-center font-bold text-secondary group-hover:text-primary transition-colors text-sm">
+                        Meer info <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all h-full">
+                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm mb-8">
+                      <Zap className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-secondary mb-4 tracking-tight">{useCase.title}</h3>
+                    <p className="text-slate-500 leading-relaxed italic">{useCase.desc}</p>
                   </div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4 tracking-tight">{useCase.title}</h3>
-                  <p className="text-slate-500 leading-relaxed italic">{useCase.desc}</p>
-                </div>
+                )}
               </FadeIn>
             ))}
           </div>

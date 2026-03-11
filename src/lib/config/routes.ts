@@ -50,6 +50,26 @@ export const ROUTES = {
         path: '/oplossingen/ems',
         priority: 0.8,
         changeFreq: 'monthly' as const
+      },
+      peakShaving: {
+        path: '/oplossingen/peak-shaving',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      noodstroom: {
+        path: '/oplossingen/noodstroom',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      zelfconsumptie: {
+        path: '/oplossingen/zelfconsumptie',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      dcSnellader: {
+        path: '/oplossingen/dc-snellader',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
       }
     }
   },
