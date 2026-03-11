@@ -1,3 +1,5 @@
+DirectoryIndex index.html
+
 RewriteEngine On
 
 # www → non-www (301)
