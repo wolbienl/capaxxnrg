@@ -6,6 +6,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /lp/
 
 # Sitemap locatie
 Sitemap: https://capaxx-energy.nl/sitemap.xml
