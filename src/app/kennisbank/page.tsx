@@ -59,6 +59,18 @@ const categories: { label: string; items: KennisbankItem[] }[] = [
         description: 'Nieuwe spelregels sinds 1 januari 2026 — kansen voor jouw situatie.',
         href: '/kennisbank/energiewet-2026',
       },
+      {
+        icon: Zap,
+        title: 'ERE-certificaten',
+        description: 'Emissiereductie-eenheden: hoe ze werken, wat ze opleveren en het verschil met HBE.',
+        href: '/kennisbank/ere-certificaten',
+      },
+      {
+        icon: Cable,
+        title: 'Inboeken elektriciteit',
+        description: 'Het REV, de drempelwaarde van 2 miljoen kWh en wanneer je een inboekdienstverlener nodig hebt.',
+        href: '/kennisbank/inboeken-elektriciteit',
+      },
     ],
   },
   {

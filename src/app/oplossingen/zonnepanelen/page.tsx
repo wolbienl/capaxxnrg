@@ -83,6 +83,21 @@ export default function ZonnepanelenPage() {
                   Reken het door voor jouw pand <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
+
+              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 mt-6">
+                <h3 className="text-sm font-black text-secondary mb-2">
+                  Eigen opwek + laadinfra = dubbele ERE-opbrengst
+                </h3>
+                <p className="text-sm text-slate-500 mb-3">
+                  Zonnepanelen op uw dak in combinatie met laadinfra? Dan kunt u 100% hernieuwbaar inboeken — bijna dubbel zoveel ERE-certificaten als netstroom.
+                </p>
+                <Link
+                  href="/inboekdienstverlening"
+                  className="inline-flex items-center text-sm text-primary font-black group"
+                >
+                  Bekijk inboekdienstverlening <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </FadeIn>
           </div>
         </div>

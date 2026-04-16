@@ -183,6 +183,16 @@ export const ROUTES = {
         priority: 0.8,
         changeFreq: 'monthly' as const
       },
+      kennisbankEreCertificaten: {
+        path: '/kennisbank/ere-certificaten',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
+      kennisbankInboekenElektriciteit: {
+        path: '/kennisbank/inboeken-elektriciteit',
+        priority: 0.8,
+        changeFreq: 'monthly' as const
+      },
       regio_twente: {
         path: '/netcongestie/twente',
         priority: 0.8,
@@ -264,6 +274,19 @@ export const ROUTES = {
     path: '/energieweerbericht',
     priority: 0.8,
     changeFreq: 'hourly' as const,
+  },
+
+  inboekdienstverlening: {
+    path: '/inboekdienstverlening',
+    priority: 0.9,
+    changeFreq: 'weekly' as const,
+    children: {
+      aanmelden: {
+        path: '/inboekdienstverlening/aanmelden',
+        priority: 0.7,
+        changeFreq: 'monthly' as const
+      }
+    }
   },
 
   advies: {

@@ -179,7 +179,27 @@ export default function LaadinfraPage() {
               </ul>
             </FadeIn>
 
-            <FadeIn direction="left" className="bg-slate-50 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 border border-slate-100 lg:sticky lg:top-32 shadow-xl shadow-slate-200/50">
+            <FadeIn direction="left" className="space-y-6 lg:sticky lg:top-32">
+              <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+                <div className="flex items-center gap-2 mb-2">
+                  <Zap className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-black text-primary uppercase tracking-widest">Wist je dat?</span>
+                </div>
+                <p className="text-sm text-secondary font-bold mb-3">
+                  Jouw laadinfra levert geld op via ERE-certificaten — tot € 0,10 per geladen kWh.
+                </p>
+                <p className="text-sm text-slate-500 mb-4">
+                  CAPAXX Energy is officieel inboekdienstverlener bij de NEa. Wij regelen de registratie en uitkering.
+                </p>
+                <Link
+                  href="/inboekdienstverlening"
+                  className="inline-flex items-center text-sm text-primary font-black group"
+                >
+                  Meer over inboekdienstverlening <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-slate-50 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 border border-slate-100 shadow-xl shadow-slate-200/50">
               <h2 className="text-2xl md:text-3xl font-black text-secondary mb-8 md:mb-10 tracking-tight">Wat wij leveren</h2>
               <ul className="space-y-4 mb-12">
                 {[
@@ -200,6 +220,7 @@ export default function LaadinfraPage() {
               >
                 Start jouw laadplan
               </Link>
+            </div>
             </FadeIn>
           </div>
         </div>

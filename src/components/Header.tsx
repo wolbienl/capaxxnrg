@@ -4,9 +4,11 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Menu, X, Sun, Battery, EvCharger, Car, BarChart3, ClipboardCheck, Award, Globe, TrendingUp, ArrowRight, Building2, Factory, Zap, Cable, Scale, Wrench, BookOpen, MapIcon } from 'lucide-react'
+import { ChevronDown, Menu, X, Sun, Battery, EvCharger, Car, BarChart3, ClipboardCheck, Award, Globe, TrendingUp, ArrowRight, Building2, Factory, Zap, Cable, Scale, Wrench, BookOpen, MapIcon, FileCheck } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import TransitionLink from './TransitionLink'
+
+const ANNOUNCEMENT_STORAGE_KEY = 'capaxx-ere-dismissed'
 
 const solutions = [
   {
@@ -38,6 +40,12 @@ const solutions = [
     description: 'Realtime inzicht en automatische sturing.',
     href: '/oplossingen/ems',
     icon: BarChart3,
+  },
+  {
+    title: 'Inboekdienstverlening',
+    description: 'ERE-certificaten voor uw laadinfra.',
+    href: '/inboekdienstverlening',
+    icon: ClipboardCheck,
   },
 ]
 
@@ -120,6 +128,12 @@ const kennisbankItems = [
     href: '/kennisbank/energiewet-2026',
     icon: BookOpen,
   },
+  {
+    title: 'ERE-certificaten',
+    description: 'Verdien met elke geladen kWh.',
+    href: '/kennisbank/ere-certificaten',
+    icon: Zap,
+  },
 ]
 
 const navLinks = [
@@ -133,6 +147,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [openMegaMenu, setOpenMegaMenu] = useState<MegaMenu>(null)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showAnnouncement, setShowAnnouncement] = useState(false)
+  const [announcementDismissed, setAnnouncementDismissed] = useState(true)
   const pathname = usePathname()
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -162,6 +178,30 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const isAnnouncementPage = pathname.startsWith('/inboekdienstverlening')
+
+  useEffect(() => {
+    try {
+      const wasDismissed = sessionStorage.getItem(ANNOUNCEMENT_STORAGE_KEY)
+      if (!wasDismissed && !isAnnouncementPage) {
+        setAnnouncementDismissed(false)
+        const timer = setTimeout(() => setShowAnnouncement(true), 2000)
+        return () => clearTimeout(timer)
+      }
+      if (isAnnouncementPage && !wasDismissed) {
+        sessionStorage.setItem(ANNOUNCEMENT_STORAGE_KEY, '1')
+      }
+    } catch {}
+  }, [isAnnouncementPage])
+
+  const dismissAnnouncement = () => {
+    setShowAnnouncement(false)
+    try { sessionStorage.setItem(ANNOUNCEMENT_STORAGE_KEY, '1') } catch {}
+    setTimeout(() => setAnnouncementDismissed(true), 400)
+  }
+
+  const announcementVisible = showAnnouncement && !announcementDismissed && !isAnnouncementPage
+
   return (
     <header 
       className={cn(
@@ -173,6 +213,46 @@ export default function Header() {
             : "bg-white/70 backdrop-blur-xl border-b border-slate-200/50"
       )}
     >
+      {/* Announcement ribbon */}
+      <AnimatePresence>
+        {announcementVisible && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="bg-secondary overflow-hidden"
+          >
+            <div className="container mx-auto px-4 md:px-6">
+              <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 py-2">
+                <span className="hidden sm:inline-flex items-center gap-1.5 text-[10px] font-black text-primary uppercase tracking-widest shrink-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  Nieuw
+                </span>
+                <p className="text-white/80 text-[11px] md:text-xs truncate">
+                  <span className="font-bold text-white">Officieel inboekdienstverlener</span>
+                  <span className="hidden md:inline"> — verdien tot € 0,10/kWh via ERE-certificaten</span>
+                </p>
+                <TransitionLink
+                  href="/inboekdienstverlening"
+                  onClick={dismissAnnouncement}
+                  className="inline-flex items-center gap-1 text-primary text-[11px] md:text-xs font-black hover:text-accent transition-colors whitespace-nowrap shrink-0 group"
+                >
+                  Bekijk
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </TransitionLink>
+                <button
+                  onClick={dismissAnnouncement}
+                  className="p-0.5 text-white/20 hover:text-white/70 transition-colors shrink-0"
+                  aria-label="Sluiten"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <nav className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}

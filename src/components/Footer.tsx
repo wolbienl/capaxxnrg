@@ -56,6 +56,7 @@ export default function Footer() {
                 { label: 'Noodstroom', href: '/oplossingen/noodstroom' },
                 { label: 'Zelfconsumptie', href: '/oplossingen/zelfconsumptie' },
                 { label: 'DC-Snellader', href: '/oplossingen/dc-snellader' },
+                { label: 'Inboekdienstverlening', href: '/inboekdienstverlening' },
                 { label: 'ROI laadinfra', href: '/roi-laadinfra-vastgoed' },
               ].map((item) => (
                 <li key={item.label}>
@@ -145,6 +146,8 @@ export default function Footer() {
                 { label: 'Energiehubs', href: '/kennisbank/energiehubs' },
                 { label: 'Flex-e subsidie 2026', href: '/kennisbank/flex-e-subsidie-2026' },
                 { label: 'SDE++ SPRILA 2026', href: '/kennisbank/sprila-2026' },
+                { label: 'ERE-certificaten', href: '/kennisbank/ere-certificaten' },
+                { label: 'Inboeken elektriciteit', href: '/kennisbank/inboeken-elektriciteit' },
                 { label: 'Whitepaper netcongestie', href: '/whitepapers/netcongestie-bedrijventerreinen' },
               ].map((item) => (
                 <li key={item.label}>

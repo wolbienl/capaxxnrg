@@ -129,6 +129,27 @@ export default function EMSPage() {
         </div>
       </section>
 
+      {/* ERE crosslink */}
+      <section className="py-12 md:py-16 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeIn className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-white rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm">
+            <div className="flex-1">
+              <p className="text-xs font-black text-primary uppercase tracking-widest mb-2">EMS + ERE-certificaten</p>
+              <h3 className="text-lg md:text-xl font-black text-secondary mb-2">Uw EMS-data als basis voor ERE-registratie</h3>
+              <p className="text-sm text-slate-500">
+                De meetdata uit uw EMS vormt de administratieve basis voor het inboeken van ERE-certificaten. CAPAXX Energy koppelt uw energiemanagement direct aan de inboekdienstverlening.
+              </p>
+            </div>
+            <Link
+              href="/inboekdienstverlening"
+              className="shrink-0 inline-flex items-center px-6 py-3 bg-secondary text-white font-black rounded-xl text-sm hover:bg-slate-800 transition-all group"
+            >
+              Meer info <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
