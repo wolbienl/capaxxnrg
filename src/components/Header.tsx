@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Menu, X, Sun, Battery, EvCharger, Car, BarChart3, ClipboardCheck, Award, Globe, TrendingUp, ArrowRight, Building2, Factory, Zap, Cable, Scale, Wrench, BookOpen, MapIcon, FileCheck } from 'lucide-react'
+import { ChevronDown, Menu, X, Sun, Battery, EvCharger, Car, BarChart3, ClipboardCheck, Award, Globe, TrendingUp, ArrowRight, Building2, Factory, Zap, Cable, Scale, Wrench, BookOpen, MapIcon, FileCheck, Cpu } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import TransitionLink from './TransitionLink'
 
@@ -40,6 +40,12 @@ const solutions = [
     description: 'Realtime inzicht en automatische sturing.',
     href: '/oplossingen/ems',
     icon: BarChart3,
+  },
+  {
+    title: 'Gebouwautomatisering',
+    description: 'Klimaat, regeltechniek en toegang geïntegreerd.',
+    href: '/oplossingen/gebouwautomatisering',
+    icon: Cpu,
   },
   {
     title: 'Inboekdienstverlening',

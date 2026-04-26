@@ -34,6 +34,10 @@ De meest urgente uitdaging voor bedrijven in Nederland: het elektriciteitsnet is
 - [Laadinfrastructuur](https://capaxx-energy.nl/oplossingen/laadinfra/): Laadpalen en laadpleinen voor vastgoed en bedrijventerreinen.
 - [Solar Carports](https://capaxx-energy.nl/oplossingen/solar-carports/): Overkapping met geïntegreerde zonnepanelen voor parkeerterreinen.
 - [EMS — Energiemanagementsysteem](https://capaxx-energy.nl/oplossingen/ems/): Slim sturen van alle energiestromen op een locatie.
+- [Slim Gebouwbeheer / Gebouwautomatisering](https://capaxx-energy.nl/oplossingen/gebouwautomatisering/): Klimaat, regeltechniek en toegang geïntegreerd voor utiliteit. Merk-onafhankelijk, BACS- en EPBD IV-conform, lokaal verwerkt. Loxone Silver Partner naast KNX, BACnet, Modbus en DALI.
+- [Klimaat & luchtbehandeling](https://capaxx-energy.nl/oplossingen/gebouwautomatisering/klimaat-en-luchtbehandeling/): HVAC-regeltechniek, individuele ruimteregeling en koppeling met EMS, PV en warmtepomp.
+- [Regeltechniek & comfort (DALI, PELV)](https://capaxx-energy.nl/oplossingen/gebouwautomatisering/regeltechniek-en-comfort/): Lichtsturing, zonwering en scenes. DALI-2, KNX, 24V/PELV-verlichting (NEN 3140 / SCIOS Scope 8 by design).
+- [Toegangscontrole](https://capaxx-energy.nl/oplossingen/gebouwautomatisering/toegangscontrole/): NFC, codes, tijdsgebonden toegang en multi-tenant logging (AVG-proof).
 
 ## Advies
 

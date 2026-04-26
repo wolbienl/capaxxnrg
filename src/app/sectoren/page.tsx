@@ -9,15 +9,15 @@ const sectors = [
   {
     title: 'Kantoren en multi-tenant complexen',
     icon: Building2,
-    challenges: ['Hoge piekbelasting door HVAC', 'Diverse huurders met verschillende behoeften', 'Energielabel verplichtingen'],
-    approach: ['Gedetailleerde verbruiksanalyse', 'Slimme laadinfra voor medewerkers', 'EMS voor kostenverdeling'],
+    challenges: ['Hoge piekbelasting door HVAC', 'Diverse huurders met verschillende behoeften', 'Energielabel- en BACS-verplichtingen', 'AVG-proof toegangsbeheer per huurder'],
+    approach: ['Gedetailleerde verbruiksanalyse', 'Slimme laadinfra voor medewerkers', 'EMS voor kostenverdeling', 'Gebouwautomatisering met multi-tenant-scoping'],
     case: 'Piekreductie van 30% bij een verzamelgebouw met HVAC-optimalisatie.'
   },
   {
     title: 'Retail en parkeerrijke locaties',
     icon: ShoppingBag,
-    challenges: ['Grote parkeercapaciteit onbenut', 'Korte verblijftijd bezoekers', 'Zichtbaarheid van duurzaamheid'],
-    approach: ['Solar carports op parkeerterrein', 'Snel- en semi-snelladers', 'Zonnepanelen op platte daken'],
+    challenges: ['Grote parkeercapaciteit onbenut', 'Korte verblijftijd bezoekers', 'Zichtbaarheid van duurzaamheid', 'Sluit/open-scenes met licht en alarm'],
+    approach: ['Solar carports op parkeerterrein', 'Snel- en semi-snelladers', 'Zonnepanelen op platte daken', 'DALI-2 en architecturale verlichting'],
     case: 'Solar carport op parkeerterrein: 200 MWh per jaar extra opwek.'
   },
   {

@@ -61,6 +61,11 @@ export default function VastgoedPage() {
           title: 'Zelfaanleg bij grotere behoefte',
           description: 'Drempel verlaagd naar 2,3 MVA. Jij schakelt een gekwalificeerde aannemer in, de netbeheerder koppelt aan. Sneller, goedkoper, meer regie.',
           href: '/kennisbank/zelfaanleg'
+        },
+        {
+          title: 'Slim gebouwbeheer voor multi-tenant',
+          description: 'Klimaat, regeltechniek en toegang als één geregeld systeem — met scoping per huurder. BACS- en EPBD IV-conform, AVG-proof logging, lokaal verwerkt.',
+          href: '/oplossingen/gebouwautomatisering'
         }
       ]}
       closingText="Het verschil tussen bedrijven die stilstaan en bedrijven die doorgroeien? De eerste wachten op capaciteit op het net. De tweede laten hun aansluiting harder werken voor hun operatie."

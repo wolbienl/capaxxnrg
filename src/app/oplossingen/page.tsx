@@ -16,7 +16,8 @@ import {
   TrendingDown,
   Shield,
   ShieldCheck,
-  Network
+  Network,
+  Cpu
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 
@@ -101,6 +102,15 @@ const oplossingen = [
     href: '/oplossingen/dc-snellader',
     color: 'from-violet-500 to-purple-600',
     features: ['50-400 kW', 'Load balancing', 'Batterijbuffer']
+  },
+  {
+    title: 'Gebouwautomatisering',
+    subtitle: 'Slim gebouwbeheer voor utiliteit',
+    description: 'Klimaat, regeltechniek en toegang als één geregeld systeem. BACS/EPBD IV-conform, merk-onafhankelijk en lokaal verwerkt.',
+    icon: Cpu,
+    href: '/oplossingen/gebouwautomatisering',
+    color: 'from-cyan-500 to-blue-600',
+    features: ['BACS klasse C', 'KNX & DALI', 'Multi-tenant']
   }
 ]
 

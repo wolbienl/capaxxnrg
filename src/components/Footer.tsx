@@ -56,6 +56,10 @@ export default function Footer() {
                 { label: 'Noodstroom', href: '/oplossingen/noodstroom' },
                 { label: 'Zelfconsumptie', href: '/oplossingen/zelfconsumptie' },
                 { label: 'DC-Snellader', href: '/oplossingen/dc-snellader' },
+                { label: 'Gebouwautomatisering', href: '/oplossingen/gebouwautomatisering' },
+                { label: '— Klimaat & luchtbehandeling', href: '/oplossingen/gebouwautomatisering/klimaat-en-luchtbehandeling' },
+                { label: '— Regeltechniek & comfort', href: '/oplossingen/gebouwautomatisering/regeltechniek-en-comfort' },
+                { label: '— Toegangscontrole', href: '/oplossingen/gebouwautomatisering/toegangscontrole' },
                 { label: 'Inboekdienstverlening', href: '/inboekdienstverlening' },
                 { label: 'ROI laadinfra', href: '/roi-laadinfra-vastgoed' },
               ].map((item) => (

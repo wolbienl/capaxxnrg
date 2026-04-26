@@ -307,8 +307,18 @@ export default function EnergielabelsPage() {
                   Voor commercieel vastgoed geldt sinds 2023 een minimumeis van label C bij verkoop en verhuur. 
                   Gebouwen met label D of lager zijn in de vrije sector niet meer verhuurbaar.
                 </p>
-                <p className="text-sm font-bold text-secondary">
+                <p className="text-sm font-bold text-secondary mb-4">
                   Strengere eisen komen eraan. Wacht niet tot het moet.
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Vanaf 2026 komen daar de{' '}
+                  <Link
+                    href="/oplossingen/gebouwautomatisering"
+                    className="text-secondary font-bold hover:text-primary transition-colors underline underline-offset-4"
+                  >
+                    BACS-eisen EPBD IV
+                  </Link>{' '}
+                  bij — verplichte gebouwautomatisering voor utiliteit boven 290 kW HVAC.
                 </p>
               </div>
             </FadeIn>

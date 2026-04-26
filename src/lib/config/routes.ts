@@ -70,6 +70,28 @@ export const ROUTES = {
         path: '/oplossingen/dc-snellader',
         priority: 0.8,
         changeFreq: 'monthly' as const
+      },
+      gebouwautomatisering: {
+        path: '/oplossingen/gebouwautomatisering',
+        priority: 0.8,
+        changeFreq: 'monthly' as const,
+        children: {
+          klimaat: {
+            path: '/oplossingen/gebouwautomatisering/klimaat-en-luchtbehandeling',
+            priority: 0.7,
+            changeFreq: 'monthly' as const
+          },
+          regeltechniek: {
+            path: '/oplossingen/gebouwautomatisering/regeltechniek-en-comfort',
+            priority: 0.7,
+            changeFreq: 'monthly' as const
+          },
+          toegangscontrole: {
+            path: '/oplossingen/gebouwautomatisering/toegangscontrole',
+            priority: 0.7,
+            changeFreq: 'monthly' as const
+          }
+        }
       }
     }
   },

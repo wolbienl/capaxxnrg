@@ -39,7 +39,7 @@ const categories = [
   },
   {
     title: 'Health & Wellbeing',
-    description: 'Luchtkwaliteit, daglicht, comfort en veiligheid',
+    description: 'Luchtkwaliteit, daglicht, comfort en veiligheid (Hea 06 — daglicht- en aanwezigheidsregeling)',
     icon: Users,
     weight: '20%'
   },
@@ -381,6 +381,34 @@ export default function BREEAMPage() {
                 ))}
               </div>
             </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Crosslink — gebouwautomatisering / Hea 06 */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeIn className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100">
+            <div className="flex-1">
+              <p className="text-xs font-black text-primary uppercase tracking-widest mb-2">BREEAM Hea 06 in praktijk</p>
+              <h3 className="text-lg md:text-xl font-black text-secondary mb-2">Daglicht- en aanwezigheidsregeling als bron-data</h3>
+              <p className="text-sm text-slate-500">
+                Onze pagina over{' '}
+                <Link
+                  href="/oplossingen/gebouwautomatisering/regeltechniek-en-comfort"
+                  className="text-secondary font-bold hover:text-primary transition-colors underline underline-offset-4"
+                >
+                  BREEAM Hea 06: daglicht- en aanwezigheidsregeling
+                </Link>{' '}
+                laat zien hoe DALI-2, KNX en 24V/PELV-verlichting direct credits opleveren én exploitatie verlagen.
+              </p>
+            </div>
+            <Link
+              href="/oplossingen/gebouwautomatisering/regeltechniek-en-comfort"
+              className="shrink-0 inline-flex items-center px-6 py-3 bg-secondary text-white font-black rounded-xl text-sm hover:bg-slate-800 transition-all group"
+            >
+              Bekijken <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </FadeIn>
         </div>
       </section>

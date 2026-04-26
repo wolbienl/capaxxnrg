@@ -19,7 +19,8 @@ import {
   Building2,
   Factory,
   Cable,
-  Scale
+  Scale,
+  Cpu
 } from 'lucide-react'
 import FadeIn from '@/components/FadeIn'
 import FloatingPhone from '@/components/FloatingPhone'
@@ -59,6 +60,13 @@ const solutions = [
     icon: BarChart3,
     href: '/oplossingen/ems',
     color: 'bg-slate-800'
+  },
+  {
+    title: 'Gebouwautomatisering',
+    description: 'Klimaat, regeltechniek en toegang als één geregeld systeem.',
+    icon: Cpu,
+    href: '/oplossingen/gebouwautomatisering',
+    color: 'bg-cyan-600'
   }
 ]
 

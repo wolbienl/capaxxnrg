@@ -11,7 +11,8 @@ import {
   ClipboardCheck,
   Award,
   Globe,
-  TrendingUp
+  TrendingUp,
+  Cpu
 } from 'lucide-react';
 import FadeIn from '@/components/FadeIn';
 import SolutionHero from '@/components/SolutionHero';
@@ -21,7 +22,8 @@ const oplossingen = [
   { title: 'Energieopslag', href: '/oplossingen/energieopslag', icon: Battery },
   { title: 'Laadinfra', href: '/oplossingen/laadinfra', icon: EvCharger },
   { title: 'Solar Carports', href: '/oplossingen/solar-carports', icon: Car },
-  { title: 'EMS', href: '/oplossingen/ems', icon: BarChart3 }
+  { title: 'EMS', href: '/oplossingen/ems', icon: BarChart3 },
+  { title: 'Gebouwautomatisering', href: '/oplossingen/gebouwautomatisering', icon: Cpu }
 ];
 
 const advies = [
