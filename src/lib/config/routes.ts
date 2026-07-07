@@ -129,6 +129,11 @@ export const ROUTES = {
         path: '/cases/noabernet-almelo',
         priority: 0.7,
         changeFreq: 'monthly' as const
+      },
+      campusBusinessCenterHengelo: {
+        path: '/cases/campus-business-center-hengelo',
+        priority: 0.7,
+        changeFreq: 'monthly' as const
       }
     }
   },
