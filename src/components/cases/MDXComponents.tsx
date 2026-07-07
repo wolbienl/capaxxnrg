@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Image from 'next/image'
 import { Lightbulb, Quote as QuoteIcon } from 'lucide-react'
 
 interface HighlightProps {
@@ -82,12 +83,86 @@ export function InfoCard({ title, children }: InfoCardProps) {
   )
 }
 
+interface FigureImage {
+  src: string
+  alt: string
+}
+
+interface FigureProps {
+  src?: string
+  alt?: string
+  caption?: string
+  images?: FigureImage[]
+}
+
+const gridColsByCount: Record<number, string> = {
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-3',
+  4: 'sm:grid-cols-2',
+}
+
+export function Figure({ src, alt, caption, images }: FigureProps) {
+  const items: FigureImage[] =
+    images && images.length > 0
+      ? images
+      : src
+        ? [{ src, alt: alt ?? '' }]
+        : []
+
+  if (items.length === 0) return null
+
+  const isSingle = items.length === 1
+
+  return (
+    <figure className="my-10">
+      {isSingle ? (
+        <div className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+          <Image
+            src={items[0].src}
+            alt={items[0].alt}
+            width={1600}
+            height={1200}
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      ) : (
+        <div
+          className={`grid grid-cols-1 gap-3 md:gap-4 ${
+            gridColsByCount[items.length] ?? 'sm:grid-cols-2'
+          }`}
+        >
+          {items.map((img, i) => (
+            <div
+              key={i}
+              className="overflow-hidden rounded-2xl border border-slate-100 bg-slate-50"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={1200}
+                height={900}
+                className="aspect-[4/3] h-full w-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+      {caption && (
+        <figcaption className="mt-3 text-center text-sm text-slate-400">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  )
+}
+
 export function getMDXComponents() {
   return {
     Highlight,
     Stats,
     Quote,
     InfoCard,
+    Figure,
     h2: ({ children }: { children: ReactNode }) => (
       <h2 className="mb-4 mt-12 text-2xl font-black tracking-tight text-secondary first:mt-0 md:text-3xl">
         {children}
