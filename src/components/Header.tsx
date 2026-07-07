@@ -266,8 +266,10 @@ export default function Header() {
             <Image
               src="/images/logo-dark.svg"
               alt="CAPAXX ENERGY"
+              title="CAPAXX Energy"
               width={180}
               height={45}
+              priority
               className={cn(
                 "h-10 w-auto transition-all duration-500 group-hover:scale-105",
                 isTransparent ? "opacity-0 lg:opacity-100" : "opacity-100"
@@ -276,8 +278,10 @@ export default function Header() {
             <Image
               src="/images/logo-light.svg"
               alt="CAPAXX ENERGY"
+              title="CAPAXX Energy"
               width={180}
               height={45}
+              priority
               className={cn(
                 "h-10 w-auto transition-all duration-500 group-hover:scale-105 absolute inset-0 lg:opacity-0",
                 isTransparent ? "opacity-100" : "opacity-0"

@@ -120,8 +120,10 @@ export function Figure({ src, alt, caption, images }: FigureProps) {
           <Image
             src={items[0].src}
             alt={items[0].alt}
+            title={items[0].alt || undefined}
             width={1600}
             height={1200}
+            sizes="(min-width: 1024px) 720px, 100vw"
             className="h-auto w-full object-cover"
           />
         </div>
@@ -139,8 +141,10 @@ export function Figure({ src, alt, caption, images }: FigureProps) {
               <Image
                 src={img.src}
                 alt={img.alt}
+                title={img.alt || undefined}
                 width={1200}
                 height={900}
+                sizes="(min-width: 640px) 360px, 100vw"
                 className="aspect-[4/3] h-full w-full object-cover"
               />
             </div>

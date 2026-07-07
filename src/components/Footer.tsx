@@ -20,6 +20,7 @@ export default function Footer() {
               <Image
                 src="/images/logo-light.svg"
                 alt="CAPAXX ENERGY"
+                title="CAPAXX Energy"
                 width={160}
                 height={40}
                 className="h-8 w-auto"
